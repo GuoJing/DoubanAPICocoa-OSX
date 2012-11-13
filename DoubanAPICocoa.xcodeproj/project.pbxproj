@@ -15,16 +15,6 @@
 		236254C81650FE2300B2A141 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AA1650FE2200B2A141 /* DoubanAPICocoa.framework */; };
 		236254CE1650FE2300B2A141 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236254CC1650FE2300B2A141 /* InfoPlist.strings */; };
 		236254D11650FE2300B2A141 /* DoubanAPICocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254D01650FE2300B2A141 /* DoubanAPICocoaTests.m */; };
-		236254DD1651025300B2A141 /* OAuthService.h in Headers */ = {isa = PBXBuildFile; fileRef = 236254DB1651025300B2A141 /* OAuthService.h */; };
-		236254DE1651025300B2A141 /* OAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254DC1651025300B2A141 /* OAuthService.m */; };
-		236254E31651028400B2A141 /* OAuthStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 236254E11651028400B2A141 /* OAuthStore.h */; };
-		236254E41651028400B2A141 /* OAuthStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254E21651028400B2A141 /* OAuthStore.m */; };
-		236254E91651041700B2A141 /* Request.h in Headers */ = {isa = PBXBuildFile; fileRef = 236254E71651041700B2A141 /* Request.h */; };
-		236254EA1651041700B2A141 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254E81651041700B2A141 /* Request.m */; };
-		236254ED1651042400B2A141 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 236254EB1651042400B2A141 /* Query.h */; };
-		236254EE1651042400B2A141 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254EC1651042400B2A141 /* Query.m */; };
-		236254F11651043400B2A141 /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 236254EF1651043400B2A141 /* Service.h */; };
-		236254F21651043400B2A141 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254F01651043400B2A141 /* Service.m */; };
 		2362557B165105BC00B2A141 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2362552A165105BC00B2A141 /* NSData+Base64.h */; };
 		2362557C165105BC00B2A141 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362552B165105BC00B2A141 /* NSData+Base64.m */; };
 		2362557D165105BC00B2A141 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 2362552D165105BC00B2A141 /* JSON.h */; };
@@ -104,6 +94,17 @@
 		238DF8811651E24F004B2823 /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8341651E24F004B2823 /* ASIS3ServiceRequest.m */; };
 		238DF8A11651E2B3004B2823 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238DF8A01651E2B3004B2823 /* SystemConfiguration.framework */; };
 		238DF8A31651E2E3004B2823 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238DF8A21651E2E3004B2823 /* CoreServices.framework */; };
+		238DF8A91651E576004B2823 /* OAuthService.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8A41651E576004B2823 /* OAuthService.h */; };
+		238DF8AA1651E576004B2823 /* OAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8A51651E576004B2823 /* OAuth2.h */; };
+		238DF8AB1651E576004B2823 /* OAuthStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8A61651E576004B2823 /* OAuthStore.h */; };
+		238DF8AC1651E576004B2823 /* OAuthStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8A71651E576004B2823 /* OAuthStore.m */; };
+		238DF8AD1651E576004B2823 /* OAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8A81651E576004B2823 /* OAuthService.m */; };
+		238DF8B41651E5A1004B2823 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8AE1651E5A1004B2823 /* HttpRequest.m */; };
+		238DF8B51651E5A1004B2823 /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8AF1651E5A1004B2823 /* Service.h */; };
+		238DF8B61651E5A1004B2823 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8B01651E5A1004B2823 /* Service.m */; };
+		238DF8B71651E5A1004B2823 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8B11651E5A1004B2823 /* Query.h */; };
+		238DF8B81651E5A1004B2823 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8B21651E5A1004B2823 /* Query.m */; };
+		238DF8B91651E5A1004B2823 /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8B31651E5A1004B2823 /* HttpRequest.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,17 +134,6 @@
 		236254CD1650FE2300B2A141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		236254CF1650FE2300B2A141 /* DoubanAPICocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanAPICocoaTests.h; sourceTree = "<group>"; };
 		236254D01650FE2300B2A141 /* DoubanAPICocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanAPICocoaTests.m; sourceTree = "<group>"; };
-		236254DB1651025300B2A141 /* OAuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthService.h; sourceTree = "<group>"; };
-		236254DC1651025300B2A141 /* OAuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthService.m; sourceTree = "<group>"; };
-		236254E11651028400B2A141 /* OAuthStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthStore.h; sourceTree = "<group>"; };
-		236254E21651028400B2A141 /* OAuthStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthStore.m; sourceTree = "<group>"; };
-		236254E5165102D600B2A141 /* OAuth2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuth2.h; sourceTree = "<group>"; };
-		236254E71651041700B2A141 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
-		236254E81651041700B2A141 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
-		236254EB1651042400B2A141 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
-		236254EC1651042400B2A141 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
-		236254EF1651043400B2A141 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
-		236254F01651043400B2A141 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		2362552A165105BC00B2A141 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		2362552B165105BC00B2A141 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		2362552D165105BC00B2A141 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -223,6 +213,17 @@
 		238DF8341651E24F004B2823 /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
 		238DF8A01651E2B3004B2823 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		238DF8A21651E2E3004B2823 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		238DF8A41651E576004B2823 /* OAuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthService.h; path = src/service/oauth2/OAuthService.h; sourceTree = "<group>"; };
+		238DF8A51651E576004B2823 /* OAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth2.h; path = src/service/oauth2/OAuth2.h; sourceTree = "<group>"; };
+		238DF8A61651E576004B2823 /* OAuthStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthStore.h; path = src/service/oauth2/OAuthStore.h; sourceTree = "<group>"; };
+		238DF8A71651E576004B2823 /* OAuthStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthStore.m; path = src/service/oauth2/OAuthStore.m; sourceTree = "<group>"; };
+		238DF8A81651E576004B2823 /* OAuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthService.m; path = src/service/oauth2/OAuthService.m; sourceTree = "<group>"; };
+		238DF8AE1651E5A1004B2823 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = src/service/network/HttpRequest.m; sourceTree = "<group>"; };
+		238DF8AF1651E5A1004B2823 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Service.h; path = src/service/network/Service.h; sourceTree = "<group>"; };
+		238DF8B01651E5A1004B2823 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Service.m; path = src/service/network/Service.m; sourceTree = "<group>"; };
+		238DF8B11651E5A1004B2823 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Query.h; path = src/service/network/Query.h; sourceTree = "<group>"; };
+		238DF8B21651E5A1004B2823 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Query.m; path = src/service/network/Query.m; sourceTree = "<group>"; };
+		238DF8B31651E5A1004B2823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = src/service/network/HttpRequest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,45 +337,45 @@
 		236254DA1651001C00B2A141 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				236254DF1651025900B2A141 /* Service */,
+				236254DF1651025900B2A141 /* service */,
 				236254BA1650FE2200B2A141 /* DoubanAPICocoa.h */,
 				236254BB1650FE2200B2A141 /* DoubanAPICocoa.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
 		};
-		236254DF1651025900B2A141 /* Service */ = {
+		236254DF1651025900B2A141 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				236254E6165103DF00B2A141 /* Network */,
-				236254E01651026900B2A141 /* OAuth2 */,
+				236254E6165103DF00B2A141 /* network */,
+				236254E01651026900B2A141 /* oauth2 */,
 			);
-			name = Service;
+			name = service;
 			sourceTree = "<group>";
 		};
-		236254E01651026900B2A141 /* OAuth2 */ = {
+		236254E01651026900B2A141 /* oauth2 */ = {
 			isa = PBXGroup;
 			children = (
-				236254DB1651025300B2A141 /* OAuthService.h */,
-				236254DC1651025300B2A141 /* OAuthService.m */,
-				236254E11651028400B2A141 /* OAuthStore.h */,
-				236254E21651028400B2A141 /* OAuthStore.m */,
-				236254E5165102D600B2A141 /* OAuth2.h */,
+				238DF8A41651E576004B2823 /* OAuthService.h */,
+				238DF8A51651E576004B2823 /* OAuth2.h */,
+				238DF8A61651E576004B2823 /* OAuthStore.h */,
+				238DF8A71651E576004B2823 /* OAuthStore.m */,
+				238DF8A81651E576004B2823 /* OAuthService.m */,
 			);
-			name = OAuth2;
+			name = oauth2;
 			sourceTree = "<group>";
 		};
-		236254E6165103DF00B2A141 /* Network */ = {
+		236254E6165103DF00B2A141 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				236254E71651041700B2A141 /* Request.h */,
-				236254E81651041700B2A141 /* Request.m */,
-				236254EB1651042400B2A141 /* Query.h */,
-				236254EC1651042400B2A141 /* Query.m */,
-				236254EF1651043400B2A141 /* Service.h */,
-				236254F01651043400B2A141 /* Service.m */,
+				238DF8AE1651E5A1004B2823 /* HttpRequest.m */,
+				238DF8AF1651E5A1004B2823 /* Service.h */,
+				238DF8B01651E5A1004B2823 /* Service.m */,
+				238DF8B11651E5A1004B2823 /* Query.h */,
+				238DF8B21651E5A1004B2823 /* Query.m */,
+				238DF8B31651E5A1004B2823 /* HttpRequest.h */,
 			);
-			name = Network;
+			name = network;
 			sourceTree = "<group>";
 		};
 		236254F31651051E00B2A141 /* lib */ = {
@@ -517,11 +518,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236254DD1651025300B2A141 /* OAuthService.h in Headers */,
-				236254E31651028400B2A141 /* OAuthStore.h in Headers */,
-				236254E91651041700B2A141 /* Request.h in Headers */,
-				236254ED1651042400B2A141 /* Query.h in Headers */,
-				236254F11651043400B2A141 /* Service.h in Headers */,
 				2362557B165105BC00B2A141 /* NSData+Base64.h in Headers */,
 				2362557D165105BC00B2A141 /* JSON.h in Headers */,
 				2362557E165105BC00B2A141 /* NSObject+SBJson.h in Headers */,
@@ -563,6 +559,12 @@
 				238DF87C1651E24F004B2823 /* ASIS3ObjectRequest.h in Headers */,
 				238DF87E1651E24F004B2823 /* ASIS3Request.h in Headers */,
 				238DF8801651E24F004B2823 /* ASIS3ServiceRequest.h in Headers */,
+				238DF8A91651E576004B2823 /* OAuthService.h in Headers */,
+				238DF8AA1651E576004B2823 /* OAuth2.h in Headers */,
+				238DF8AB1651E576004B2823 /* OAuthStore.h in Headers */,
+				238DF8B51651E5A1004B2823 /* Service.h in Headers */,
+				238DF8B71651E5A1004B2823 /* Query.h in Headers */,
+				238DF8B91651E5A1004B2823 /* HttpRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,11 +676,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				236254BC1650FE2200B2A141 /* DoubanAPICocoa.m in Sources */,
-				236254DE1651025300B2A141 /* OAuthService.m in Sources */,
-				236254E41651028400B2A141 /* OAuthStore.m in Sources */,
-				236254EA1651041700B2A141 /* Request.m in Sources */,
-				236254EE1651042400B2A141 /* Query.m in Sources */,
-				236254F21651043400B2A141 /* Service.m in Sources */,
 				2362557C165105BC00B2A141 /* NSData+Base64.m in Sources */,
 				2362557F165105BC00B2A141 /* NSObject+SBJson.m in Sources */,
 				23625582165105BC00B2A141 /* SBJsonParser.m in Sources */,
@@ -713,6 +710,11 @@
 				238DF87D1651E24F004B2823 /* ASIS3ObjectRequest.m in Sources */,
 				238DF87F1651E24F004B2823 /* ASIS3Request.m in Sources */,
 				238DF8811651E24F004B2823 /* ASIS3ServiceRequest.m in Sources */,
+				238DF8AC1651E576004B2823 /* OAuthStore.m in Sources */,
+				238DF8AD1651E576004B2823 /* OAuthService.m in Sources */,
+				238DF8B41651E5A1004B2823 /* HttpRequest.m in Sources */,
+				238DF8B61651E5A1004B2823 /* Service.m in Sources */,
+				238DF8B81651E5A1004B2823 /* Query.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
