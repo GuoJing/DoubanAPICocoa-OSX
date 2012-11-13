@@ -105,6 +105,8 @@
 		238DF8B71651E5A1004B2823 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8B11651E5A1004B2823 /* Query.h */; };
 		238DF8B81651E5A1004B2823 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8B21651E5A1004B2823 /* Query.m */; };
 		238DF8B91651E5A1004B2823 /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8B31651E5A1004B2823 /* HttpRequest.h */; };
+		23E84081165230DF0042F413 /* Config.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E8407F165230DF0042F413 /* Config.h */; };
+		23E84082165230DF0042F413 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E84080165230DF0042F413 /* Config.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +226,8 @@
 		238DF8B11651E5A1004B2823 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Query.h; path = src/service/network/Query.h; sourceTree = "<group>"; };
 		238DF8B21651E5A1004B2823 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Query.m; path = src/service/network/Query.m; sourceTree = "<group>"; };
 		238DF8B31651E5A1004B2823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = src/service/network/HttpRequest.h; sourceTree = "<group>"; };
+		23E8407F165230DF0042F413 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		23E84080165230DF0042F413 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +302,8 @@
 		236254B31650FE2200B2A141 /* DoubanAPICocoa */ = {
 			isa = PBXGroup;
 			children = (
+				23E8407F165230DF0042F413 /* Config.h */,
+				23E84080165230DF0042F413 /* Config.m */,
 				236254F31651051E00B2A141 /* lib */,
 				236254DA1651001C00B2A141 /* src */,
 				236254B41650FE2200B2A141 /* Supporting Files */,
@@ -565,6 +571,7 @@
 				238DF8B51651E5A1004B2823 /* Service.h in Headers */,
 				238DF8B71651E5A1004B2823 /* Query.h in Headers */,
 				238DF8B91651E5A1004B2823 /* HttpRequest.h in Headers */,
+				23E84081165230DF0042F413 /* Config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +722,7 @@
 				238DF8B41651E5A1004B2823 /* HttpRequest.m in Sources */,
 				238DF8B61651E5A1004B2823 /* Service.m in Sources */,
 				238DF8B81651E5A1004B2823 /* Query.m in Sources */,
+				23E84082165230DF0042F413 /* Config.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

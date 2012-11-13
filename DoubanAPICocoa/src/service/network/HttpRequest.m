@@ -7,7 +7,8 @@
 //
 
 #import "HttpRequest.h"
-
+#import "Query.h"
+#import "SBJson.h"
 
 @implementation HttpRequest
 
