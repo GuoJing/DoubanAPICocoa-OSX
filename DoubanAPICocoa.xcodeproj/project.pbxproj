@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		236254AE1650FE2200B2A141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AD1650FE2200B2A141 /* Cocoa.framework */; };
 		236254B81650FE2200B2A141 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236254B61650FE2200B2A141 /* InfoPlist.strings */; };
-		236254BC1650FE2200B2A141 /* DoubanAPICocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254BB1650FE2200B2A141 /* DoubanAPICocoa.m */; };
 		236254C41650FE2300B2A141 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254C31650FE2300B2A141 /* SenTestingKit.framework */; };
 		236254C51650FE2300B2A141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AD1650FE2200B2A141 /* Cocoa.framework */; };
 		236254C81650FE2300B2A141 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AA1650FE2200B2A141 /* DoubanAPICocoa.framework */; };
@@ -105,6 +104,36 @@
 		238DF8B71651E5A1004B2823 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8B11651E5A1004B2823 /* Query.h */; };
 		238DF8B81651E5A1004B2823 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8B21651E5A1004B2823 /* Query.m */; };
 		238DF8B91651E5A1004B2823 /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DF8B31651E5A1004B2823 /* HttpRequest.h */; };
+		23BB02B2166C548400930FFD /* DOUComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB0292166C548400930FFD /* DOUComment.h */; };
+		23BB02B3166C548400930FFD /* DOUComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB0293166C548400930FFD /* DOUComment.m */; };
+		23BB02B4166C548400930FFD /* DOUCommentArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB0294166C548400930FFD /* DOUCommentArray.h */; };
+		23BB02B5166C548400930FFD /* DOUCommentArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB0295166C548400930FFD /* DOUCommentArray.m */; };
+		23BB02B6166C548400930FFD /* DOUOnline.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB0296166C548400930FFD /* DOUOnline.h */; };
+		23BB02B7166C548400930FFD /* DOUOnline.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB0297166C548400930FFD /* DOUOnline.m */; };
+		23BB02B8166C548400930FFD /* DOUOnlineArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB0298166C548400930FFD /* DOUOnlineArray.h */; };
+		23BB02B9166C548400930FFD /* DOUOnlineArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB0299166C548400930FFD /* DOUOnlineArray.m */; };
+		23BB02BA166C548400930FFD /* DOUUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029A166C548400930FFD /* DOUUser.h */; };
+		23BB02BB166C548400930FFD /* DOUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029B166C548400930FFD /* DOUUser.m */; };
+		23BB02BC166C548400930FFD /* DOUObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029C166C548400930FFD /* DOUObject.h */; };
+		23BB02BD166C548400930FFD /* DOUObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029D166C548400930FFD /* DOUObject.m */; };
+		23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029E166C548400930FFD /* DOUObject+Utils.h */; };
+		23BB02BF166C548400930FFD /* DOUObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029F166C548400930FFD /* DOUObject+Utils.m */; };
+		23BB02C0166C548400930FFD /* DOUObjectArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02A0166C548400930FFD /* DOUObjectArray.h */; };
+		23BB02C1166C548400930FFD /* DOUObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02A1166C548400930FFD /* DOUObjectArray.m */; };
+		23BB02C2166C548400930FFD /* DOUEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02A3166C548400930FFD /* DOUEvent.h */; };
+		23BB02C3166C548400930FFD /* DOUEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02A4166C548400930FFD /* DOUEvent.m */; };
+		23BB02C4166C548400930FFD /* DOUEventArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02A5166C548400930FFD /* DOUEventArray.h */; };
+		23BB02C5166C548400930FFD /* DOUEventArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02A6166C548400930FFD /* DOUEventArray.m */; };
+		23BB02C6166C548400930FFD /* DOULoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02A7166C548400930FFD /* DOULoc.h */; };
+		23BB02C7166C548400930FFD /* DOULoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02A8166C548400930FFD /* DOULoc.m */; };
+		23BB02C8166C548400930FFD /* DOULocArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02A9166C548400930FFD /* DOULocArray.h */; };
+		23BB02C9166C548400930FFD /* DOULocArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02AA166C548400930FFD /* DOULocArray.m */; };
+		23BB02CA166C548400930FFD /* DOUAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02AC166C548400930FFD /* DOUAlbum.h */; };
+		23BB02CB166C548400930FFD /* DOUAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02AD166C548400930FFD /* DOUAlbum.m */; };
+		23BB02CC166C548400930FFD /* DOUPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02AE166C548400930FFD /* DOUPhoto.h */; };
+		23BB02CD166C548400930FFD /* DOUPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02AF166C548400930FFD /* DOUPhoto.m */; };
+		23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02B0166C548400930FFD /* DOUPhotoArray.h */; };
+		23BB02CF166C548400930FFD /* DOUPhotoArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02B1166C548400930FFD /* DOUPhotoArray.m */; };
 		23E84081165230DF0042F413 /* Config.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E8407F165230DF0042F413 /* Config.h */; };
 		23E84082165230DF0042F413 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E84080165230DF0042F413 /* Config.m */; };
 /* End PBXBuildFile section */
@@ -128,8 +157,6 @@
 		236254B51650FE2200B2A141 /* DoubanAPICocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubanAPICocoa-Info.plist"; sourceTree = "<group>"; };
 		236254B71650FE2200B2A141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		236254B91650FE2200B2A141 /* DoubanAPICocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoubanAPICocoa-Prefix.pch"; sourceTree = "<group>"; };
-		236254BA1650FE2200B2A141 /* DoubanAPICocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanAPICocoa.h; sourceTree = "<group>"; };
-		236254BB1650FE2200B2A141 /* DoubanAPICocoa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanAPICocoa.m; sourceTree = "<group>"; };
 		236254C21650FE2300B2A141 /* DoubanAPICocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanAPICocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		236254C31650FE2300B2A141 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		236254CB1650FE2300B2A141 /* DoubanAPICocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubanAPICocoaTests-Info.plist"; sourceTree = "<group>"; };
@@ -226,6 +253,36 @@
 		238DF8B11651E5A1004B2823 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Query.h; path = src/service/network/Query.h; sourceTree = "<group>"; };
 		238DF8B21651E5A1004B2823 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Query.m; path = src/service/network/Query.m; sourceTree = "<group>"; };
 		238DF8B31651E5A1004B2823 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = src/service/network/HttpRequest.h; sourceTree = "<group>"; };
+		23BB0292166C548400930FFD /* DOUComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUComment.h; sourceTree = "<group>"; };
+		23BB0293166C548400930FFD /* DOUComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUComment.m; sourceTree = "<group>"; };
+		23BB0294166C548400930FFD /* DOUCommentArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUCommentArray.h; sourceTree = "<group>"; };
+		23BB0295166C548400930FFD /* DOUCommentArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUCommentArray.m; sourceTree = "<group>"; };
+		23BB0296166C548400930FFD /* DOUOnline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUOnline.h; sourceTree = "<group>"; };
+		23BB0297166C548400930FFD /* DOUOnline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUOnline.m; sourceTree = "<group>"; };
+		23BB0298166C548400930FFD /* DOUOnlineArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUOnlineArray.h; sourceTree = "<group>"; };
+		23BB0299166C548400930FFD /* DOUOnlineArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUOnlineArray.m; sourceTree = "<group>"; };
+		23BB029A166C548400930FFD /* DOUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUUser.h; sourceTree = "<group>"; };
+		23BB029B166C548400930FFD /* DOUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUUser.m; sourceTree = "<group>"; };
+		23BB029C166C548400930FFD /* DOUObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUObject.h; sourceTree = "<group>"; };
+		23BB029D166C548400930FFD /* DOUObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUObject.m; sourceTree = "<group>"; };
+		23BB029E166C548400930FFD /* DOUObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOUObject+Utils.h"; sourceTree = "<group>"; };
+		23BB029F166C548400930FFD /* DOUObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DOUObject+Utils.m"; sourceTree = "<group>"; };
+		23BB02A0166C548400930FFD /* DOUObjectArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUObjectArray.h; sourceTree = "<group>"; };
+		23BB02A1166C548400930FFD /* DOUObjectArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUObjectArray.m; sourceTree = "<group>"; };
+		23BB02A3166C548400930FFD /* DOUEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUEvent.h; sourceTree = "<group>"; };
+		23BB02A4166C548400930FFD /* DOUEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUEvent.m; sourceTree = "<group>"; };
+		23BB02A5166C548400930FFD /* DOUEventArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUEventArray.h; sourceTree = "<group>"; };
+		23BB02A6166C548400930FFD /* DOUEventArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUEventArray.m; sourceTree = "<group>"; };
+		23BB02A7166C548400930FFD /* DOULoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOULoc.h; sourceTree = "<group>"; };
+		23BB02A8166C548400930FFD /* DOULoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOULoc.m; sourceTree = "<group>"; };
+		23BB02A9166C548400930FFD /* DOULocArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOULocArray.h; sourceTree = "<group>"; };
+		23BB02AA166C548400930FFD /* DOULocArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOULocArray.m; sourceTree = "<group>"; };
+		23BB02AC166C548400930FFD /* DOUAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAlbum.h; sourceTree = "<group>"; };
+		23BB02AD166C548400930FFD /* DOUAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAlbum.m; sourceTree = "<group>"; };
+		23BB02AE166C548400930FFD /* DOUPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUPhoto.h; sourceTree = "<group>"; };
+		23BB02AF166C548400930FFD /* DOUPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUPhoto.m; sourceTree = "<group>"; };
+		23BB02B0166C548400930FFD /* DOUPhotoArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUPhotoArray.h; sourceTree = "<group>"; };
+		23BB02B1166C548400930FFD /* DOUPhotoArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUPhotoArray.m; sourceTree = "<group>"; };
 		23E8407F165230DF0042F413 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		23E84080165230DF0042F413 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,10 +316,6 @@
 		2362549E1650FE2200B2A141 = {
 			isa = PBXGroup;
 			children = (
-				238DF8A21651E2E3004B2823 /* CoreServices.framework */,
-				238DF8A01651E2B3004B2823 /* SystemConfiguration.framework */,
-				23625641165109DF00B2A141 /* libz.dylib */,
-				236255991651060700B2A141 /* libxml2.dylib */,
 				236254B31650FE2200B2A141 /* DoubanAPICocoa */,
 				236254C91650FE2300B2A141 /* DoubanAPICocoaTests */,
 				236254AC1650FE2200B2A141 /* Frameworks */,
@@ -282,6 +335,10 @@
 		236254AC1650FE2200B2A141 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23625641165109DF00B2A141 /* libz.dylib */,
+				236255991651060700B2A141 /* libxml2.dylib */,
+				238DF8A21651E2E3004B2823 /* CoreServices.framework */,
+				238DF8A01651E2B3004B2823 /* SystemConfiguration.framework */,
 				236254AD1650FE2200B2A141 /* Cocoa.framework */,
 				236254C31650FE2300B2A141 /* SenTestingKit.framework */,
 				236254AF1650FE2200B2A141 /* Other Frameworks */,
@@ -343,9 +400,8 @@
 		236254DA1651001C00B2A141 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				23BB0290166C545600930FFD /* model */,
 				236254DF1651025900B2A141 /* service */,
-				236254BA1650FE2200B2A141 /* DoubanAPICocoa.h */,
-				236254BB1650FE2200B2A141 /* DoubanAPICocoa.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -517,6 +573,67 @@
 			path = S3;
 			sourceTree = "<group>";
 		};
+		23BB0290166C545600930FFD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				23BB0291166C548400930FFD /* Community */,
+				23BB029C166C548400930FFD /* DOUObject.h */,
+				23BB029D166C548400930FFD /* DOUObject.m */,
+				23BB029E166C548400930FFD /* DOUObject+Utils.h */,
+				23BB029F166C548400930FFD /* DOUObject+Utils.m */,
+				23BB02A0166C548400930FFD /* DOUObjectArray.h */,
+				23BB02A1166C548400930FFD /* DOUObjectArray.m */,
+				23BB02A2166C548400930FFD /* Event */,
+				23BB02AB166C548400930FFD /* Photo */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		23BB0291166C548400930FFD /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				23BB0292166C548400930FFD /* DOUComment.h */,
+				23BB0293166C548400930FFD /* DOUComment.m */,
+				23BB0294166C548400930FFD /* DOUCommentArray.h */,
+				23BB0295166C548400930FFD /* DOUCommentArray.m */,
+				23BB0296166C548400930FFD /* DOUOnline.h */,
+				23BB0297166C548400930FFD /* DOUOnline.m */,
+				23BB0298166C548400930FFD /* DOUOnlineArray.h */,
+				23BB0299166C548400930FFD /* DOUOnlineArray.m */,
+				23BB029A166C548400930FFD /* DOUUser.h */,
+				23BB029B166C548400930FFD /* DOUUser.m */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		23BB02A2166C548400930FFD /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				23BB02A3166C548400930FFD /* DOUEvent.h */,
+				23BB02A4166C548400930FFD /* DOUEvent.m */,
+				23BB02A5166C548400930FFD /* DOUEventArray.h */,
+				23BB02A6166C548400930FFD /* DOUEventArray.m */,
+				23BB02A7166C548400930FFD /* DOULoc.h */,
+				23BB02A8166C548400930FFD /* DOULoc.m */,
+				23BB02A9166C548400930FFD /* DOULocArray.h */,
+				23BB02AA166C548400930FFD /* DOULocArray.m */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		23BB02AB166C548400930FFD /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				23BB02AC166C548400930FFD /* DOUAlbum.h */,
+				23BB02AD166C548400930FFD /* DOUAlbum.m */,
+				23BB02AE166C548400930FFD /* DOUPhoto.h */,
+				23BB02AF166C548400930FFD /* DOUPhoto.m */,
+				23BB02B0166C548400930FFD /* DOUPhotoArray.h */,
+				23BB02B1166C548400930FFD /* DOUPhotoArray.m */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -572,6 +689,21 @@
 				238DF8B71651E5A1004B2823 /* Query.h in Headers */,
 				238DF8B91651E5A1004B2823 /* HttpRequest.h in Headers */,
 				23E84081165230DF0042F413 /* Config.h in Headers */,
+				23BB02B2166C548400930FFD /* DOUComment.h in Headers */,
+				23BB02B4166C548400930FFD /* DOUCommentArray.h in Headers */,
+				23BB02B6166C548400930FFD /* DOUOnline.h in Headers */,
+				23BB02B8166C548400930FFD /* DOUOnlineArray.h in Headers */,
+				23BB02BA166C548400930FFD /* DOUUser.h in Headers */,
+				23BB02BC166C548400930FFD /* DOUObject.h in Headers */,
+				23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */,
+				23BB02C0166C548400930FFD /* DOUObjectArray.h in Headers */,
+				23BB02C2166C548400930FFD /* DOUEvent.h in Headers */,
+				23BB02C4166C548400930FFD /* DOUEventArray.h in Headers */,
+				23BB02C6166C548400930FFD /* DOULoc.h in Headers */,
+				23BB02C8166C548400930FFD /* DOULocArray.h in Headers */,
+				23BB02CA166C548400930FFD /* DOUAlbum.h in Headers */,
+				23BB02CC166C548400930FFD /* DOUPhoto.h in Headers */,
+				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +814,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236254BC1650FE2200B2A141 /* DoubanAPICocoa.m in Sources */,
 				2362557C165105BC00B2A141 /* NSData+Base64.m in Sources */,
 				2362557F165105BC00B2A141 /* NSObject+SBJson.m in Sources */,
 				23625582165105BC00B2A141 /* SBJsonParser.m in Sources */,
@@ -723,6 +854,21 @@
 				238DF8B61651E5A1004B2823 /* Service.m in Sources */,
 				238DF8B81651E5A1004B2823 /* Query.m in Sources */,
 				23E84082165230DF0042F413 /* Config.m in Sources */,
+				23BB02B3166C548400930FFD /* DOUComment.m in Sources */,
+				23BB02B5166C548400930FFD /* DOUCommentArray.m in Sources */,
+				23BB02B7166C548400930FFD /* DOUOnline.m in Sources */,
+				23BB02B9166C548400930FFD /* DOUOnlineArray.m in Sources */,
+				23BB02BB166C548400930FFD /* DOUUser.m in Sources */,
+				23BB02BD166C548400930FFD /* DOUObject.m in Sources */,
+				23BB02BF166C548400930FFD /* DOUObject+Utils.m in Sources */,
+				23BB02C1166C548400930FFD /* DOUObjectArray.m in Sources */,
+				23BB02C3166C548400930FFD /* DOUEvent.m in Sources */,
+				23BB02C5166C548400930FFD /* DOUEventArray.m in Sources */,
+				23BB02C7166C548400930FFD /* DOULoc.m in Sources */,
+				23BB02C9166C548400930FFD /* DOULocArray.m in Sources */,
+				23BB02CB166C548400930FFD /* DOUAlbum.m in Sources */,
+				23BB02CD166C548400930FFD /* DOUPhoto.m in Sources */,
+				23BB02CF166C548400930FFD /* DOUPhotoArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
