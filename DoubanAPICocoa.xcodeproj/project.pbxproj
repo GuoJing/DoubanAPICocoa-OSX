@@ -361,8 +361,8 @@
 			children = (
 				23E8407F165230DF0042F413 /* Config.h */,
 				23E84080165230DF0042F413 /* Config.m */,
-				236254F31651051E00B2A141 /* lib */,
-				236254DA1651001C00B2A141 /* src */,
+				236254F31651051E00B2A141 /* Lib */,
+				236254DA1651001C00B2A141 /* Src */,
 				236254B41650FE2200B2A141 /* Supporting Files */,
 			);
 			path = DoubanAPICocoa;
@@ -397,25 +397,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		236254DA1651001C00B2A141 /* src */ = {
+		236254DA1651001C00B2A141 /* Src */ = {
 			isa = PBXGroup;
 			children = (
-				23BB0290166C545600930FFD /* model */,
-				236254DF1651025900B2A141 /* service */,
+				23BB0290166C545600930FFD /* Model */,
+				236254DF1651025900B2A141 /* Service */,
 			);
-			name = src;
+			name = Src;
 			sourceTree = "<group>";
 		};
-		236254DF1651025900B2A141 /* service */ = {
+		236254DF1651025900B2A141 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				236254E6165103DF00B2A141 /* network */,
-				236254E01651026900B2A141 /* oauth2 */,
+				236254E6165103DF00B2A141 /* Network */,
+				236254E01651026900B2A141 /* Oauth2 */,
 			);
-			name = service;
+			name = Service;
 			sourceTree = "<group>";
 		};
-		236254E01651026900B2A141 /* oauth2 */ = {
+		236254E01651026900B2A141 /* Oauth2 */ = {
 			isa = PBXGroup;
 			children = (
 				238DF8A41651E576004B2823 /* OAuthService.h */,
@@ -424,10 +424,10 @@
 				238DF8A71651E576004B2823 /* OAuthStore.m */,
 				238DF8A81651E576004B2823 /* OAuthService.m */,
 			);
-			name = oauth2;
+			name = Oauth2;
 			sourceTree = "<group>";
 		};
-		236254E6165103DF00B2A141 /* network */ = {
+		236254E6165103DF00B2A141 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				238DF8AE1651E5A1004B2823 /* HttpRequest.m */,
@@ -437,17 +437,17 @@
 				238DF8B21651E5A1004B2823 /* Query.m */,
 				238DF8B31651E5A1004B2823 /* HttpRequest.h */,
 			);
-			name = network;
+			name = Network;
 			sourceTree = "<group>";
 		};
-		236254F31651051E00B2A141 /* lib */ = {
+		236254F31651051E00B2A141 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 				236255A01651094700B2A141 /* ASIHTTPRequest */,
 				23625529165105BC00B2A141 /* Base64 */,
 				2362552C165105BC00B2A141 /* JSON */,
 			);
-			name = lib;
+			name = Lib;
 			sourceTree = "<group>";
 		};
 		23625529165105BC00B2A141 /* Base64 */ = {
@@ -457,7 +457,7 @@
 				2362552B165105BC00B2A141 /* NSData+Base64.m */,
 			);
 			name = Base64;
-			path = lib/Base64;
+			path = Lib/Base64;
 			sourceTree = "<group>";
 		};
 		2362552C165105BC00B2A141 /* JSON */ = {
@@ -491,7 +491,7 @@
 				23625546165105BC00B2A141 /* SBJsonWriter.m */,
 			);
 			name = JSON;
-			path = lib/JSON;
+			path = Lib/JSON;
 			sourceTree = "<group>";
 		};
 		236255A01651094700B2A141 /* ASIHTTPRequest */ = {
@@ -520,7 +520,7 @@
 				238DF8271651E24F004B2823 /* S3 */,
 			);
 			name = ASIHTTPRequest;
-			path = lib/ASIHTTPRequest;
+			path = Lib/ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
 		238DF8151651E24F004B2823 /* ASIWebPageRequest */ = {
@@ -573,7 +573,7 @@
 			path = S3;
 			sourceTree = "<group>";
 		};
-		23BB0290166C545600930FFD /* model */ = {
+		23BB0290166C545600930FFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				23BB0291166C548400930FFD /* Community */,
@@ -586,7 +586,7 @@
 				23BB02A2166C548400930FFD /* Event */,
 				23BB02AB166C548400930FFD /* Photo */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		23BB0291166C548400930FFD /* Community */ = {
