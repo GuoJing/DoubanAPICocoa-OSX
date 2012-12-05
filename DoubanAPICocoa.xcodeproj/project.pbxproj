@@ -970,6 +970,7 @@
 				GCC_PREFIX_HEADER = "DoubanAPICocoa/DoubanAPICocoa-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = "DoubanAPICocoa/DoubanAPICocoa-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -986,6 +987,7 @@
 				GCC_PREFIX_HEADER = "DoubanAPICocoa/DoubanAPICocoa-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				INFOPLIST_FILE = "DoubanAPICocoa/DoubanAPICocoa-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
