@@ -20,11 +20,6 @@
 		234B191B167037B7005B9C80 /* DOUOAuthStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B1916167037B7005B9C80 /* DOUOAuthStore.m */; };
 		236254AE1650FE2200B2A141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AD1650FE2200B2A141 /* Cocoa.framework */; };
 		236254B81650FE2200B2A141 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236254B61650FE2200B2A141 /* InfoPlist.strings */; };
-		236254C41650FE2300B2A141 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254C31650FE2300B2A141 /* SenTestingKit.framework */; };
-		236254C51650FE2300B2A141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AD1650FE2200B2A141 /* Cocoa.framework */; };
-		236254C81650FE2300B2A141 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AA1650FE2200B2A141 /* DoubanAPICocoa.framework */; };
-		236254CE1650FE2300B2A141 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236254CC1650FE2300B2A141 /* InfoPlist.strings */; };
-		236254D11650FE2300B2A141 /* DoubanAPICocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 236254D01650FE2300B2A141 /* DoubanAPICocoaTests.m */; };
 		2362557B165105BC00B2A141 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 2362552A165105BC00B2A141 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2362557C165105BC00B2A141 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362552B165105BC00B2A141 /* NSData+Base64.m */; };
 		2362557D165105BC00B2A141 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 2362552D165105BC00B2A141 /* JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -138,16 +133,6 @@
 		23E84082165230DF0042F413 /* DOUAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E84080165230DF0042F413 /* DOUAPIConfig.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		236254C61650FE2300B2A141 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 236254A01650FE2200B2A141 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 236254A91650FE2200B2A141;
-			remoteInfo = DoubanAPICocoa;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		234B190616703781005B9C80 /* DOUHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUHttpRequest.h; sourceTree = "<group>"; };
 		234B190716703781005B9C80 /* DOUHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUHttpRequest.m; sourceTree = "<group>"; };
@@ -168,12 +153,7 @@
 		236254B51650FE2200B2A141 /* DoubanAPICocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubanAPICocoa-Info.plist"; sourceTree = "<group>"; };
 		236254B71650FE2200B2A141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		236254B91650FE2200B2A141 /* DoubanAPICocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoubanAPICocoa-Prefix.pch"; sourceTree = "<group>"; };
-		236254C21650FE2300B2A141 /* DoubanAPICocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanAPICocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		236254C31650FE2300B2A141 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		236254CB1650FE2300B2A141 /* DoubanAPICocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubanAPICocoaTests-Info.plist"; sourceTree = "<group>"; };
-		236254CD1650FE2300B2A141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		236254CF1650FE2300B2A141 /* DoubanAPICocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanAPICocoaTests.h; sourceTree = "<group>"; };
-		236254D01650FE2300B2A141 /* DoubanAPICocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanAPICocoaTests.m; sourceTree = "<group>"; };
 		2362552A165105BC00B2A141 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		2362552B165105BC00B2A141 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		2362552D165105BC00B2A141 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -300,16 +280,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		236254BE1650FE2300B2A141 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236254C41650FE2300B2A141 /* SenTestingKit.framework in Frameworks */,
-				236254C51650FE2300B2A141 /* Cocoa.framework in Frameworks */,
-				236254C81650FE2300B2A141 /* DoubanAPICocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -317,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				236254B31650FE2200B2A141 /* DoubanAPICocoa */,
-				236254C91650FE2300B2A141 /* DoubanAPICocoaTests */,
 				236254AC1650FE2200B2A141 /* Frameworks */,
 				236254AB1650FE2200B2A141 /* Products */,
 			);
@@ -327,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				236254AA1650FE2200B2A141 /* DoubanAPICocoa.framework */,
-				236254C21650FE2300B2A141 /* DoubanAPICocoaTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,25 +342,6 @@
 				236254B51650FE2200B2A141 /* DoubanAPICocoa-Info.plist */,
 				236254B61650FE2200B2A141 /* InfoPlist.strings */,
 				236254B91650FE2200B2A141 /* DoubanAPICocoa-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		236254C91650FE2300B2A141 /* DoubanAPICocoaTests */ = {
-			isa = PBXGroup;
-			children = (
-				236254CF1650FE2300B2A141 /* DoubanAPICocoaTests.h */,
-				236254D01650FE2300B2A141 /* DoubanAPICocoaTests.m */,
-				236254CA1650FE2300B2A141 /* Supporting Files */,
-			);
-			path = DoubanAPICocoaTests;
-			sourceTree = "<group>";
-		};
-		236254CA1650FE2300B2A141 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				236254CB1650FE2300B2A141 /* DoubanAPICocoaTests-Info.plist */,
-				236254CC1650FE2300B2A141 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -584,7 +533,8 @@
 				23BB02A2166C548400930FFD /* Event */,
 				23BB02AB166C548400930FFD /* Photo */,
 			);
-			path = Model;
+			name = Model;
+			path = Src/Model;
 			sourceTree = "<group>";
 		};
 		23BB0291166C548400930FFD /* Community */ = {
@@ -726,25 +676,6 @@
 			productReference = 236254AA1650FE2200B2A141 /* DoubanAPICocoa.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		236254C11650FE2300B2A141 /* DoubanAPICocoaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 236254D71650FE2300B2A141 /* Build configuration list for PBXNativeTarget "DoubanAPICocoaTests" */;
-			buildPhases = (
-				236254BD1650FE2300B2A141 /* Sources */,
-				236254BE1650FE2300B2A141 /* Frameworks */,
-				236254BF1650FE2300B2A141 /* Resources */,
-				236254C01650FE2300B2A141 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				236254C71650FE2300B2A141 /* PBXTargetDependency */,
-			);
-			name = DoubanAPICocoaTests;
-			productName = DoubanAPICocoaTests;
-			productReference = 236254C21650FE2300B2A141 /* DoubanAPICocoaTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -767,7 +698,6 @@
 			projectRoot = "";
 			targets = (
 				236254A91650FE2200B2A141 /* DoubanAPICocoa */,
-				236254C11650FE2300B2A141 /* DoubanAPICocoaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -781,31 +711,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		236254BF1650FE2300B2A141 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236254CE1650FE2300B2A141 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		236254C01650FE2300B2A141 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		236254A51650FE2200B2A141 /* Sources */ = {
@@ -870,37 +776,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		236254BD1650FE2300B2A141 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236254D11650FE2300B2A141 /* DoubanAPICocoaTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		236254C71650FE2300B2A141 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 236254A91650FE2200B2A141 /* DoubanAPICocoa */;
-			targetProxy = 236254C61650FE2300B2A141 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		236254B61650FE2200B2A141 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				236254B71650FE2200B2A141 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		236254CC1650FE2300B2A141 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				236254CD1650FE2300B2A141 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -993,32 +875,6 @@
 			};
 			name = Release;
 		};
-		236254D81650FE2300B2A141 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DoubanAPICocoa/DoubanAPICocoa-Prefix.pch";
-				INFOPLIST_FILE = "DoubanAPICocoaTests/DoubanAPICocoaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		236254D91650FE2300B2A141 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DoubanAPICocoa/DoubanAPICocoa-Prefix.pch";
-				INFOPLIST_FILE = "DoubanAPICocoaTests/DoubanAPICocoaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1036,15 +892,6 @@
 			buildConfigurations = (
 				236254D51650FE2300B2A141 /* Debug */,
 				236254D61650FE2300B2A141 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		236254D71650FE2300B2A141 /* Build configuration list for PBXNativeTarget "DoubanAPICocoaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				236254D81650FE2300B2A141 /* Debug */,
-				236254D91650FE2300B2A141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
