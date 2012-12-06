@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
-#import "Config.h"
+#import "DOUAPIConfig.h"
 
 NSString * const kHttpsApiBaseUrl = @"https://api.douban.com";
 NSString * const kHttpApiBaseUrl = @"http://api.douban.com";
