@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190616703781005B9C80 /* DOUHttpRequest.h */; };
+		234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190616703781005B9C80 /* DOUHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B190D16703781005B9C80 /* DOUHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190716703781005B9C80 /* DOUHttpRequest.m */; };
-		234B190E16703781005B9C80 /* DOUQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190816703781005B9C80 /* DOUQuery.h */; };
+		234B190E16703781005B9C80 /* DOUQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190816703781005B9C80 /* DOUQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B190F16703781005B9C80 /* DOUQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190916703781005B9C80 /* DOUQuery.m */; };
-		234B191016703781005B9C80 /* DOUService.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190A16703781005B9C80 /* DOUService.h */; };
+		234B191016703781005B9C80 /* DOUService.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190A16703781005B9C80 /* DOUService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B191116703781005B9C80 /* DOUService.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190B16703781005B9C80 /* DOUService.m */; };
-		234B1917167037B7005B9C80 /* DOUOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B1912167037B7005B9C80 /* DOUOAuth2.h */; };
-		234B1918167037B7005B9C80 /* DOUOAuthService.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B1913167037B7005B9C80 /* DOUOAuthService.h */; };
+		234B1917167037B7005B9C80 /* DOUOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B1912167037B7005B9C80 /* DOUOAuth2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		234B1918167037B7005B9C80 /* DOUOAuthService.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B1913167037B7005B9C80 /* DOUOAuthService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B1919167037B7005B9C80 /* DOUOAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B1914167037B7005B9C80 /* DOUOAuthService.m */; };
-		234B191A167037B7005B9C80 /* DOUOAuthStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B1915167037B7005B9C80 /* DOUOAuthStore.h */; };
+		234B191A167037B7005B9C80 /* DOUOAuthStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B1915167037B7005B9C80 /* DOUOAuthStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B191B167037B7005B9C80 /* DOUOAuthStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B1916167037B7005B9C80 /* DOUOAuthStore.m */; };
 		236254AE1650FE2200B2A141 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236254AD1650FE2200B2A141 /* Cocoa.framework */; };
 		236254B81650FE2200B2A141 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236254B61650FE2200B2A141 /* InfoPlist.strings */; };
@@ -641,17 +641,17 @@
 				23BB02C0166C548400930FFD /* DOUObjectArray.h in Headers */,
 				23BB02C2166C548400930FFD /* DOUEvent.h in Headers */,
 				23BB02C4166C548400930FFD /* DOUEventArray.h in Headers */,
-				23BB02C6166C548400930FFD /* DOULoc.h in Headers */,
-				23BB02C8166C548400930FFD /* DOULocArray.h in Headers */,
-				23BB02CA166C548400930FFD /* DOUAlbum.h in Headers */,
-				23BB02CC166C548400930FFD /* DOUPhoto.h in Headers */,
-				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
 				234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */,
 				234B190E16703781005B9C80 /* DOUQuery.h in Headers */,
 				234B191016703781005B9C80 /* DOUService.h in Headers */,
 				234B1917167037B7005B9C80 /* DOUOAuth2.h in Headers */,
 				234B1918167037B7005B9C80 /* DOUOAuthService.h in Headers */,
 				234B191A167037B7005B9C80 /* DOUOAuthStore.h in Headers */,
+				23BB02C6166C548400930FFD /* DOULoc.h in Headers */,
+				23BB02C8166C548400930FFD /* DOULocArray.h in Headers */,
+				23BB02CA166C548400930FFD /* DOUAlbum.h in Headers */,
+				23BB02CC166C548400930FFD /* DOUPhoto.h in Headers */,
+				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
