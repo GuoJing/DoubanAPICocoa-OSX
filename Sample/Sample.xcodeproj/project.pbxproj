@@ -11,8 +11,6 @@
 		23152158167077EF00AF553E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23152156167077EF00AF553E /* InfoPlist.strings */; };
 		2315215A167077EF00AF553E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23152159167077EF00AF553E /* main.m */; };
 		2315215E167077EF00AF553E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2315215C167077EF00AF553E /* Credits.rtf */; };
-		23152161167077EF00AF553E /* dbcityDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 23152160167077EF00AF553E /* dbcityDocument.m */; };
-		23152164167077EF00AF553E /* dbcityDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23152162167077EF00AF553E /* dbcityDocument.xib */; };
 		23152167167077F000AF553E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23152165167077F000AF553E /* MainMenu.xib */; };
 		2315216F167077F000AF553E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315216E167077F000AF553E /* SenTestingKit.framework */; };
 		23152170167077F000AF553E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315214D167077EF00AF553E /* Cocoa.framework */; };
@@ -21,6 +19,7 @@
 		231522801670793500AF553E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315227F1670793500AF553E /* Security.framework */; };
 		23152282167079A100AF553E /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23152281167079A100AF553E /* DoubanAPICocoa.framework */; };
 		23152283167079AB00AF553E /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23152281167079A100AF553E /* DoubanAPICocoa.framework */; };
+		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +56,6 @@
 		23152159167077EF00AF553E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2315215B167077EF00AF553E /* Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
 		2315215D167077EF00AF553E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2315215F167077EF00AF553E /* dbcityDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dbcityDocument.h; sourceTree = "<group>"; };
-		23152160167077EF00AF553E /* dbcityDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dbcityDocument.m; sourceTree = "<group>"; };
-		23152163167077EF00AF553E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/dbcityDocument.xib; sourceTree = "<group>"; };
 		23152166167077F000AF553E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2315216D167077F000AF553E /* SampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2315216E167077F000AF553E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,6 +65,8 @@
 		2315217A167077F000AF553E /* SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleTests.m; sourceTree = "<group>"; };
 		2315227F1670793500AF553E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		23152281167079A100AF553E /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
+		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 		2315213E167077EF00AF553E = {
 			isa = PBXGroup;
 			children = (
-				2315227F1670793500AF553E /* Security.framework */,
 				23152153167077EF00AF553E /* Sample */,
 				23152173167077F000AF553E /* SampleTests */,
 				2315214C167077EF00AF553E /* Frameworks */,
@@ -117,6 +114,7 @@
 		2315214C167077EF00AF553E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2315227F1670793500AF553E /* Security.framework */,
 				23152281167079A100AF553E /* DoubanAPICocoa.framework */,
 				2315214D167077EF00AF553E /* Cocoa.framework */,
 				2315216E167077F000AF553E /* SenTestingKit.framework */,
@@ -138,10 +136,9 @@
 		23152153167077EF00AF553E /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				2315215F167077EF00AF553E /* dbcityDocument.h */,
-				23152160167077EF00AF553E /* dbcityDocument.m */,
-				23152162167077EF00AF553E /* dbcityDocument.xib */,
 				23152165167077F000AF553E /* MainMenu.xib */,
+				23F2A3EC1675BF620034BFD4 /* MainWindowController.h */,
+				23F2A3ED1675BF620034BFD4 /* MainWindowController.m */,
 				23152154167077EF00AF553E /* Supporting Files */,
 			);
 			path = Sample;
@@ -253,7 +250,6 @@
 			files = (
 				23152158167077EF00AF553E /* InfoPlist.strings in Resources */,
 				2315215E167077EF00AF553E /* Credits.rtf in Resources */,
-				23152164167077EF00AF553E /* dbcityDocument.xib in Resources */,
 				23152167167077F000AF553E /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2315215A167077EF00AF553E /* main.m in Sources */,
-				23152161167077EF00AF553E /* dbcityDocument.m in Sources */,
+				23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,14 +323,6 @@
 				2315215D167077EF00AF553E /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		23152162167077EF00AF553E /* dbcityDocument.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23152163167077EF00AF553E /* en */,
-			);
-			name = dbcityDocument.xib;
 			sourceTree = "<group>";
 		};
 		23152165167077F000AF553E /* MainMenu.xib */ = {
@@ -486,6 +474,7 @@
 				23152180167077F000AF553E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23152181167077F000AF553E /* Build configuration list for PBXNativeTarget "SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +483,7 @@
 				23152183167077F000AF553E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
