@@ -6,9 +6,9 @@
 
 **并且该版本不支持GData等V1版本特性，只支持V2。**
 
-如果你需要iPhone版本，请去:
+如果你需要iOS版本，请去:
 
-1. 开发版：[douban-objc-client](https://github.com/lincode/douban-objc-client)。
+1. 开发版：[douban-objc-client](https://github.com/lincode/douban-objc-client)
 2. 官方版：[douban-objc-client](https://github.com/douban/douban-objc-client)
 
 ## 信息 ##
@@ -28,6 +28,8 @@
 `Xcode` -> `Add files to PROJECT` -> `select the folder`
 
 你会看到一个小的工具箱，名字为DoubanAPICocoa库已经增加完毕。
+
+![samplecode](http://guojing.me/images/2012/samplecode.png)
 
 在项目的`Build Phases`里的`Link Binary with Libraries`增加必要的组件，如`Security.framework`。
 
@@ -89,6 +91,15 @@
 	[service addRequest:req];
 
 具体还是请看Sample代码，简单易懂。
+
+## Sample ##
+
+Sample是一个简单的桌面客户端，非常简单，其作用是获取豆瓣活动信息。
+
+![samplewindow](http://guojing.me/images/2012/samplewindow.png)
+
+1. 首先点击Connect，连接到豆瓣。
+2. 在输入框中输入活动的id，并且点击Get，获取活动海报信息。
 
 ## 历史 ##
 
