@@ -17,8 +17,7 @@
 		23152178167077F000AF553E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23152176167077F000AF553E /* InfoPlist.strings */; };
 		2315217B167077F000AF553E /* SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2315217A167077F000AF553E /* SampleTests.m */; };
 		231522801670793500AF553E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315227F1670793500AF553E /* Security.framework */; };
-		23152282167079A100AF553E /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23152281167079A100AF553E /* DoubanAPICocoa.framework */; };
-		23152283167079AB00AF553E /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23152281167079A100AF553E /* DoubanAPICocoa.framework */; };
+		239B95CB1676EE9B00EE769B /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239B95CA1676EE9B00EE769B /* DoubanAPICocoa.framework */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				23152283167079AB00AF553E /* DoubanAPICocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +62,7 @@
 		23152179167077F000AF553E /* SampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleTests.h; sourceTree = "<group>"; };
 		2315217A167077F000AF553E /* SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleTests.m; sourceTree = "<group>"; };
 		2315227F1670793500AF553E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		23152281167079A100AF553E /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
+		239B95CA1676EE9B00EE769B /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +74,7 @@
 			files = (
 				231522801670793500AF553E /* Security.framework in Frameworks */,
 				2315214E167077EF00AF553E /* Cocoa.framework in Frameworks */,
-				23152282167079A100AF553E /* DoubanAPICocoa.framework in Frameworks */,
+				239B95CB1676EE9B00EE769B /* DoubanAPICocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,8 +112,8 @@
 		2315214C167077EF00AF553E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				239B95CA1676EE9B00EE769B /* DoubanAPICocoa.framework */,
 				2315227F1670793500AF553E /* Security.framework */,
-				23152281167079A100AF553E /* DoubanAPICocoa.framework */,
 				2315214D167077EF00AF553E /* Cocoa.framework */,
 				2315216E167077F000AF553E /* SenTestingKit.framework */,
 				2315214F167077EF00AF553E /* Other Frameworks */,
@@ -403,6 +401,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../DoubanAPICocoa/Src/Service/**";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -419,6 +418,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../DoubanAPICocoa/Src/Service/**";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

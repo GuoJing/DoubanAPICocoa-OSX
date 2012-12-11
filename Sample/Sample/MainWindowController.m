@@ -9,6 +9,9 @@
 #import "MainWindowController.h"
 #import <DoubanAPICocoa/DOUOAuthService.h>
 #import <DoubanAPICocoa/DOUAPIConfig.h>
+#import <DoubanAPICocoa/DOUQuery.h>
+#import <DoubanAPICocoa/DOUEvent.h>
+#import <DoubanAPICocoa/DOUEventArray.h>
 
 static NSString * const kAPIKey = @"03c410cd0bc4fe1b0b4c3267234efa51";
 static NSString * const kPrivateKey = @"af0ec50edbaf217e";
@@ -17,6 +20,10 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 @implementation MainWindowController
 
 @synthesize login_button;
+@synthesize get_button;
+@synthesize eid_field;
+@synthesize pic_cell;
+@synthesize info_field;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -55,27 +62,82 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
     NSLog(@"success!");
-    self.login_button.title = @"Login success!";
+    self.login_button.title = @"Connected!";
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
     NSLog(@"Fail!");
 }
 
+- (IBAction)onGetClicked:(id)sender {
+    DOUService *service = [DOUService sharedInstance];
+    
+    //need to use https here
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    
+    NSString *subPath = [NSString stringWithFormat:@"/v2/event/%@", self.eid_field.title];
+    //NSLog(@"%@", self.eid_field.title);
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:subPath parameters:nil];
+
+    __block DOUEvent *event = nil;
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            
+            if (array) {
+                event = [[DOUEvent alloc] initWithString:[req responseString]];
+                NSLog(@"Get event success");
+                
+                
+                NSLog(@"%@", [event endTime]);
+                
+                NSImage *post=nil;
+                NSString *poster_url = [event image];
+                
+                NSLog(@"%@", poster_url);
+                
+                NSURL *poster_image = [NSURL URLWithString:poster_url];
+                NSData *poster_data = [NSData dataWithContentsOfURL:poster_image];
+                if (poster_data) {
+                    post = [[NSImage alloc] initWithData:poster_data];
+                    [self.pic_cell setImage:post];
+                }
+            } else {
+                NSLog(@"Get event failed");
+            }
+        }
+    };
+    
+    [service get:query callback:completionBlock];
+}
+
 - (IBAction)onLoginClicked:(id)sender {
-    NSString *url_str = [NSString stringWithFormat:@"https://www.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kAPIKey, kRedirectUrl];
-    NSURL *login_url = [NSURL URLWithString:url_str];
-    if ([[NSWorkspace sharedWorkspace] openURL:login_url])
-        NSLog(@"Opened successfully.");
-    else
-        NSLog(@"Failed to open URL.");
+    DOUService *service = [DOUService sharedInstance];
+    if ([service isValid]) {
+        self.info_field.title = @"Connected";
+        self.login_button.title = @"Connected";
+    } else {
+        NSString *url_str = [NSString stringWithFormat:@"https://loc-zeta.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kAPIKey, kRedirectUrl];
+        NSURL *login_url = [NSURL URLWithString:url_str];
+        if ([[NSWorkspace sharedWorkspace] openURL:login_url])
+            NSLog(@"Opened successfully.");
+        else
+            NSLog(@"Failed to open URL.");
+    }
+}
+
+- (void)awakeFromNib {
+    DOUService *service = [DOUService sharedInstance];
+    if ([service isValid]) {
+        self.info_field.title = @"Is Connected to douban";
+        self.login_button.title = @"Connected";
+    }
 }
 
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
 @end

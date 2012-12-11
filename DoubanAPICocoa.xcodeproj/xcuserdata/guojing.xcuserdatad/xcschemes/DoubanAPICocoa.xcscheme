@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "236254C11650FE2300B2A141"
-               BuildableName = "DoubanAPICocoaTests.octest"
-               BlueprintName = "DoubanAPICocoaTests"
-               ReferencedContainer = "container:DoubanAPICocoa.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
