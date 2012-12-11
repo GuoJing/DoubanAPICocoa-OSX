@@ -101,7 +101,8 @@ Sample是一个简单的桌面客户端，非常简单，其作用是获取豆�
 ![samplewindow](http://guojing.me/images/2012/samplewindow.png)
 
 1. 首先点击Connect，连接到豆瓣。
-2. 在输入框中输入活动的id，并且点击Get，获取活动海报信息。
+2. 链接成功后，会跳转到我的页面，点击Load再度激活程序。
+3. 在输入框中输入活动的id，并且点击Get，获取活动海报信息。
 
 ## 历史 ##
 
