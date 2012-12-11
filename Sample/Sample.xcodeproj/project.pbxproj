@@ -112,7 +112,6 @@
 		2315214C167077EF00AF553E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				239B95CA1676EE9B00EE769B /* DoubanAPICocoa.framework */,
 				2315227F1670793500AF553E /* Security.framework */,
 				2315214D167077EF00AF553E /* Cocoa.framework */,
 				2315216E167077F000AF553E /* SenTestingKit.framework */,
@@ -124,6 +123,7 @@
 		2315214F167077EF00AF553E /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				239B95CA1676EE9B00EE769B /* DoubanAPICocoa.framework */,
 				23152150167077EF00AF553E /* AppKit.framework */,
 				23152151167077EF00AF553E /* CoreData.framework */,
 				23152152167077EF00AF553E /* Foundation.framework */,
