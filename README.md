@@ -35,6 +35,8 @@
 
 同样在`Build Phases`里，在右下角找到`Add Build Phase`，在下拉列表中选择`Add Build Phase`，一个新的框会出现在这个页面里，打开刚创建的框，里面把刚才添加在文件列表的framework拖动到此处。并在分类选项里选择Framework。
 
+![sampleconfig](http://guojing.me/images/2012/sampleconfig.png)
+
 ### 直接引用Framework Project ###
 
 直接拖动DoubanAPICocoa包到项目中。
