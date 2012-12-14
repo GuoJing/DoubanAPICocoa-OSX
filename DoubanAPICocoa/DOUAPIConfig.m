@@ -8,6 +8,8 @@
 
 #import "DOUAPIConfig.h"
 
+NSString * const kDoubanUrl = @"http://www.douban.com";
+
 NSString * const kHttpsApiBaseUrl = @"https://api.douban.com";
 NSString * const kHttpApiBaseUrl = @"http://api.douban.com";
 

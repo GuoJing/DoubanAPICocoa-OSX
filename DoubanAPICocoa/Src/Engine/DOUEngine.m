@@ -13,6 +13,11 @@
 
 #import "DOUEventEngine.h"
 #import "DOULocEngine.h"
+#import "DOUAlbumEngine.h"
+#import "DOUPhotoEngine.h"
+#import "DOUCommentEngine.h"
+#import "DOUOnlineEngine.h"
+#import "DOUUserEngine.h"
 
 @implementation DOUEngine
 
@@ -44,7 +49,7 @@
 }
 
 - (NSString *)getConnectUrl {
-    NSString *urlStr = [NSString stringWithFormat:@"https://www.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", self.apiKey, self.redirUrl];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kDoubanUrl, self.apiKey, self.redirUrl];
     return urlStr;
 }
 
@@ -83,6 +88,16 @@
         return [[[DOUEventEngine alloc] initWithEngine:self] autorelease];
     } else if ([engine isEqualToString:@"loc"]) {
         return [[[DOULocEngine alloc] initWithEngine:self] autorelease];
+    } else if ([engine isEqualToString:@"album"]) {
+        return [[[DOUAlbumEngine alloc] initWithEngine:self] autorelease];
+    } else if ([engine isEqualToString:@"photo"]) {
+        return [[[DOUPhotoEngine alloc] initWithEngine:self] autorelease];
+    } else if ([engine isEqualToString:@"comment"]) {
+        return [[[DOUCommentEngine alloc] initWithEngine:self] autorelease];
+    } else if ([engine isEqualToString:@"online"]) {
+        return [[[DOUOnlineEngine alloc] initWithEngine:self] autorelease];
+    } else if ([engine isEqualToString:@"user"]) {
+        return [[[DOUUserEngine alloc] initWithEngine:self] autorelease];
     }
     return self;
 }
