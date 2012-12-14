@@ -13,6 +13,8 @@
 
 @interface DOUEventEngine : DOUEngine
 
-- (void)getEventWithRemoteID:(NSString *)event_id successBlock:(void(^)(DOUEvent *))successBlock;
+- (void)getEventWithRemoteID:(NSString *)event_id
+                successBlock:(void(^)(DOUEvent *))successBlock
+                 failedBlock:(void(^)(NSString *))failedBlock;
 
 @end

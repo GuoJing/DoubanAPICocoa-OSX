@@ -17,7 +17,9 @@
 
 @implementation DOUEventEngine
 
-- (void)getEventWithRemoteID:(NSString *)event_id successBlock:(void(^)(DOUEvent *))successBlock{
+- (void)getEventWithRemoteID:(NSString *)event_id
+                successBlock:(void(^)(DOUEvent *))successBlock
+                 failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUEvent *newEvent = nil;
     if(![self isServiceValid]) {
         return;
@@ -25,7 +27,7 @@
 
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUEventAPI, event_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUEventAPIUrl, event_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
@@ -37,6 +39,10 @@
                 if (successBlock) {
                     successBlock(newEvent);
                 }
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
             }
         }
     };

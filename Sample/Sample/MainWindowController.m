@@ -16,6 +16,7 @@
 //using DOUEngine
 #import <DoubanAPICocoa/DOUEngine.h>
 #import <DoubanAPICocoa/DOUEventEngine.h>
+#import <DoubanAPICocoa/DOULocEngine.h>
 
 static NSString * const kAPIKey = @"03c410cd0bc4fe1b0b4c3267234efa51";
 static NSString * const kPrivateKey = @"af0ec50edbaf217e";
@@ -75,10 +76,27 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
         [self updateImageUI:event];
     };
     
-    [event_engine getEventWithRemoteID:self.eid_field.title successBlock:successBlock];
+    void(^failedBlock)(NSString *) = ^(NSString *e) {
+        NSLog(@"%@", e);
+    };
+    
+    [event_engine getEventWithRemoteID:self.eid_field.title successBlock:successBlock failedBlock:failedBlock];
 }
 
 - (void)updateImageUI:(DOUEvent *)event {
+    DOULocEngine *loc_engine = [self.engine getEngine:@"loc"];
+    
+    void(^successBlock)(DOULoc *) = ^(DOULoc *loc) {
+        self.info_field.title = [loc name];
+    };
+    
+    void(^failedBlock)(NSString *) = ^(NSString *e) {
+        NSLog(@"%@", e);
+    };
+    
+    [loc_engine getLocWithRemoteID:@"108288" successBlock:successBlock failedBlock:failedBlock];
+    
+    
     NSImage *post=nil;
     NSString *poster_url = [event image];
     NSURL *poster_image = [NSURL URLWithString:poster_url];

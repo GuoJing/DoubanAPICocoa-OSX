@@ -12,6 +12,7 @@
 #import "DOUOAuthService.h"
 
 #import "DOUEventEngine.h"
+#import "DOULocEngine.h"
 
 @implementation DOUEngine
 
@@ -79,7 +80,9 @@
 
 - (id)getEngine:(NSString *)engine{
     if ([engine isEqualToString:@"event"]) {
-        return [[DOUEventEngine alloc] initWithEngine:self];
+        return [[[DOUEventEngine alloc] initWithEngine:self] autorelease];
+    } else if ([engine isEqualToString:@"loc"]) {
+        return [[[DOULocEngine alloc] initWithEngine:self] autorelease];
     }
     return self;
 }

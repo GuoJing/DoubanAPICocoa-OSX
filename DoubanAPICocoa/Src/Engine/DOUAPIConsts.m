@@ -8,5 +8,6 @@
 
 #import "DOUAPIConsts.h"
 
-NSString * const kDOUEventAPI = @"/v2/event/%@";
+NSString * const kDOUEventAPIUrl = @"/v2/event/%@";
+NSString * const kDOULocAPIUrl = @"/v2/loc/%@";
 

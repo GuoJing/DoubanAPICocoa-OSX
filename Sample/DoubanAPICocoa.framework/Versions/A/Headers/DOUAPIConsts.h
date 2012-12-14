@@ -8,4 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const kDOUEventAPI;
+extern NSString * const kDOUEventAPIUrl;
+extern NSString * const kDOULocAPIUrl;
