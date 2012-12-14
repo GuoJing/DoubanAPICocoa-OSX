@@ -19,6 +19,8 @@
 #import "DOUOnlineEngine.h"
 #import "DOUUserEngine.h"
 
+#import "DOUConsts.h"
+
 @implementation DOUEngine
 
 @synthesize apiKey;
@@ -83,21 +85,31 @@
     }
 }
 
-- (id)getEngine:(NSString *)engine{
-    if ([engine isEqualToString:@"event"]) {
-        return [[[DOUEventEngine alloc] initWithEngine:self] autorelease];
-    } else if ([engine isEqualToString:@"loc"]) {
-        return [[[DOULocEngine alloc] initWithEngine:self] autorelease];
-    } else if ([engine isEqualToString:@"album"]) {
-        return [[[DOUAlbumEngine alloc] initWithEngine:self] autorelease];
-    } else if ([engine isEqualToString:@"photo"]) {
-        return [[[DOUPhotoEngine alloc] initWithEngine:self] autorelease];
-    } else if ([engine isEqualToString:@"comment"]) {
-        return [[[DOUCommentEngine alloc] initWithEngine:self] autorelease];
-    } else if ([engine isEqualToString:@"online"]) {
-        return [[[DOUOnlineEngine alloc] initWithEngine:self] autorelease];
-    } else if ([engine isEqualToString:@"user"]) {
-        return [[[DOUUserEngine alloc] initWithEngine:self] autorelease];
+- (id)getEngine:(EngineTypes)engine_id{
+    switch (engine_id) {
+        case kDouEvent:
+            return [[[DOUEventEngine alloc] initWithEngine:self] autorelease];
+            break;
+        case kDouLoc:
+            return[[[DOULocEngine alloc] initWithEngine:self] autorelease];;
+            break;
+        case kDouAlbum:
+            return [[[DOUAlbumEngine alloc] initWithEngine:self] autorelease];;
+            break;
+        case kDouPhoto:
+            return [[[DOUPhotoEngine alloc] initWithEngine:self] autorelease];
+            break;
+        case kDouComment:
+            return [[[DOUCommentEngine alloc] initWithEngine:self] autorelease];
+            break;
+        case kDouOnline:
+            return [[[DOUOnlineEngine alloc] initWithEngine:self] autorelease];
+            break;
+        case kDouUser:
+            return [[[DOUUserEngine alloc] initWithEngine:self] autorelease];
+            break;
+        default:
+            return self;
     }
     return self;
 }

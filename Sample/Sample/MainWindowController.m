@@ -14,6 +14,7 @@
 #import <DoubanAPICocoa/DOUEventArray.h>
 
 //using DOUEngine
+#import <DoubanAPICocoa/DOUConsts.h>
 #import <DoubanAPICocoa/DOUEngine.h>
 #import <DoubanAPICocoa/DOUEventEngine.h>
 #import <DoubanAPICocoa/DOULocEngine.h>
@@ -69,7 +70,7 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 }
 
 - (IBAction)onGetClicked:(id)sender {
-    DOUEventEngine *event_engine = [self.engine getEngine:@"event"];
+    DOUEventEngine *event_engine = [self.engine getEngine:kDouEvent];
     self.info_field.title = @"Wariting for reply...";
     
     void(^successBlock)(DOUEvent *) = ^(DOUEvent *event) {
@@ -84,7 +85,7 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 }
 
 - (void)updateImageUI:(DOUEvent *)event {
-    DOULocEngine *loc_engine = [self.engine getEngine:@"loc"];
+    DOULocEngine *loc_engine = [self.engine getEngine:kDouLoc];
     
     void(^successBlock)(DOULoc *) = ^(DOULoc *loc) {
         self.info_field.title = [loc name];

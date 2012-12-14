@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "DOUService.h"
+#import "DOUConsts.h"
 
 @interface DOUEngine : NSObject {
     NSString *apiKey;
@@ -28,6 +29,6 @@
 - (void)didLoadWithCode:(NSString *)code;
 - (BOOL)isServiceValid;
 - (DOUService *)getService;
-- (id)getEngine:(NSString *)engine;
+- (id)getEngine:(EngineTypes)engine_id;
 
 @end

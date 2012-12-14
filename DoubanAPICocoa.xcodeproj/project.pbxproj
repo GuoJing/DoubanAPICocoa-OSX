@@ -16,16 +16,18 @@
 		2322B615167AFC28002D1811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2322B614167AFC28002D1811 /* README.md */; };
 		2322B621167B0EC9002D1811 /* DOULocEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B61F167B0EC9002D1811 /* DOULocEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B622167B0EC9002D1811 /* DOULocEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B620167B0EC9002D1811 /* DOULocEngine.m */; };
-		2322B62F167B2386002D1811 /* DOUCommentEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B62D167B2386002D1811 /* DOUCommentEngine.h */; };
+		2322B62F167B2386002D1811 /* DOUCommentEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B62D167B2386002D1811 /* DOUCommentEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B630167B2386002D1811 /* DOUCommentEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B62E167B2386002D1811 /* DOUCommentEngine.m */; };
-		2322B633167B23A1002D1811 /* DOUOnlineEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B631167B23A1002D1811 /* DOUOnlineEngine.h */; };
+		2322B633167B23A1002D1811 /* DOUOnlineEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B631167B23A1002D1811 /* DOUOnlineEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B634167B23A1002D1811 /* DOUOnlineEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B632167B23A1002D1811 /* DOUOnlineEngine.m */; };
-		2322B637167B2456002D1811 /* DOUUserEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B635167B2456002D1811 /* DOUUserEngine.h */; };
+		2322B637167B2456002D1811 /* DOUUserEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B635167B2456002D1811 /* DOUUserEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B638167B2456002D1811 /* DOUUserEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B636167B2456002D1811 /* DOUUserEngine.m */; };
-		2322B63B167B24A7002D1811 /* DOUAlbumEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B639167B24A7002D1811 /* DOUAlbumEngine.h */; };
+		2322B63B167B24A7002D1811 /* DOUAlbumEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B639167B24A7002D1811 /* DOUAlbumEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B63C167B24A7002D1811 /* DOUAlbumEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B63A167B24A7002D1811 /* DOUAlbumEngine.m */; };
-		2322B63F167B24DD002D1811 /* DOUPhotoEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B63D167B24DD002D1811 /* DOUPhotoEngine.h */; };
+		2322B63F167B24DD002D1811 /* DOUPhotoEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B63D167B24DD002D1811 /* DOUPhotoEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B640167B24DD002D1811 /* DOUPhotoEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B63E167B24DD002D1811 /* DOUPhotoEngine.m */; };
+		2322B643167B276C002D1811 /* DOUConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B641167B276C002D1811 /* DOUConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2322B644167B276C002D1811 /* DOUConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B642167B276C002D1811 /* DOUConsts.m */; };
 		234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190616703781005B9C80 /* DOUHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B190D16703781005B9C80 /* DOUHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190716703781005B9C80 /* DOUHttpRequest.m */; };
 		234B190E16703781005B9C80 /* DOUQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190816703781005B9C80 /* DOUQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -172,6 +174,8 @@
 		2322B63A167B24A7002D1811 /* DOUAlbumEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAlbumEngine.m; sourceTree = "<group>"; };
 		2322B63D167B24DD002D1811 /* DOUPhotoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUPhotoEngine.h; sourceTree = "<group>"; };
 		2322B63E167B24DD002D1811 /* DOUPhotoEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUPhotoEngine.m; sourceTree = "<group>"; };
+		2322B641167B276C002D1811 /* DOUConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUConsts.h; sourceTree = "<group>"; };
+		2322B642167B276C002D1811 /* DOUConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUConsts.m; sourceTree = "<group>"; };
 		234B190616703781005B9C80 /* DOUHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUHttpRequest.h; sourceTree = "<group>"; };
 		234B190716703781005B9C80 /* DOUHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUHttpRequest.m; sourceTree = "<group>"; };
 		234B190816703781005B9C80 /* DOUQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUQuery.h; sourceTree = "<group>"; };
@@ -396,6 +400,8 @@
 			children = (
 				2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */,
 				2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */,
+				2322B641167B276C002D1811 /* DOUConsts.h */,
+				2322B642167B276C002D1811 /* DOUConsts.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -769,12 +775,13 @@
 				2303EDD01679ACAD0026B5DB /* DOUEventEngine.h in Headers */,
 				2322B621167B0EC9002D1811 /* DOULocEngine.h in Headers */,
 				2303EDD91679B92F0026B5DB /* DOUAPIConsts.h in Headers */,
-				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
 				2322B62F167B2386002D1811 /* DOUCommentEngine.h in Headers */,
 				2322B633167B23A1002D1811 /* DOUOnlineEngine.h in Headers */,
 				2322B637167B2456002D1811 /* DOUUserEngine.h in Headers */,
 				2322B63B167B24A7002D1811 /* DOUAlbumEngine.h in Headers */,
 				2322B63F167B24DD002D1811 /* DOUPhotoEngine.h in Headers */,
+				2322B643167B276C002D1811 /* DOUConsts.h in Headers */,
+				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,6 +913,7 @@
 				2322B638167B2456002D1811 /* DOUUserEngine.m in Sources */,
 				2322B63C167B24A7002D1811 /* DOUAlbumEngine.m in Sources */,
 				2322B640167B24DD002D1811 /* DOUPhotoEngine.m in Sources */,
+				2322B644167B276C002D1811 /* DOUConsts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

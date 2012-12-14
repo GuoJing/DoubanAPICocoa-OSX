@@ -17,8 +17,8 @@
 		23152178167077F000AF553E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23152176167077F000AF553E /* InfoPlist.strings */; };
 		2315217B167077F000AF553E /* SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2315217A167077F000AF553E /* SampleTests.m */; };
 		231522801670793500AF553E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315227F1670793500AF553E /* Security.framework */; };
-		2322B612167AFB0E002D1811 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2322B611167AFB0E002D1811 /* DoubanAPICocoa.framework */; };
-		2322B613167AFB18002D1811 /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2322B611167AFB0E002D1811 /* DoubanAPICocoa.framework */; };
+		2322B647167B35B6002D1811 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
+		2322B648167B35BC002D1811 /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2322B613167AFB18002D1811 /* DoubanAPICocoa.framework in CopyFiles */,
+				2322B648167B35BC002D1811 /* DoubanAPICocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 		23152179167077F000AF553E /* SampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleTests.h; sourceTree = "<group>"; };
 		2315217A167077F000AF553E /* SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleTests.m; sourceTree = "<group>"; };
 		2315227F1670793500AF553E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		2322B611167AFB0E002D1811 /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
+		2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +76,7 @@
 			files = (
 				231522801670793500AF553E /* Security.framework in Frameworks */,
 				2315214E167077EF00AF553E /* Cocoa.framework in Frameworks */,
-				2322B612167AFB0E002D1811 /* DoubanAPICocoa.framework in Frameworks */,
+				2322B647167B35B6002D1811 /* DoubanAPICocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		2315214F167077EF00AF553E /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2322B611167AFB0E002D1811 /* DoubanAPICocoa.framework */,
+				2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */,
 				23152150167077EF00AF553E /* AppKit.framework */,
 				23152151167077EF00AF553E /* CoreData.framework */,
 				23152152167077EF00AF553E /* Foundation.framework */,
