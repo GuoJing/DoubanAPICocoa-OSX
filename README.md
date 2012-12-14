@@ -6,6 +6,8 @@
 
 **并且该版本不支持GData等V1版本特性，只支持V2。**
 
+我是豆瓣的同城工程师，所以同城方面的支持会更好。其他的基本功能应该是支持的。
+
 如果你需要iOS版本，请去:
 
 1. 开发版：[douban-objc-client](https://github.com/lincode/douban-objc-client)
