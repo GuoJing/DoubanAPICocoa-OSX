@@ -92,6 +92,28 @@
 	DOUService *service = [DOUService sharedInstance];
 	[service addRequest:req];
 
+### 使用v0.1.1之后的版本 ###
+
+通过apiKey等获得一个engine。
+
+    DOUEngine *engine = [[DOUEngine alloc] initWithApiKey:kAPIKey
+                                            withSecretKey:kPrivateKey
+                                             withRedirUrl:kRedirectUrl];
+                                             
+通过engine获得event_engine。
+
+    DOUEventEngine *event_engine = [self.engine getEngine:@"event"];
+    
+使用闭包进行网络请求。
+
+    void(^successBlock)(DOUEvent *) = ^(DOUEvent *event) {
+        [self updateImageUI:event];
+    };
+    
+使用engine内封装好的方法，把闭包传进去。
+
+    [event_engine getEventWithRemoteID:self.eid_field.title successBlock:successBlock];
+
 具体还是请看Sample代码，简单易懂。
 
 ## Sample ##
@@ -113,7 +135,7 @@ v0.1
 
 ## 待办 ##
 
-v0.2
+v0.1.1 - **working on this**
 
-1. 更好的api支持，可以通过id直接获得对象，而不是从列表中或许。
+1. 更好的api支持，可以通过id直接获得对象，而不是从列表中获取。
 2. 配置自定义化。

@@ -13,6 +13,7 @@
 		2303EDD11679ACAD0026B5DB /* DOUEventEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303EDCF1679ACAD0026B5DB /* DOUEventEngine.m */; };
 		2303EDD81679B92F0026B5DB /* DOUAPIConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */; };
 		2303EDD91679B92F0026B5DB /* DOUAPIConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2322B615167AFC28002D1811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2322B614167AFC28002D1811 /* README.md */; };
 		234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190616703781005B9C80 /* DOUHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B190D16703781005B9C80 /* DOUHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190716703781005B9C80 /* DOUHttpRequest.m */; };
 		234B190E16703781005B9C80 /* DOUQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190816703781005B9C80 /* DOUQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -146,6 +147,7 @@
 		2303EDCF1679ACAD0026B5DB /* DOUEventEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUEventEngine.m; sourceTree = "<group>"; };
 		2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAPIConsts.m; sourceTree = "<group>"; };
 		2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAPIConsts.h; sourceTree = "<group>"; };
+		2322B614167AFC28002D1811 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		234B190616703781005B9C80 /* DOUHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUHttpRequest.h; sourceTree = "<group>"; };
 		234B190716703781005B9C80 /* DOUHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUHttpRequest.m; sourceTree = "<group>"; };
 		234B190816703781005B9C80 /* DOUQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUQuery.h; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		236254B41650FE2200B2A141 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2322B614167AFC28002D1811 /* README.md */,
 				236254B51650FE2200B2A141 /* DoubanAPICocoa-Info.plist */,
 				236254B61650FE2200B2A141 /* InfoPlist.strings */,
 				236254B91650FE2200B2A141 /* DoubanAPICocoa-Prefix.pch */,
@@ -738,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				236254B81650FE2200B2A141 /* InfoPlist.strings in Resources */,
+				2322B615167AFC28002D1811 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
