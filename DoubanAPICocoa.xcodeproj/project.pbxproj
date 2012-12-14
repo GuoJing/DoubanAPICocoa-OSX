@@ -304,13 +304,11 @@
 		2303EDC41679AA520026B5DB /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				2322B62C167B19A3002D1811 /* Utils */,
+				2322B62B167B1980002D1811 /* Engine */,
 				2322B623167B115B002D1811 /* Event */,
 				2322B625167B1169002D1811 /* Photo */,
 				2322B624167B1162002D1811 /* Community */,
-				2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */,
-				2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */,
-				2303EDCA1679AC860026B5DB /* DOUEngine.h */,
-				2303EDCB1679AC860026B5DB /* DOUEngine.m */,
 			);
 			name = Engine;
 			path = Src/Engine;
@@ -339,6 +337,37 @@
 			children = (
 			);
 			name = Photo;
+			sourceTree = "<group>";
+		};
+		2322B62A167B196F002D1811 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				23BB029C166C548400930FFD /* DOUObject.h */,
+				23BB029D166C548400930FFD /* DOUObject.m */,
+				23BB029E166C548400930FFD /* DOUObject+Utils.h */,
+				23BB029F166C548400930FFD /* DOUObject+Utils.m */,
+				23BB02A0166C548400930FFD /* DOUObjectArray.h */,
+				23BB02A1166C548400930FFD /* DOUObjectArray.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
+		2322B62B167B1980002D1811 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				2303EDCA1679AC860026B5DB /* DOUEngine.h */,
+				2303EDCB1679AC860026B5DB /* DOUEngine.m */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		2322B62C167B19A3002D1811 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */,
+				2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		2362549E1650FE2200B2A141 = {
@@ -583,15 +612,10 @@
 		23BB0290166C545600930FFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2322B62A167B196F002D1811 /* Object */,
 				23BB02A2166C548400930FFD /* Event */,
 				23BB02AB166C548400930FFD /* Photo */,
 				23BB0291166C548400930FFD /* Community */,
-				23BB029C166C548400930FFD /* DOUObject.h */,
-				23BB029D166C548400930FFD /* DOUObject.m */,
-				23BB029E166C548400930FFD /* DOUObject+Utils.h */,
-				23BB029F166C548400930FFD /* DOUObject+Utils.m */,
-				23BB02A0166C548400930FFD /* DOUObjectArray.h */,
-				23BB02A1166C548400930FFD /* DOUObjectArray.m */,
 			);
 			name = Model;
 			path = Src/Model;
