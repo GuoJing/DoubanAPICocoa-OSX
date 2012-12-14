@@ -11,20 +11,40 @@
 #import "DOUAPIConfig.h"
 #import "DOUOAuthService.h"
 
+#import "DOUEventEngine.h"
+
 @implementation DOUEngine
 
 @synthesize apiKey;
 @synthesize secretKey;
 @synthesize redirUrl;
 
+- (id)initWithEngine:(DOUEngine *)engine {
+    self = [super init];
+    if (self) {
+        self.apiKey = engine.apiKey;
+        self.secretKey = engine.secretKey;
+        self.redirUrl = engine.redirUrl;
+    }
+    return self;
+}
+
 - (id)initWithApiKey:(NSString *)theApiKey
        withSecretKey:(NSString *)theSecretKey
         withRedirUrl:(NSString *)theRedirUrl {
-    //Use this to new a engine
-    self.apiKey = theApiKey;
-    self.secretKey = theSecretKey;
-    self.redirUrl = theRedirUrl;
+    self = [super init];
+    if (self) {
+        //Use this to new a engine
+        self.apiKey = theApiKey;
+        self.secretKey = theSecretKey;
+        self.redirUrl = theRedirUrl;
+    }
     return self;
+}
+
+- (NSString *)getConnectUrl {
+    NSString *urlStr = [NSString stringWithFormat:@"https://www.douban.com/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", self.apiKey, self.redirUrl];
+    return urlStr;
 }
 
 - (void)didLoadWithCode:(NSString *)code{
@@ -55,6 +75,13 @@
     } else {
         return service;
     }
+}
+
+- (id)getEngine:(NSString *)engine{
+    if ([engine isEqualToString:@"event"]) {
+        return [[DOUEventEngine alloc] initWithEngine:self];
+    }
+    return self;
 }
 
 - (void)dealloc {

@@ -7,36 +7,44 @@
 //
 
 #import "DOUEventEngine.h"
-
+#import "DOUAPIConfig.h"
 #import "DOUEvent.h"
 #import "DOUEventArray.h"
 #import "DOUService.h"
-#import "DOUApiConsts.h"
+#import "DOUOAuthService.h"
+#import "DOUAPIConsts.h"
 #import "DOUQuery.h"
 
 @implementation DOUEventEngine
 
-- (DOUEvent *)initWithRemoteID:(NSString *)event_id {
-    __block DOUEvent *event = nil;
+- (void)getEventWithRemoteID:(NSString *)event_id successBlock:(void(^)(DOUEvent *))successBlock{
+    __block DOUEvent *newEvent = nil;
     if(![self isServiceValid]) {
-        return nil;
+        return;
     }
 
     DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventAPI, event_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
-
+    
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
             if (array) {
-                event = [[DOUEvent alloc] initWithString:[req responseString]];
+                newEvent = [[DOUEvent alloc] initWithString:[req responseString]];
+                if (successBlock) {
+                    successBlock(newEvent);
+                }
             }
         }
     };
     [service get:query callback:completionBlock];
-    return event;
 }
 
+- (void)dealloc
+{
+    [super dealloc];
+}
 @end
