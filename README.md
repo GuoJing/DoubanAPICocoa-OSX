@@ -104,7 +104,7 @@
                                              
 通过engine获得event_engine。
 
-    DOUEventEngine *event_engine = [self.engine getEngine:@"event"];
+    DOUEventEngine *event_engine = [self.engine getEngine:kDouEvent];
     
 使用闭包进行网络请求。
 
