@@ -19,6 +19,8 @@
 		231522801670793500AF553E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315227F1670793500AF553E /* Security.framework */; };
 		2322B647167B35B6002D1811 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
 		2322B648167B35BC002D1811 /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
+		2322B675167CBD4C002D1811 /* eye_50.png in Resources */ = {isa = PBXBuildFile; fileRef = 2322B674167CBD4C002D1811 /* eye_50.png */; };
+		2322B67E167CBFAE002D1811 /* EventWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B67D167CBFAE002D1811 /* EventWindowController.m */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,9 @@
 		2315217A167077F000AF553E /* SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleTests.m; sourceTree = "<group>"; };
 		2315227F1670793500AF553E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
+		2322B674167CBD4C002D1811 /* eye_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye_50.png; sourceTree = "<group>"; };
+		2322B67C167CBFAE002D1811 /* EventWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventWindowController.h; sourceTree = "<group>"; };
+		2322B67D167CBFAE002D1811 /* EventWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventWindowController.m; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +144,8 @@
 				23152165167077F000AF553E /* MainMenu.xib */,
 				23F2A3EC1675BF620034BFD4 /* MainWindowController.h */,
 				23F2A3ED1675BF620034BFD4 /* MainWindowController.m */,
+				2322B67C167CBFAE002D1811 /* EventWindowController.h */,
+				2322B67D167CBFAE002D1811 /* EventWindowController.m */,
 				23152154167077EF00AF553E /* Supporting Files */,
 			);
 			path = Sample;
@@ -147,6 +154,7 @@
 		23152154167077EF00AF553E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2322B674167CBD4C002D1811 /* eye_50.png */,
 				23152155167077EF00AF553E /* Sample-Info.plist */,
 				23152156167077EF00AF553E /* InfoPlist.strings */,
 				23152159167077EF00AF553E /* main.m */,
@@ -251,6 +259,7 @@
 				23152158167077EF00AF553E /* InfoPlist.strings in Resources */,
 				2315215E167077EF00AF553E /* Credits.rtf in Resources */,
 				23152167167077F000AF553E /* MainMenu.xib in Resources */,
+				2322B675167CBD4C002D1811 /* eye_50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,7 @@
 			files = (
 				2315215A167077EF00AF553E /* main.m in Sources */,
 				23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */,
+				2322B67E167CBFAE002D1811 /* EventWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

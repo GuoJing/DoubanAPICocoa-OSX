@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #import "DOUService.h"
+#import "DOUOAuthService.h"
+#import "DOUAPIConfig.h"
+#import "DOUQuery.h"
+#import "DOUHttpRequest.h"
+#import "DOUOAuthStore.h"
 #import "DOUConsts.h"
 
 @interface DOUEngine : NSObject {
