@@ -18,3 +18,17 @@ enum _EngineTypes {
     kDOUUser,
     kDOUBook
 } typedef EngineTypes;
+
+enum _RateRanks {
+    ONE = 1,
+    TWO = 2,
+    THREE = 3,
+    FOUR = 4,
+    FIVE = 5
+} typedef RateRanks;
+
+extern NSString * const kDOUBookactionWish;
+extern NSString * const kDOUBookactionReading;
+extern NSString * const kDOUBookactionRead;
+extern NSString * const kDOUPrivacyPrivate;
+extern NSString * const kDOUPrivacyPublic;

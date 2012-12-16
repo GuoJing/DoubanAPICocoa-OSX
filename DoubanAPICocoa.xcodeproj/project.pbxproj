@@ -79,6 +79,7 @@
 		2322B673167CB7D8002D1811 /* DOUNotificationArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B66B167CB7D8002D1811 /* DOUNotificationArray.m */; };
 		2322B68B167D748F002D1811 /* DOUErrorConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B689167D748E002D1811 /* DOUErrorConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B68C167D748F002D1811 /* DOUErrorConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B68A167D748E002D1811 /* DOUErrorConsts.m */; };
+		234A3824167E11F10078AC9D /* DOUConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A3823167E11F10078AC9D /* DOUConsts.m */; };
 		234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190616703781005B9C80 /* DOUHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B190D16703781005B9C80 /* DOUHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190716703781005B9C80 /* DOUHttpRequest.m */; };
 		234B190E16703781005B9C80 /* DOUQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190816703781005B9C80 /* DOUQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -268,6 +269,7 @@
 		2322B66B167CB7D8002D1811 /* DOUNotificationArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUNotificationArray.m; sourceTree = "<group>"; };
 		2322B689167D748E002D1811 /* DOUErrorConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUErrorConsts.h; sourceTree = "<group>"; };
 		2322B68A167D748E002D1811 /* DOUErrorConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUErrorConsts.m; sourceTree = "<group>"; };
+		234A3823167E11F10078AC9D /* DOUConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUConsts.m; sourceTree = "<group>"; };
 		234B190616703781005B9C80 /* DOUHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUHttpRequest.h; sourceTree = "<group>"; };
 		234B190716703781005B9C80 /* DOUHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUHttpRequest.m; sourceTree = "<group>"; };
 		234B190816703781005B9C80 /* DOUQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUQuery.h; sourceTree = "<group>"; };
@@ -656,6 +658,7 @@
 				2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */,
 				2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */,
 				2322B641167B276C002D1811 /* DOUConsts.h */,
+				234A3823167E11F10078AC9D /* DOUConsts.m */,
 				2322B689167D748E002D1811 /* DOUErrorConsts.h */,
 				2322B68A167D748E002D1811 /* DOUErrorConsts.m */,
 			);
@@ -1254,6 +1257,7 @@
 				23198EC6167DC9A900E9692D /* DOUUserTagArray.m in Sources */,
 				23198ECA167DCBAC00E9692D /* DOUAnnotation.m in Sources */,
 				23198ECE167DCBBD00E9692D /* DOUAnnotationArray.m in Sources */,
+				234A3824167E11F10078AC9D /* DOUConsts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

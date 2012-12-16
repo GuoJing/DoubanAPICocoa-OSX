@@ -72,7 +72,6 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            NSLog(@"%@", [req responseString]);
             DOUUserArray *array = [[DOUUserArray alloc] initWithString:[req responseString]];
             if (successBlock) {
                 successBlock(array);

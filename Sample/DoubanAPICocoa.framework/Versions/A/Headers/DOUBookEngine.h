@@ -41,7 +41,8 @@
                   failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)getTagsWithRemoteUserID:(NSString *)user_id
-                 bookID:(NSString *)book_id
+                          start:(int)start
+                          count:(int)count
            successBlock:(void(^)(DOUUserTagArray *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock;
 
@@ -52,8 +53,6 @@
                    failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)getUserCollectionWithRemoteBookID:(NSString *)book_id
-                                    start:(int)start
-                                    count:(int)count
                        successBlock:(void(^)(DOUCollection *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock;
 
@@ -78,7 +77,7 @@
                            tags:(NSString *)tags
                         comment:(NSString *)comment
                         privacy:(NSString *)privacy
-                         rating:(NSString *)rating
+                         rating:(int)rating
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock;
 
@@ -87,7 +86,7 @@
                                tags:(NSString *)tags
                             comment:(NSString *)comment
                             privacy:(NSString *)privacy
-                             rating:(NSString *)rating
+                             rating:(int)rating
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock;
 
@@ -118,14 +117,14 @@
 - (void)writeReview:(NSString *)book_id
               title:(NSString *)title
             content:(NSString *)content
-             rating:(NSString *)rating
+             rating:(int)rating
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)eidtReview:(NSString *)book_id
               title:(NSString *)title
             content:(NSString *)content
-             rating:(NSString *)rating
+             rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock;
 

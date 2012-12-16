@@ -7,3 +7,10 @@
 //
 
 #import "DOUConsts.h"
+
+NSString * const kDOUBookactionWish = @"wish";
+NSString * const kDOUBookactionReading = @"reading";
+NSString * const kDOUBookactionRead = @"read";
+
+NSString * const kDOUPrivacyPrivate = @"private";
+NSString * const kDOUPrivacyPublic = @"public";
