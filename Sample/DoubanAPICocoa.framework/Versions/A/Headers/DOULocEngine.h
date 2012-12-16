@@ -10,6 +10,7 @@
 
 #import "DOUEngine.h"
 #import "DOULoc.h"
+#import "DOULocArray.h"
 
 @interface DOULocEngine : DOUEngine
 
@@ -17,4 +18,6 @@
               successBlock:(void(^)(DOULoc *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock;
 
+- (void)getLocListWithRemote:successBlock:(void(^)(DOULocArray *))successListBlock
+                 failedBlock:(void(^)(NSString *))failedListBlock;
 @end

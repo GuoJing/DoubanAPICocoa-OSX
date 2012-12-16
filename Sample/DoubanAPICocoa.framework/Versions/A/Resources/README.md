@@ -104,7 +104,7 @@
                                              
 通过engine获得event_engine。
 
-    DOUEventEngine *event_engine = [self.engine getEngine:kDouEvent];
+    DOUEventEngine *event_engine = [self.engine getEngine:kDOUEvent];
     
 使用闭包进行网络请求。
 
@@ -120,13 +120,21 @@
 
 ## Sample ##
 
-Sample是一个简单的桌面客户端，非常简单，其作用是获取豆瓣活动信息。
+Sample是一个简单的客户端，用来演示各种功能。
+
+![samplewindow](http://guojing.me/images/2012/samplestart.png)
+
+可以在**菜单栏**里打开相应的Sample，**Sample并不是同步更新完善**。
+
+### Event Sample ###
 
 ![samplewindow](http://guojing.me/images/2012/samplewindow.png)
 
-1. 首先点击`Connect`，连接到豆瓣。
+获取活动信息
+
+1. 首先点击`验证`，连接到豆瓣。
 2. 链接成功后，会跳转到我的页面，点击`Load`再度激活程序。
-3. 在输入框中输入活动的id，并且点击`Get`，获取活动海报信息。
+3. 在输入框中输入活动的id，并且点击`获取`，获取活动海报等信息。
 
 ## 历史 ##
 

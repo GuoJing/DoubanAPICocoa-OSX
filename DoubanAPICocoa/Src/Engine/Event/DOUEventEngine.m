@@ -13,6 +13,7 @@
 #import "DOUService.h"
 #import "DOUOAuthService.h"
 #import "DOUAPIConsts.h"
+#import "DOUErrorConsts.h"
 #import "DOUQuery.h"
 
 @implementation DOUEventEngine
@@ -22,7 +23,9 @@
                  failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUEvent *newEvent = nil;
     if(![self isServiceValid]) {
-        return;
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
     }
 
     DOUService *service = [self getService];
@@ -47,6 +50,31 @@
         }
     };
     [service get:query callback:completionBlock];
+}
+
+- (void)getParticipantedUsersWithRemoteEventID:(NSString *)event_id
+                                  successBlock:(void(^)(DOUUser *))successBlock
+                                   failedBlock:(void(^)(NSString *))failedBlock{
+}
+
+- (void)getWishedUsersWithRemoteEventID:(NSString *)event_id
+                           successBlock:(void(^)(DOUUser *))successBlock
+                            failedBlock:(void(^)(NSString *))failedBlock{
+}
+
+- (void)getUserEventsWithRemoteUserID:(NSString *)user_id
+                         successBlock:(void(^)(DOUEventArray *))successBlock
+                          failedBlock:(void(^)(NSString *))failedBlock{
+}
+
+- (void)getUserParticipantedEventsWithRemoteUserID:(NSString *)user_id
+                                      successBlock:(void(^)(DOUEventArray *))successBlock
+                                       failedBlock:(void(^)(NSString *))failedBlock{
+}
+
+- (void)getUserWishedEventsWithRemoteUserID:(NSString *)event_id
+                               successBlock:(void(^)(DOUEventArray *))successBlock
+                                failedBlock:(void(^)(NSString *))failedBlock{
 }
 
 - (void)dealloc

@@ -72,7 +72,7 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 }
 
 - (IBAction)onGetClicked:(id)sender {
-    DOUEventEngine *event_engine = [self.engine getEngine:kDouEvent];
+    DOUEventEngine *event_engine = [self.engine getEngine:kDOUEvent];
     self.info_field.title = @"等待网络请求...";
     [self.progress startAnimation:self];
     
@@ -89,7 +89,7 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 }
 
 - (void)updateImageUI:(DOUEvent *)event {
-    DOULocEngine *loc_engine = [self.engine getEngine:kDouLoc];
+    DOULocEngine *loc_engine = [self.engine getEngine:kDOULoc];
     
     void(^successBlock)(DOULoc *) = ^(DOULoc *loc) {
         self.city_field.title = [loc name];

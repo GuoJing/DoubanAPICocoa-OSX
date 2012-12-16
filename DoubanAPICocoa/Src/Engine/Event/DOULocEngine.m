@@ -50,4 +50,8 @@
     [service get:query callback:completionBlock];
 }
 
+- (void)getLocListWithRemote:successBlock:(void(^)(DOULocArray *))successListBlock
+                 failedBlock:(void(^)(NSString *))failedListBlock{
+}
+
 @end

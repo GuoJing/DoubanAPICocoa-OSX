@@ -87,25 +87,25 @@
 
 - (id)getEngine:(EngineTypes)engine_id{
     switch (engine_id) {
-        case kDouEvent:
+        case kDOUEvent:
             return [[[DOUEventEngine alloc] initWithEngine:self] autorelease];
             break;
-        case kDouLoc:
+        case kDOULoc:
             return[[[DOULocEngine alloc] initWithEngine:self] autorelease];;
             break;
-        case kDouAlbum:
+        case kDOUAlbum:
             return [[[DOUAlbumEngine alloc] initWithEngine:self] autorelease];;
             break;
-        case kDouPhoto:
+        case kDOUPhoto:
             return [[[DOUPhotoEngine alloc] initWithEngine:self] autorelease];
             break;
-        case kDouComment:
+        case kDOUComment:
             return [[[DOUCommentEngine alloc] initWithEngine:self] autorelease];
             break;
-        case kDouOnline:
+        case kDOUOnline:
             return [[[DOUOnlineEngine alloc] initWithEngine:self] autorelease];
             break;
-        case kDouUser:
+        case kDOUUser:
             return [[[DOUUserEngine alloc] initWithEngine:self] autorelease];
             break;
         default:
