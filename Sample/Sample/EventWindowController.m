@@ -26,12 +26,20 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 @synthesize info_field;
 @synthesize engine;
 
+@synthesize city_field;
+@synthesize begin_time_field;
+@synthesize end_time_field;
+@synthesize address_field;
+@synthesize einfo_field;
+@synthesize progress;
+
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
     if (self) {
         [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(getUrl:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
         self.engine = [[DOUEngine alloc] initWithApiKey:kAPIKey withSecretKey:kPrivateKey withRedirUrl:kRedirectUrl];
+        [[self progress] setDisplayedWhenStopped:YES];
     }
     
     return self;
@@ -55,8 +63,8 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
-    NSLog(@"success!");
-    self.login_button.title = @"Connected!";
+    NSLog(@"成功!");
+    self.login_button.title = @"已验证!";
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didFailWithError:(NSError *)error {
@@ -65,9 +73,11 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 
 - (IBAction)onGetClicked:(id)sender {
     DOUEventEngine *event_engine = [self.engine getEngine:kDouEvent];
-    self.info_field.title = @"Wariting for reply...";
+    self.info_field.title = @"等待网络请求...";
+    [self.progress startAnimation:self];
     
     void(^successBlock)(DOUEvent *) = ^(DOUEvent *event) {
+        self.info_field.title = @"成功!";
         [self updateImageUI:event];
     };
     
@@ -82,7 +92,7 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
     DOULocEngine *loc_engine = [self.engine getEngine:kDouLoc];
     
     void(^successBlock)(DOULoc *) = ^(DOULoc *loc) {
-        self.info_field.title = [loc name];
+        self.city_field.title = [loc name];
     };
     
     void(^failedBlock)(NSString *) = ^(NSString *e) {
@@ -99,16 +109,22 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
     if (poster_data) {
         post = [[NSImage alloc] initWithData:poster_data];
         [self.pic_cell setImage:post];
-        self.info_field.title = @"Success!";
+        self.info_field.title = @"成功!";
     } else {
-        self.info_field.title = @"Failed!";
+        self.info_field.title = @"显示图片失败!";
     }
+    self.begin_time_field.title = [event beginTimeStr];
+    self.end_time_field.title = [event endTimeStr];
+    self.address_field.title  = [event address];
+    [self.einfo_field setString:[event content]];
+    
+    [self.progress stopAnimation:self];
 }
 
 - (IBAction)onLoginClicked:(id)sender {
     if ([self.engine isServiceValid]) {
-        self.info_field.title = @"Connected";
-        self.login_button.title = @"Connected";
+        self.info_field.title = @"已验证";
+        self.login_button.title = @"已验证";
     } else {
         NSString *url_str = [self.engine getConnectUrl];
         NSURL *login_url = [NSURL URLWithString:url_str];
@@ -121,9 +137,10 @@ static NSString * const kRedirectUrl = @"http://guojing.me/release/doubanapicoco
 
 - (void)awakeFromNib {
     if ([self.engine isServiceValid]) {
-        self.info_field.title = @"Is Connected to douban";
-        self.login_button.title = @"Connected";
+        self.info_field.title = @"已在豆瓣验证";
+        self.login_button.title = @"已验证";
     }
+    [[self progress] stopAnimation:self];
 }
 
 - (void)windowDidLoad
