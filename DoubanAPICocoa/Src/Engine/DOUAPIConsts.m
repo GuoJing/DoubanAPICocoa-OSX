@@ -11,12 +11,15 @@
 //Event
 
 NSString * const kDOUEventAPIUrl = @"/v2/event/%@";
-NSString * const kDOUEventParticipantsAPIUrl = @"/v2/event/%@/participants";
-NSString * const kDOUEventWishersAPIurl = @"/v2/event/%@/wishers";
-NSString * const kDOUUserEvents = @"/v2/event/user_created/%@";
-NSString * const kDOUUserParticipantedEvents = @"/v2/event/user_participated/%@";
-NSString * const kDOUUserWishedEvents = @"/v2/event/user_wished/%@";
-NSString * const kDOUEventsList = @"/v2/event/list";
+NSString * const kDOUEventParticipantsAPIUrl = @"/v2/event/%@/participants?start=%d&count=%d";
+NSString * const kDOUEventWishersAPIUrl = @"/v2/event/%@/wishers?start=%d&count=%d";
+NSString * const kDOUUserEventsAPIUrl = @"/v2/event/user_created/%@?start=%d&count=%d";
+NSString * const kDOUUserParticipantedEventsAPIUrl = @"/v2/event/user_participated/%@?start=%d&count=%d";
+NSString * const kDOUUserWishedEventsAPIUrl = @"/v2/event/user_wished/%@?start=%d&count=%d";
+NSString * const kDOUEventsListAPIUrl = @"/v2/event/list";
+
+NSString * const kDOUAttendEventAPIUrl = @"/v2/event/%@/participants";
+NSString * const kDOUWishEventAPIUrl = @"/v2/event/%@/wishers";
 
 //Loc
 

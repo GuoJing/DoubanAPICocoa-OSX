@@ -10,11 +10,13 @@
 
 extern NSString * const kDOUEventAPIUrl;
 extern NSString * const kDOUEventParticipantsAPIUrl;
-extern NSString * const kDOUEventWishersAPIurl;
-extern NSString * const kDOUUserEvents;
-extern NSString * const kDOUUserParticipantedEvents;
-extern NSString * const kDOUUserWishedEvents;
-extern NSString * const kDOUEventsList;
+extern NSString * const kDOUEventWishersAPIUrl;
+extern NSString * const kDOUUserEventsAPIUrl;
+extern NSString * const kDOUUserParticipantedEventsAPIUrl;
+extern NSString * const kDOUUserWishedEventsAPIUrl;
+extern NSString * const kDOUEventsListAPIUrl;
+extern NSString * const kDOUAttendEventAPIUrl;
+extern NSString * const kDOUWishEventAPIUrl;
 
 extern NSString * const kDOULocAPIUrl;
 extern NSString * const kDOULocListAPIUrl;
