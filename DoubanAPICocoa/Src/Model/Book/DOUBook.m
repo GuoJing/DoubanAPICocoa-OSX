@@ -8,7 +8,7 @@
 
 #import "DOUBook.h"
 #import "DOUObject+Utils.h"
-
+#import "SBJson.h"
 
 @implementation DOUBook
 
@@ -16,6 +16,8 @@
 @dynamic title;
 @dynamic subTitle;
 @dynamic rating;
+@dynamic numRaters;
+@dynamic average;
 @dynamic ISBN10;
 @dynamic ISBN13;
 
@@ -23,6 +25,7 @@
 @dynamic publishDateStr;
 @dynamic publishDate;
 
+@dynamic image;
 @dynamic largeImage;
 @dynamic smallImage;
 @dynamic mediumImage;
@@ -32,19 +35,37 @@
 
 
 - (NSString *)identifier {
-  return [self.dictionary objectForKey:@"id"];
+    return [self.dictionary objectForKey:@"id"];
 }
 
 - (NSString *)subTitle {
-  return [self.dictionary objectForKey:@"subtitle"];
+    return [self.dictionary objectForKey:@"subtitle"];
 }
 
 - (NSString *)title {
-  return [self.dictionary objectForKey:@"title"];
+    return [self.dictionary objectForKey:@"title"];
 }
 
 - (NSString *)rating {
-  return [self.dictionary objectForKey:@"rating"];
+    return [self.dictionary objectForKey:@"rating"];
+}
+
+- (NSString *)numRaters {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"rating"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"numRaters"];
+    }
+}
+
+- (NSString *)average {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"rating"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"average"];
+    }
 }
 
 - (NSString *)ISBN10 {
@@ -59,16 +80,39 @@
     return [self.dictionary objectForKey:@"pubdate"];
 }
 
+- (NSString *)image{
+    return [self.dictionary objectForKey:@"image"];
+}
+
+- (NSString *)images{
+    return [self.dictionary objectForKey:@"images"];
+}
+
 - (NSString *)largeImage {
-  return [self.dictionary objectForKey:@"large"];
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"images"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"large"];
+    }
 }
 
 - (NSString *)smallImage {
-  return [self.dictionary objectForKey:@"small"];
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"images"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"small"];
+    }
 }
 
 - (NSString *)mediumImage {
-  return [self.dictionary objectForKey:@"medium"];
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"images"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"medium"];
+    }
 }
 
 

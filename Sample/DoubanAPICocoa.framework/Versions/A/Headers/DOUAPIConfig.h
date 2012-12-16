@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const kDoubanUrl;
+extern NSString * const kDoubanHttpUrl;
+extern NSString * const kDoubanHttpsUrl;
 
 extern NSString * const kHttpsApiBaseUrl;
 extern NSString * const kHttpApiBaseUrl;

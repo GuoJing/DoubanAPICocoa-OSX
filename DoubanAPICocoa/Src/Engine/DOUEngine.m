@@ -52,7 +52,7 @@
 }
 
 - (NSString *)getConnectUrl {
-    NSString *urlStr = [NSString stringWithFormat:@"%@/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kDoubanUrl, self.apiKey, self.redirUrl];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/service/auth2/auth?client_id=%@&redirect_uri=%@&response_type=code", kDoubanHttpsUrl, self.apiKey, self.redirUrl];
     return urlStr;
 }
 

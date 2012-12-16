@@ -11,11 +11,47 @@
 #import "DOUBook.h"
 #import "DOUBookArray.h"
 
+#import "DOUAPIConsts.h"
+#import "DOUErrorConsts.h"
+
+#import "DOUBook.h"
+
 @implementation DOUBookEngine
 
 - (void)getBookWithRemoteID:(NSString *)book_id
                successBlock:(void(^)(DOUBook *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
+    __block DOUBook *newBook = nil;
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookAPIUrl, book_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        NSLog(@"%@", [req url]);
+        if (!error) {
+            DOUBookArray *array = [[DOUBookArray alloc] initWithString:[req responseString]];
+            if (array) {
+                newBook = [[DOUBook alloc] initWithString:[req responseString]];
+                if (successBlock) {
+                    successBlock(newBook);
+                }
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
 

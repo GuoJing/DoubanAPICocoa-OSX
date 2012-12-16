@@ -22,6 +22,8 @@
 		2322B648167B35BC002D1811 /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
 		2322B675167CBD4C002D1811 /* eye_50.png in Resources */ = {isa = PBXBuildFile; fileRef = 2322B674167CBD4C002D1811 /* eye_50.png */; };
 		2322B67E167CBFAE002D1811 /* EventWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B67D167CBFAE002D1811 /* EventWindowController.m */; };
+		234A381E167DE4D30078AC9D /* Consts.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A381D167DE4D30078AC9D /* Consts.m */; };
+		234A3822167DE5B60078AC9D /* BookWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A3821167DE5B60078AC9D /* BookWindowController.m */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,10 @@
 		2322B674167CBD4C002D1811 /* eye_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye_50.png; sourceTree = "<group>"; };
 		2322B67C167CBFAE002D1811 /* EventWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventWindowController.h; sourceTree = "<group>"; };
 		2322B67D167CBFAE002D1811 /* EventWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventWindowController.m; sourceTree = "<group>"; };
+		234A381C167DE4D30078AC9D /* Consts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		234A381D167DE4D30078AC9D /* Consts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consts.m; sourceTree = "<group>"; };
+		234A3820167DE5B60078AC9D /* BookWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookWindowController.h; sourceTree = "<group>"; };
+		234A3821167DE5B60078AC9D /* BookWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookWindowController.m; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,10 +150,14 @@
 			isa = PBXGroup;
 			children = (
 				23152165167077F000AF553E /* MainMenu.xib */,
+				234A381C167DE4D30078AC9D /* Consts.h */,
+				234A381D167DE4D30078AC9D /* Consts.m */,
 				23F2A3EC1675BF620034BFD4 /* MainWindowController.h */,
 				23F2A3ED1675BF620034BFD4 /* MainWindowController.m */,
 				2322B67C167CBFAE002D1811 /* EventWindowController.h */,
 				2322B67D167CBFAE002D1811 /* EventWindowController.m */,
+				234A3820167DE5B60078AC9D /* BookWindowController.h */,
+				234A3821167DE5B60078AC9D /* BookWindowController.m */,
 				23152154167077EF00AF553E /* Supporting Files */,
 			);
 			path = Sample;
@@ -301,6 +311,8 @@
 				2315215A167077EF00AF553E /* main.m in Sources */,
 				23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */,
 				2322B67E167CBFAE002D1811 /* EventWindowController.m in Sources */,
+				234A381E167DE4D30078AC9D /* Consts.m in Sources */,
+				234A3822167DE5B60078AC9D /* BookWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
