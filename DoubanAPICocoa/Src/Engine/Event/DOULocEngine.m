@@ -15,6 +15,7 @@
 #import "DOUOAuthService.h"
 #import "DOUAPIConsts.h"
 #import "DOUQuery.h"
+#import "DOUErrorConsts.h"
 
 @implementation DOULocEngine
 
@@ -23,6 +24,9 @@
                failedBlock:(void(^)(NSString *))failedBlock{
     __block DOULoc *newLoc = nil;
     if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
         return;
     }
     
@@ -52,6 +56,33 @@
 
 - (void)getLocListWithRemote:successBlock:(void(^)(DOULocArray *))successListBlock
                  failedBlock:(void(^)(NSString *))failedListBlock{
+    if(![self isServiceValid]) {
+        if (failedListBlock) {
+            failedListBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = kDOULocListAPIUrl;
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOULocArray *array = [[DOULocArray alloc] initWithString:[req responseString]];
+            if (array) {
+                if (successListBlock) {
+                    successListBlock(array);
+                }
+            }
+        } else {
+            if (failedListBlock) {
+                failedListBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
 @end

@@ -143,9 +143,13 @@ v0.1
 1. 移植iOS版本支持MacOS并调整结构。
 2. 去掉GData等老版本的支持。
 
+v0.1.1
+
+1. 使用封装的DOUEngine开发api，更加简单。
+2. 增加一些常用的model。
+
 ## 待办 ##
 
-v0.1.1 - **working on this**
+v0.1.2 - **working on this**
 
-1. 更好的api支持，可以通过id直接获得对象，而不是从列表中获取。
-2. 配置自定义化。
+1. 完善Engine。
