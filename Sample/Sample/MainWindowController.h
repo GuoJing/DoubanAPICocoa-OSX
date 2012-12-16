@@ -8,21 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MainWindowController : NSWindowController {
-    IBOutlet NSButton *login_button;
-    IBOutlet NSButton *get_button;
-    IBOutlet NSTextFieldCell *eid_field;
-    IBOutlet NSImageCell *pic_cell;
-    
-    IBOutlet NSTextFieldCell *info_field;
-}
+#import <DoubanAPICocoa/DOUEngine.h>
 
-@property (nonatomic, retain) NSButton *login_button;
-@property (nonatomic, retain) NSButton *get_button;
-@property (nonatomic, retain) NSTextFieldCell *eid_field;
-@property (nonatomic, retain) NSImageCell *pic_cell;
-@property (nonatomic, retain) NSTextFieldCell *info_field;
-
-- (IBAction)onGetClicked:(id)sender;
-- (IBAction)onLoginClicked:(id)sender;
+@interface MainWindowController : NSWindowController
 @end
