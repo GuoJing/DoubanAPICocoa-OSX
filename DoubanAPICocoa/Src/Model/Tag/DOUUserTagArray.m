@@ -1,22 +1,23 @@
 //
-//  DOUUserArray.m
+//  DOUUserTagArray.m
 //  DoubanAPICocoa
 //
 //  Created by GuoJing on 12-12-16.
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
-#import "DOUUserArray.h"
-#import "DOUUser.h"
+#import "DOUUserTagArray.h"
 
-@implementation DOUUserArray
+#import "DOUUserTag.h"
+
+@implementation DOUUserTagArray
 
 + (Class)objectClass {
-    return [DOUUser class];
+    return [DOUUserTag class];
 }
 
 + (NSString *)objectName {
-    return @"users";
+    return @"tags";
 }
 
 @end

@@ -18,6 +18,7 @@
 #import "DOUCommentEngine.h"
 #import "DOUOnlineEngine.h"
 #import "DOUUserEngine.h"
+#import "DOUBookEngine.h"
 
 #import "DOUConsts.h"
 
@@ -108,6 +109,8 @@
         case kDOUUser:
             return [[[DOUUserEngine alloc] initWithEngine:self] autorelease];
             break;
+        case kDOUBook:
+            return [[[DOUBookEngine alloc] initWithEngine:self] autorelease];
         default:
             return self;
     }

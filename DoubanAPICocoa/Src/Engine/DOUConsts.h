@@ -15,5 +15,6 @@ enum _EngineTypes {
     kDOUPhoto,
     kDOUComment,
     kDOUOnline,
-    kDOUUser
+    kDOUUser,
+    kDOUBook
 } typedef EngineTypes;
