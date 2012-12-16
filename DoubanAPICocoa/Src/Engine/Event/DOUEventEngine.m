@@ -15,6 +15,7 @@
 #import "DOUAPIConsts.h"
 #import "DOUErrorConsts.h"
 #import "DOUQuery.h"
+#import "DOUUserArray.h"
 
 @implementation DOUEventEngine
 
@@ -26,6 +27,7 @@
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
         }
+        return;
     }
 
     DOUService *service = [self getService];
@@ -53,28 +55,274 @@
 }
 
 - (void)getParticipantedUsersWithRemoteEventID:(NSString *)event_id
-                                  successBlock:(void(^)(DOUUser *))successBlock
+                                     userStart:(int)start
+                                     userCount:(int)count
+                                  successBlock:(void(^)(DOUUserArray *))successBlock
                                    failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUEventParticipantsAPIUrl, event_id, start, count];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            NSLog(@"%@", [req responseString]);
+            DOUUserArray *array = [[DOUUserArray alloc] initWithString:[req responseString]];
+            if (successBlock) {
+                successBlock(array);
+            }
+        } else {
+            if(failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
 - (void)getWishedUsersWithRemoteEventID:(NSString *)event_id
-                           successBlock:(void(^)(DOUUser *))successBlock
+                              userStart:(int)start
+                              userCount:(int)count
+                           successBlock:(void(^)(DOUUserArray *))successBlock
                             failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishersAPIUrl, event_id, start, count];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUUserArray *array = [[DOUUserArray alloc] initWithString:[req responseString]];
+            if (successBlock) {
+                successBlock(array);
+            }
+        } else {
+            if(failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
 - (void)getUserEventsWithRemoteUserID:(NSString *)user_id
+                            userStart:(int)start
+                            userCount:(int)count
                          successBlock:(void(^)(DOUEventArray *))successBlock
                           failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUUserEventsAPIUrl, user_id, start, count];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            if (successBlock) {
+                successBlock(array);
+            }
+        } else {
+            if(failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
 - (void)getUserParticipantedEventsWithRemoteUserID:(NSString *)user_id
+                                         userStart:(int)start
+                                         userCount:(int)count
                                       successBlock:(void(^)(DOUEventArray *))successBlock
                                        failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUUserParticipantedEventsAPIUrl, user_id, start, count];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            if (successBlock) {
+                successBlock(array);
+            }
+        } else {
+            if(failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
-- (void)getUserWishedEventsWithRemoteUserID:(NSString *)event_id
+- (void)getUserWishedEventsWithRemoteUserID:(NSString *)user_id
+                                  userStart:(int)start
+                                  userCount:(int)count
                                successBlock:(void(^)(DOUEventArray *))successBlock
                                 failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUUserWishedEventsAPIUrl, user_id, start, count];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            if (successBlock) {
+                successBlock(array);
+            }
+        } else {
+            if(failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
+}
+
+- (void)attendEvent:(NSString *)event_id
+       successBlock:(void(^)(NSString *))successBlock
+        failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUAttendEventAPIUrl, event_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service post:query postBody:nil callback:completionBlock];
+}
+
+- (void)quitAttendEvent:(NSString *)event_id
+           successBlock:(void(^)(NSString *))successBlock
+            failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUAttendEventAPIUrl, event_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service delete:query callback:completionBlock];
+}
+
+- (void)wishEvent:(NSString *)event_id
+     successBlock:(void(^)(NSString *))successBlock
+      failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUWishEventAPIUrl, event_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service post:query postBody:nil callback:completionBlock];
+}
+
+- (void)quitWishEvent:(NSString *)event_id
+         successBlock:(void(^)(NSString *))successBlock
+          failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUWishEventAPIUrl, event_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service delete:query callback:completionBlock];
 }
 
 - (void)dealloc

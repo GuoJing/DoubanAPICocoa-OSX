@@ -13,6 +13,8 @@
 		2303EDD11679ACAD0026B5DB /* DOUEventEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303EDCF1679ACAD0026B5DB /* DOUEventEngine.m */; };
 		2303EDD81679B92F0026B5DB /* DOUAPIConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */; };
 		2303EDD91679B92F0026B5DB /* DOUAPIConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23198E41167D9ED300E9692D /* DOUUserArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23198E3F167D9ED300E9692D /* DOUUserArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23198E42167D9ED300E9692D /* DOUUserArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23198E40167D9ED300E9692D /* DOUUserArray.m */; };
 		2322B615167AFC28002D1811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2322B614167AFC28002D1811 /* README.md */; };
 		2322B621167B0EC9002D1811 /* DOULocEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B61F167B0EC9002D1811 /* DOULocEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B622167B0EC9002D1811 /* DOULocEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B620167B0EC9002D1811 /* DOULocEngine.m */; };
@@ -48,7 +50,7 @@
 		2322B671167CB7D8002D1811 /* DOUNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B669167CB7D8002D1811 /* DOUNotification.m */; };
 		2322B672167CB7D8002D1811 /* DOUNotificationArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B66A167CB7D8002D1811 /* DOUNotificationArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B673167CB7D8002D1811 /* DOUNotificationArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B66B167CB7D8002D1811 /* DOUNotificationArray.m */; };
-		2322B68B167D748F002D1811 /* DOUErrorConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B689167D748E002D1811 /* DOUErrorConsts.h */; };
+		2322B68B167D748F002D1811 /* DOUErrorConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2322B689167D748E002D1811 /* DOUErrorConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2322B68C167D748F002D1811 /* DOUErrorConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B68A167D748E002D1811 /* DOUErrorConsts.m */; };
 		234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 234B190616703781005B9C80 /* DOUHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		234B190D16703781005B9C80 /* DOUHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 234B190716703781005B9C80 /* DOUHttpRequest.m */; };
@@ -183,6 +185,8 @@
 		2303EDCF1679ACAD0026B5DB /* DOUEventEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUEventEngine.m; sourceTree = "<group>"; };
 		2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAPIConsts.m; sourceTree = "<group>"; };
 		2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAPIConsts.h; sourceTree = "<group>"; };
+		23198E3F167D9ED300E9692D /* DOUUserArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUUserArray.h; sourceTree = "<group>"; };
+		23198E40167D9ED300E9692D /* DOUUserArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUUserArray.m; sourceTree = "<group>"; };
 		2322B614167AFC28002D1811 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2322B61F167B0EC9002D1811 /* DOULocEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOULocEngine.h; sourceTree = "<group>"; };
 		2322B620167B0EC9002D1811 /* DOULocEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOULocEngine.m; sourceTree = "<group>"; };
@@ -760,6 +764,8 @@
 				23BB0299166C548400930FFD /* DOUOnlineArray.m */,
 				23BB029A166C548400930FFD /* DOUUser.h */,
 				23BB029B166C548400930FFD /* DOUUser.m */,
+				23198E3F167D9ED300E9692D /* DOUUserArray.h */,
+				23198E40167D9ED300E9692D /* DOUUserArray.m */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -799,6 +805,50 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E84081165230DF0042F413 /* DOUAPIConfig.h in Headers */,
+				23BB02B2166C548400930FFD /* DOUComment.h in Headers */,
+				23BB02B4166C548400930FFD /* DOUCommentArray.h in Headers */,
+				23BB02B6166C548400930FFD /* DOUOnline.h in Headers */,
+				23BB02B8166C548400930FFD /* DOUOnlineArray.h in Headers */,
+				23BB02BA166C548400930FFD /* DOUUser.h in Headers */,
+				23BB02BC166C548400930FFD /* DOUObject.h in Headers */,
+				23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */,
+				23BB02C0166C548400930FFD /* DOUObjectArray.h in Headers */,
+				23BB02C2166C548400930FFD /* DOUEvent.h in Headers */,
+				23BB02C4166C548400930FFD /* DOUEventArray.h in Headers */,
+				234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */,
+				234B190E16703781005B9C80 /* DOUQuery.h in Headers */,
+				234B191016703781005B9C80 /* DOUService.h in Headers */,
+				234B1917167037B7005B9C80 /* DOUOAuth2.h in Headers */,
+				234B1918167037B7005B9C80 /* DOUOAuthService.h in Headers */,
+				234B191A167037B7005B9C80 /* DOUOAuthStore.h in Headers */,
+				23BB02C6166C548400930FFD /* DOULoc.h in Headers */,
+				23BB02C8166C548400930FFD /* DOULocArray.h in Headers */,
+				23BB02CA166C548400930FFD /* DOUAlbum.h in Headers */,
+				23BB02CC166C548400930FFD /* DOUPhoto.h in Headers */,
+				2303EDCC1679AC860026B5DB /* DOUEngine.h in Headers */,
+				2303EDD01679ACAD0026B5DB /* DOUEventEngine.h in Headers */,
+				2322B621167B0EC9002D1811 /* DOULocEngine.h in Headers */,
+				2303EDD91679B92F0026B5DB /* DOUAPIConsts.h in Headers */,
+				2322B62F167B2386002D1811 /* DOUCommentEngine.h in Headers */,
+				2322B633167B23A1002D1811 /* DOUOnlineEngine.h in Headers */,
+				2322B637167B2456002D1811 /* DOUUserEngine.h in Headers */,
+				2322B63B167B24A7002D1811 /* DOUAlbumEngine.h in Headers */,
+				2322B63F167B24DD002D1811 /* DOUPhotoEngine.h in Headers */,
+				2322B643167B276C002D1811 /* DOUConsts.h in Headers */,
+				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
+				2322B64E167CB77B002D1811 /* DOUBook.h in Headers */,
+				2322B650167CB77B002D1811 /* DOUBookArray.h in Headers */,
+				2322B65C167CB788002D1811 /* DOUMovie.h in Headers */,
+				2322B65E167CB788002D1811 /* DOUMovieArray.h in Headers */,
+				2322B660167CB788002D1811 /* DOUMusic.h in Headers */,
+				2322B662167CB788002D1811 /* DOUMusicArray.h in Headers */,
+				2322B68B167D748F002D1811 /* DOUErrorConsts.h in Headers */,
+				23198E41167D9ED300E9692D /* DOUUserArray.h in Headers */,
+				2322B66C167CB7D8002D1811 /* DOUNote.h in Headers */,
+				2322B66E167CB7D8002D1811 /* DOUNoteArray.h in Headers */,
+				2322B670167CB7D8002D1811 /* DOUNotification.h in Headers */,
+				2322B672167CB7D8002D1811 /* DOUNotificationArray.h in Headers */,
 				2362557B165105BC00B2A141 /* NSData+Base64.h in Headers */,
 				2362557D165105BC00B2A141 /* JSON.h in Headers */,
 				2362557E165105BC00B2A141 /* NSObject+SBJson.h in Headers */,
@@ -840,49 +890,6 @@
 				238DF87C1651E24F004B2823 /* ASIS3ObjectRequest.h in Headers */,
 				238DF87E1651E24F004B2823 /* ASIS3Request.h in Headers */,
 				238DF8801651E24F004B2823 /* ASIS3ServiceRequest.h in Headers */,
-				23E84081165230DF0042F413 /* DOUAPIConfig.h in Headers */,
-				23BB02B2166C548400930FFD /* DOUComment.h in Headers */,
-				23BB02B4166C548400930FFD /* DOUCommentArray.h in Headers */,
-				23BB02B6166C548400930FFD /* DOUOnline.h in Headers */,
-				23BB02B8166C548400930FFD /* DOUOnlineArray.h in Headers */,
-				23BB02BA166C548400930FFD /* DOUUser.h in Headers */,
-				23BB02BC166C548400930FFD /* DOUObject.h in Headers */,
-				23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */,
-				23BB02C0166C548400930FFD /* DOUObjectArray.h in Headers */,
-				23BB02C2166C548400930FFD /* DOUEvent.h in Headers */,
-				23BB02C4166C548400930FFD /* DOUEventArray.h in Headers */,
-				234B190C16703781005B9C80 /* DOUHttpRequest.h in Headers */,
-				234B190E16703781005B9C80 /* DOUQuery.h in Headers */,
-				234B191016703781005B9C80 /* DOUService.h in Headers */,
-				234B1917167037B7005B9C80 /* DOUOAuth2.h in Headers */,
-				234B1918167037B7005B9C80 /* DOUOAuthService.h in Headers */,
-				234B191A167037B7005B9C80 /* DOUOAuthStore.h in Headers */,
-				23BB02C6166C548400930FFD /* DOULoc.h in Headers */,
-				23BB02C8166C548400930FFD /* DOULocArray.h in Headers */,
-				23BB02CA166C548400930FFD /* DOUAlbum.h in Headers */,
-				23BB02CC166C548400930FFD /* DOUPhoto.h in Headers */,
-				2303EDCC1679AC860026B5DB /* DOUEngine.h in Headers */,
-				2303EDD01679ACAD0026B5DB /* DOUEventEngine.h in Headers */,
-				2322B621167B0EC9002D1811 /* DOULocEngine.h in Headers */,
-				2303EDD91679B92F0026B5DB /* DOUAPIConsts.h in Headers */,
-				2322B62F167B2386002D1811 /* DOUCommentEngine.h in Headers */,
-				2322B633167B23A1002D1811 /* DOUOnlineEngine.h in Headers */,
-				2322B637167B2456002D1811 /* DOUUserEngine.h in Headers */,
-				2322B63B167B24A7002D1811 /* DOUAlbumEngine.h in Headers */,
-				2322B63F167B24DD002D1811 /* DOUPhotoEngine.h in Headers */,
-				2322B643167B276C002D1811 /* DOUConsts.h in Headers */,
-				23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */,
-				2322B64E167CB77B002D1811 /* DOUBook.h in Headers */,
-				2322B650167CB77B002D1811 /* DOUBookArray.h in Headers */,
-				2322B65C167CB788002D1811 /* DOUMovie.h in Headers */,
-				2322B65E167CB788002D1811 /* DOUMovieArray.h in Headers */,
-				2322B660167CB788002D1811 /* DOUMusic.h in Headers */,
-				2322B662167CB788002D1811 /* DOUMusicArray.h in Headers */,
-				2322B66C167CB7D8002D1811 /* DOUNote.h in Headers */,
-				2322B66E167CB7D8002D1811 /* DOUNoteArray.h in Headers */,
-				2322B670167CB7D8002D1811 /* DOUNotification.h in Headers */,
-				2322B672167CB7D8002D1811 /* DOUNotificationArray.h in Headers */,
-				2322B68B167D748F002D1811 /* DOUErrorConsts.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1033,7 @@
 				2322B671167CB7D8002D1811 /* DOUNotification.m in Sources */,
 				2322B673167CB7D8002D1811 /* DOUNotificationArray.m in Sources */,
 				2322B68C167D748F002D1811 /* DOUErrorConsts.m in Sources */,
+				23198E42167D9ED300E9692D /* DOUUserArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
