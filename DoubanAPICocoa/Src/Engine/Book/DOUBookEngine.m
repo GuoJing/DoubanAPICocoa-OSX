@@ -24,6 +24,13 @@
                   failedBlock:(void(^)(NSString *))failedBlock{
 }
 
+- (void)searchBooks:(NSString *)search_text
+              start:(int)start
+              count:(int)count
+       successBlock:(void(^)(DOUBookArray *))successBlock
+        failedBlock:(void(^)(NSString *))failedBlock{
+}
+
 - (void)getTagsWithRemoteBookID:(NSString *)book_id
                    successBlock:(void(^)(DOUTagArray *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock{
@@ -36,21 +43,29 @@
 }
 
 - (void)getBookCollectionsWithRemoteUserID:(NSString *)user_id
+                                     start:(int)start
+                                     count:(int)count
                               successBlock:(void(^)(DOUCollectionArray *))successBlock
                                failedBlock:(void(^)(NSString *))failedBlock{
 }
 
 - (void)getUserCollectionWithRemoteBookID:(NSString *)book_id
+                                    start:(int)start
+                                    count:(int)count
                              successBlock:(void(^)(DOUCollection *))successBlock
                               failedBlock:(void(^)(NSString *))failedBlock{
 }
 
 - (void)getAnnotationsWithRemoteUserID:(NSString *)user_id
+                                 start:(int)start
+                                 count:(int)count
                           successBlock:(void(^)(DOUCollectionArray *))successBlock
                            failedBlock:(void(^)(NSString *))failedBlock{
 }
 
 - (void)getAnnotationsWithRemoteBookID:(NSString *)book_id
+                                 start:(int)start
+                                 count:(int)count
                           successBlock:(void(^)(DOUCollectionArray *))successBlock
                            failedBlock:(void(^)(NSString *))failedBlock{
 }

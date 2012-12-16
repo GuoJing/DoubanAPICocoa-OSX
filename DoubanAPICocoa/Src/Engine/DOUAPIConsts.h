@@ -11,12 +11,28 @@
 extern NSString * const kDOUEventAPIUrl;
 extern NSString * const kDOUEventParticipantsAPIUrl;
 extern NSString * const kDOUEventWishersAPIUrl;
-extern NSString * const kDOUUserEventsAPIUrl;
-extern NSString * const kDOUUserParticipantedEventsAPIUrl;
-extern NSString * const kDOUUserWishedEventsAPIUrl;
+extern NSString * const kDOUEventUserEventsAPIUrl;
+extern NSString * const kDOUEventParticipantedEventsAPIUrl;
+extern NSString * const kDOUEventWishedEventsAPIUrl;
 extern NSString * const kDOUEventsListAPIUrl;
-extern NSString * const kDOUAttendEventAPIUrl;
-extern NSString * const kDOUWishEventAPIUrl;
+extern NSString * const kDOUEventAttendEventAPIUrl;
+extern NSString * const kDOUEventWishEventAPIUrl;
 
 extern NSString * const kDOULocAPIUrl;
 extern NSString * const kDOULocListAPIUrl;
+
+extern NSString * const kDOUBookAPIUrl;
+extern NSString * const kDOUBookWithISBNAPIUrl;
+extern NSString * const kDOUBookSearchAPIUrl;
+extern NSString * const kDOUBookTagsAPIUrl;
+extern NSString * const kDOUBookUserAllTagsAPIUrl;
+extern NSString * const kDOUBookUserAllCollectionsAPIUrl;
+extern NSString * const kDOUBookCollectInfoAPIUrl;
+extern NSString * const kDOUBookUserAnnotationAPIUrl;
+extern NSString * const kDOUBookAnnotationsAPIUrl;
+extern NSString * const kDOUBookAnnotationAPIUrl;
+extern NSString * const kDOUBookCollectBookAPIUrl;
+extern NSString * const kDOUBookWriteAnnotationAPIUrl;
+extern NSString * const kDOUBookEditAnnotationAPIUrl;
+extern NSString * const kDOUBookWriteReviewAPIUrl;
+extern NSString * const kDOUBookEditReviewAPIUrl;
