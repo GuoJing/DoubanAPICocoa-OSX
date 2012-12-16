@@ -410,13 +410,13 @@
 		2303EDC41679AA520026B5DB /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				23198ECF167DDAC100E9692D /* Broadcast */,
 				23198E8A167DB6D500E9692D /* Note */,
 				23198E73167DB5EC00E9692D /* Online */,
 				23198E74167DB5EC00E9692D /* User */,
 				23198E75167DB5ED00E9692D /* Comment */,
 				23198E76167DB5ED00E9692D /* Discussion */,
 				23198E77167DB5EE00E9692D /* Doumail */,
-				23198E78167DB5EE00E9692D /* Podcast */,
 				23198E6A167DB51F00E9692D /* Music */,
 				23198E6B167DB52000E9692D /* Book */,
 				23198E6C167DB52000E9692D /* Movie */,
@@ -500,13 +500,6 @@
 			path = Doumail;
 			sourceTree = "<group>";
 		};
-		23198E72167DB5E000E9692D /* Podcast */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Podcast;
-			sourceTree = "<group>";
-		};
 		23198E73167DB5EC00E9692D /* Online */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,13 +539,6 @@
 			children = (
 			);
 			path = Doumail;
-			sourceTree = "<group>";
-		};
-		23198E78167DB5EE00E9692D /* Podcast */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Podcast;
 			sourceTree = "<group>";
 		};
 		23198E89167DB6CA00E9692D /* Note */ = {
@@ -597,6 +583,20 @@
 				23198EBC167DC7DE00E9692D /* DOUCollectionArray.m */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		23198ECF167DDAC100E9692D /* Broadcast */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Broadcast;
+			sourceTree = "<group>";
+		};
+		23198ED0167DDACE00E9692D /* Broadcast */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Broadcast;
 			sourceTree = "<group>";
 		};
 		2322B623167B115B002D1811 /* Event */ = {
@@ -941,6 +941,7 @@
 		23BB0290166C545600930FFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				23198ED0167DDACE00E9692D /* Broadcast */,
 				23198EB6167DC7A700E9692D /* Collection */,
 				23198EAB167DC66900E9692D /* Tag */,
 				23198E89167DB6CA00E9692D /* Note */,
@@ -949,7 +950,6 @@
 				23198E6F167DB5E000E9692D /* Comment */,
 				23198E70167DB5E000E9692D /* Disscussion */,
 				23198E71167DB5E000E9692D /* Doumail */,
-				23198E72167DB5E000E9692D /* Podcast */,
 				2322B652167CB787002D1811 /* Movie */,
 				2322B657167CB787002D1811 /* Music */,
 				2322B649167CB77B002D1811 /* Book */,
