@@ -941,7 +941,6 @@
 							<string key="NSFrame">{{280, 33}, {74, 19}}</string>
 							<reference key="NSSuperview" ref="869398860"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="675774235">
@@ -980,9 +979,13 @@
 							<object class="NSImageCell" key="NSCell" id="53445080">
 								<int key="NSCellFlags">134217728</int>
 								<int key="NSCellFlags2">33554432</int>
+								<object class="NSCustomResource" key="NSContents">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">eposter</string>
+								</object>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<int key="NSAlign">0</int>
-								<int key="NSScale">0</int>
+								<int key="NSScale">1</int>
 								<int key="NSStyle">2</int>
 								<bool key="NSAnimates">NO</bool>
 							</object>
@@ -1420,7 +1423,7 @@ wGw</bytes>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="178728890">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSTextField" id="911552788">
@@ -1428,7 +1431,6 @@ wGw</bytes>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{102, 38}, {427, 17}}</string>
 							<reference key="NSSuperview" ref="178728890"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="755919269">
@@ -1482,7 +1484,6 @@ wGw</bytes>
 						</object>
 					</array>
 					<string key="NSFrameSize">{479, 139}</string>
-					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="1067338660"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
@@ -4134,6 +4135,7 @@ wGw</bytes>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NSMenuCheckmark">{11, 11}</string>
 			<string key="NSMenuMixedState">{10, 3}</string>
+			<string key="eposter">{42, 62.399999999999999}</string>
 			<string key="eye_50">{48, 48}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
