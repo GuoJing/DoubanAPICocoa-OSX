@@ -37,29 +37,11 @@
 {
     self = [super initWithWindow:window];
     if (self) {
-        [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(getUrl:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
         self.engine = [[DOUEngine alloc] initWithApiKey:kAPIKey withSecretKey:kPrivateKey withRedirUrl:kRedirectUrl];
         [[self progress] setDisplayedWhenStopped:YES];
     }
     
     return self;
-}
-
-- (void)getUrl:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
-{
-    NSURL *call_backurl = [NSURL URLWithString:[[event paramDescriptorForKeyword:keyDirectObject] stringValue]];
-    NSString* query = [call_backurl query];
-    NSLog(@"query is %@", query);
-    NSArray *qs = [query componentsSeparatedByString:@"="];
-    NSString *code = nil;
-    NSInteger index = [qs indexOfObject:@"code"];
-    index = index + 1;
-    if (index != NSNotFound) {
-        code = [qs objectAtIndex:index];
-    }
-    NSLog(@"code is %@", code);
-    
-    [self.engine didLoadWithCode:code];
 }
 
 - (void)OAuthClient:(DOUOAuthService *)client didAcquireSuccessDictionary:(NSDictionary *)dic {
@@ -118,20 +100,6 @@
     [self.einfo_field setString:[event content]];
     
     [self.progress stopAnimation:self];
-}
-
-- (IBAction)onLoginClicked:(id)sender {
-    if ([self.engine isServiceValid]) {
-        self.info_field.title = @"已验证";
-        self.login_button.title = @"已验证";
-    } else {
-        NSString *url_str = [self.engine getConnectUrl];
-        NSURL *login_url = [NSURL URLWithString:url_str];
-        if ([[NSWorkspace sharedWorkspace] openURL:login_url])
-            NSLog(@"Opened successfully.");
-        else
-            NSLog(@"Failed to open URL.");
-    }
 }
 
 - (void)awakeFromNib {

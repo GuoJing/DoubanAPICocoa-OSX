@@ -93,7 +93,7 @@
            successBlock:(void(^)(NSString *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)editAnnotation:(NSString *)book_id
+- (void)editAnnotation:(NSString *)annotation_id
              withContet:(NSString *)content
                withPage:(NSString *)page
             withChapter:(NSString *)chapter
@@ -112,14 +112,14 @@
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)eidtReview:(NSString *)book_id
+- (void)eidtReview:(NSString *)review_id
               title:(NSString *)title
             content:(NSString *)content
              rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)deleteReview:(NSString *)book_id
+- (void)deleteReview:(NSString *)review_id
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock;
 

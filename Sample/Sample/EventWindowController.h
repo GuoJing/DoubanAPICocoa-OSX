@@ -11,7 +11,6 @@
 #import <DoubanAPICocoa/DOUEngine.h>
 
 @interface EventWindowController : NSWindowController {
-    IBOutlet NSButton *login_button;
     IBOutlet NSButton *get_button;
     IBOutlet NSTextFieldCell *eid_field;
     IBOutlet NSImageCell *pic_cell;
@@ -43,6 +42,5 @@
 @property (nonatomic, retain) IBOutlet NSProgressIndicator *progress;
 
 - (IBAction)onGetClicked:(id)sender;
-- (IBAction)onLoginClicked:(id)sender;
 
 @end

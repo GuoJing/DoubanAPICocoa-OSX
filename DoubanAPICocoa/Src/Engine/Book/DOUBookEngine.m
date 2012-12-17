@@ -427,20 +427,93 @@
             withPrivacy:(NSString *)privacy
            successBlock:(void(^)(NSString *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@&privacy=%@", content, page, chapter, privacy];
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookWriteAnnotationAPIUrl, book_id];
+    NSLog(@"api url %@", apiUrl);
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    NSLog(@"%@", postBody);
+    [service post:query postBody:postBody callback:completionBlock];
 }
 
-- (void)editAnnotation:(NSString *)book_id
+- (void)editAnnotation:(NSString *)annotation_id
             withContet:(NSString *)content
               withPage:(NSString *)page
            withChapter:(NSString *)chapter
            withPrivacy:(NSString *)privacy
           successBlock:(void(^)(NSString *))successBlock
            failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    NSMutableString *putBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@&privacy=%@", content, page, chapter, privacy];
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditAnnotationAPIUrl, annotation_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service put:query putBody:putBody callback:completionBlock];
 }
 
 - (void)deleteAnnotation:(NSString *)annotation_id
             successBlock:(void(^)(NSString *))successBlock
              failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditAnnotationAPIUrl, annotation_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service delete:query callback:completionBlock];
 }
 
 - (void)writeReview:(NSString *)book_id
@@ -449,6 +522,30 @@
              rating:(int)rating
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"book=%@&title=%@&content=%@&rating=%d", book_id , title, content, rating];
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookWriteReviewAPIUrl, book_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service post:query postBody:postBody callback:completionBlock];
 }
 
 - (void)eidtReview:(NSString *)book_id
@@ -457,11 +554,58 @@
             rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    NSMutableString *putBody = [NSMutableString stringWithFormat:@"book=%@&title=%@&content=%@&rating=%d", book_id , title, content, rating];
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, book_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service put:query putBody:putBody callback:completionBlock];
 }
 
 - (void)deleteReview:(NSString *)book_id
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, book_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service delete:query callback:completionBlock];
 }
 
 @end

@@ -29,6 +29,11 @@
 @synthesize read_button;
 @synthesize delete_collect_button;
 
+@synthesize annotation_text;
+@synthesize annotation_button;
+@synthesize review_text;
+@synthesize review_button;
+
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -73,8 +78,6 @@
         NSLog(@"Failed %@", e);
     };
     void(^collectSuccessBlock)(DOUCollection *) = ^(DOUCollection *collection) {
-        NSLog(@"good %@", [collection status]);
-        
         NSString *status = [collection status];
         
         [self updateReadStatusUI:status];
@@ -158,6 +161,32 @@
     };
     DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
     [book_engine deleteBookCollectWithRemoteID:self.bid_field.title successBlock:successBlock failedBlock:nil];
+}
+
+- (IBAction)onAnnotationButtonClicked:(id)sender{
+    void(^successBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"成功";
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"失败";
+    };
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine writeAnnotation:self.bid_field.title withContet:self.annotation_text.title withPage:@"20" withChapter:@"20" withPrivacy:@"" successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onReviewButtonClicked:(id)sender{
+    void(^successBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"成功";
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"失败";
+    };
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine writeReview:self.bid_field.title title:@"测试评论" content:self.review_text.title rating:FOUR successBlock:successBlock failedBlock:failBlock];
 }
 
 @end

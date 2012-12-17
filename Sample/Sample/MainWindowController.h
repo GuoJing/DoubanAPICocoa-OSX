@@ -10,5 +10,12 @@
 
 #import <DoubanAPICocoa/DOUEngine.h>
 
-@interface MainWindowController : NSWindowController
+@interface MainWindowController : NSWindowController {
+    IBOutlet NSButton *login_button;
+    DOUEngine *engine;
+}
+
+@property (nonatomic, retain) NSButton *login_button;
+@property (nonatomic, retain) DOUEngine *engine;
+
 @end

@@ -25,6 +25,11 @@
     IBOutlet NSButton *reading_button;
     IBOutlet NSButton *read_button;
     IBOutlet NSButton *delete_collect_button;
+    
+    IBOutlet NSTextFieldCell *annotation_text;
+    IBOutlet NSButton *annotation_button;
+    IBOutlet NSTextFieldCell *review_text;
+    IBOutlet NSButton *review_button;
 }
 
 @property (nonatomic, retain) DOUEngine *engine;
@@ -42,6 +47,11 @@
 @property (nonatomic, retain) IBOutlet NSButton *read_button;
 @property (nonatomic, retain) IBOutlet NSButton *delete_collect_button;
 
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *annotation_text;
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *review_text;
+@property (nonatomic, retain) IBOutlet NSButton *annotation_button;
+@property (nonatomic, retain) IBOutlet NSButton *review_button;
+
 - (IBAction)onGetClicked:(id)sender;
 
 - (IBAction)onWishButtonClicked:(id)sender;
@@ -49,5 +59,8 @@
 - (IBAction)onReadButtonClicked:(id)sender;
 
 - (IBAction)onDelteCollectButtonClicked:(id)sender;
+
+- (IBAction)onAnnotationButtonClicked:(id)sender;
+- (IBAction)onReviewButtonClicked:(id)sender;
 
 @end
