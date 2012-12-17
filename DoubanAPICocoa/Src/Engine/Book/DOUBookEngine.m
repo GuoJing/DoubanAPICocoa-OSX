@@ -366,6 +366,45 @@
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookCollectBookAPIUrl, book_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"status=%@&tags=%@&comment=%@&privacy=%@&rating=%d", status, tags, comment, privacy, rating];
+    DOUReqBlock completionPutBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            [service put:query putBody:postBody callback:completionPutBlock];
+        }
+    };
+    [service post:query postBody:postBody callback:completionBlock];
+}
+
+- (void)deleteBookCollectWithRemoteID:(NSString *)book_id
+                         successBlock:(void(^)(NSString *))successBlock
+                          failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookCollectBookAPIUrl, book_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
         if (!error) {
@@ -378,23 +417,7 @@
             }
         }
     };
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"status=%@&tags=%@&comment=%@&privacy=%@&rating=%d", status, tags, comment, privacy, rating];
-    [service post:query postBody:postBody callback:completionBlock];
-}
-
-- (void)editBookCollectWithRemoteID:(NSString *)book_id
-                             status:(NSString *)status
-                               tags:(NSString *)tags
-                            comment:(NSString *)comment
-                            privacy:(NSString *)privacy
-                             rating:(int)rating
-                       successBlock:(void(^)(NSString *))successBlock
-                        failedBlock:(void(^)(NSString *))failedBlock{
-}
-
-- (void)deleteBookCollectWithRemoteID:(NSString *)book_id
-                         successBlock:(void(^)(NSString *))successBlock
-                          failedBlock:(void(^)(NSString *))failedBlock{
+    [service delete:query callback:completionBlock];
 }
 
 - (void)writeAnnotation:(NSString *)book_id

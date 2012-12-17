@@ -39,6 +39,10 @@
                 postBody:(NSString *)body
                 callback:(DOUReqBlock)block;
 
+- (DOUHttpRequest *)put:(DOUQuery *)query
+                putBody:(NSString *)body
+                callback:(DOUReqBlock)block;
+
 // v2 api post image
 - (DOUHttpRequest *)post2:(DOUQuery *)query
                 photoData:(NSData *)photoData

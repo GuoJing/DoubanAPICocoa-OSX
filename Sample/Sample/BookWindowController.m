@@ -22,6 +22,12 @@
 @synthesize progress;
 @synthesize title_field;
 @synthesize rate_field;
+@synthesize bid_field;
+
+@synthesize wish_button;
+@synthesize reading_button;
+@synthesize read_button;
+@synthesize delete_collect_button;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -38,6 +44,9 @@
         self.info_field.title = @"已在豆瓣验证";
     }
     [[self progress] stopAnimation:self];
+    [self.wish_button setEnabled:NO];
+    [self.reading_button setEnabled:NO];
+    [self.read_button setEnabled:NO];
 }
 
 - (IBAction)onGetClicked:(id)sender{
@@ -63,8 +72,92 @@
         [[self progress] stopAnimation:self];
         NSLog(@"Failed %@", e);
     };
+    void(^collectSuccessBlock)(DOUCollection *) = ^(DOUCollection *collection) {
+        NSLog(@"good %@", [collection status]);
+        
+        NSString *status = [collection status];
+        
+        [self updateReadStatusUI:status];
+    };
+    void(^collectFailBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        [self updateReadStatusUI:nil];
+    };
     DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
-    [book_engine getBookWithRemoteID:@"11528350" successBlock:successBlock failedBlock:failBlock];
+    [book_engine getBookWithRemoteID:self.bid_field.title successBlock:successBlock failedBlock:failBlock];
+    [book_engine getUserCollectionWithRemoteBookID:self.bid_field.title successBlock:collectSuccessBlock failedBlock:collectFailBlock];
+}
+
+- (IBAction)onWishButtonClicked:(id)sender{
+    void(^successBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        NSLog(@"Success %@", e);
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        NSLog(@"Failed %@", e);
+    };
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine collectBookWithRemoteID:self.bid_field.title status:kDOUBookactionWish tags:@"" comment:@"This is a wish comment" privacy:kDOUPrivacyPublic rating:FOUR successBlock:successBlock failedBlock:failBlock];
+    [self updateReadStatusUI:kDOUBookactionWish];
+}
+- (IBAction)onReadingButtonClicked:(id)sender{
+    void(^successBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        NSLog(@"Success %@", e);
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        NSLog(@"Failed %@", e);
+    };
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine collectBookWithRemoteID:self.bid_field.title status:kDOUBookactionReading tags:@"" comment:@"This is a reading comment" privacy:kDOUPrivacyPublic rating:FOUR successBlock:successBlock failedBlock:failBlock];
+    [self updateReadStatusUI:kDOUBookactionReading];
+}
+- (IBAction)onReadButtonClicked:(id)sender{
+    void(^successBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        NSLog(@"Success %@", e);
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        NSLog(@"Failed %@", e);
+    };
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine collectBookWithRemoteID:self.bid_field.title status:kDOUBookactionRead tags:@"" comment:@"This is a read comment" privacy:kDOUPrivacyPublic rating:FOUR successBlock:successBlock failedBlock:failBlock];
+    [self updateReadStatusUI:kDOUBookactionRead];
+}
+
+- (void)updateReadStatusUI:(NSString *)status{
+    if ([status isEqualToString:kDOUBookactionWish]) {
+        [self.wish_button setEnabled:NO];
+        [self.reading_button setEnabled:YES];
+        [self.read_button setEnabled:YES];
+        [self.delete_collect_button setEnabled:YES];
+    } else if ([status isEqualToString:kDOUBookactionReading]) {
+        [self.wish_button setEnabled:YES];
+        [self.reading_button setEnabled:NO];
+        [self.read_button setEnabled:YES];
+        [self.delete_collect_button setEnabled:YES];
+    } else if ([status isEqualToString:kDOUBookactionRead]) {
+        [self.wish_button setEnabled:YES];
+        [self.reading_button setEnabled:YES];
+        [self.read_button setEnabled:NO];
+        [self.delete_collect_button setEnabled:YES];
+    } else {
+        [self.wish_button setEnabled:YES];
+        [self.reading_button setEnabled:YES];
+        [self.read_button setEnabled:YES];
+        [self.delete_collect_button setEnabled:NO];
+    }
+}
+
+- (IBAction)onDelteCollectButtonClicked:(id)sender {
+    void(^successBlock)(NSString *) = ^(NSString *e) {
+        [self updateReadStatusUI:nil];
+    };
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine deleteBookCollectWithRemoteID:self.bid_field.title successBlock:successBlock failedBlock:nil];
 }
 
 @end

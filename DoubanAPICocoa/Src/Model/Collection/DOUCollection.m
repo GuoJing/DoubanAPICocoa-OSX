@@ -16,20 +16,20 @@
 @dynamic updated;
 
 - (NSString *)status {
-    return [self.dictionary objectForKey:@"count"];
+    return [self.dictionary objectForKey:@"status"];
 }
 
 
 - (NSString *)book_id {
-    return [self.dictionary objectForKey:@"name"];
+    return [self.dictionary objectForKey:@"book_id"];
 }
 
 - (NSString *)tags {
-    return [self.dictionary objectForKey:@"name"];
+    return [self.dictionary objectForKey:@"tags"];
 }
 
 - (NSString *)updated {
-    return [self.dictionary objectForKey:@"name"];
+    return [self.dictionary objectForKey:@"updated"];
 }
 
 @end

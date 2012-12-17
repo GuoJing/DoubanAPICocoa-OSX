@@ -250,6 +250,32 @@ static DOUService *myInstance = nil;
     return req;
 }
 
+- (DOUHttpRequest *)put:(DOUQuery *)query putBody:(NSString *)body callback:(DOUReqBlock)block {
+    query.apiBaseUrlString = self.apiBaseUrlString;
+    __block DOUHttpRequest * req = [DOUHttpRequest requestWithQuery:query completionBlock:^{
+        if (block != NULL) {
+            block(req);
+        }
+    }];
+    
+    [req setRequestMethod:@"PUT"];
+    [req addRequestHeader:@"Content-Type" value:@"application/x-www-form-urlencoded; charset=UTF-8"];
+    
+    if (body && [body length] > 0) {
+        NSData *objectData = [body dataUsingEncoding:NSUTF8StringEncoding];
+        NSString *length = [NSString stringWithFormat:@"%lu", [objectData length]];
+        [req appendPostData:objectData];
+        [req addRequestHeader:@"Content-Length" value:length];
+    }
+    else {
+        [req addRequestHeader:@"Content-Length" value:@"0"];
+    }
+    
+    [req setResponseEncoding:NSUTF8StringEncoding];
+    [self addRequest:req];
+    return req;
+}
+
 - (DOUHttpRequest *)post2:(DOUQuery *)query 
                 photoData:(NSData *)photoData
               description:(NSString *)description

@@ -81,15 +81,6 @@
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)editBookCollectWithRemoteID:(NSString *)book_id
-                             status:(NSString *)status
-                               tags:(NSString *)tags
-                            comment:(NSString *)comment
-                            privacy:(NSString *)privacy
-                             rating:(int)rating
-                   successBlock:(void(^)(NSString *))successBlock
-                    failedBlock:(void(^)(NSString *))failedBlock;
-
 - (void)deleteBookCollectWithRemoteID:(NSString *)book_id
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock;
