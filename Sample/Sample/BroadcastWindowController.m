@@ -15,9 +15,11 @@
 
 @synthesize engine;
 @synthesize shuo_button;
+@synthesize image_button;
 @synthesize shuo_field;
 @synthesize info_field;
 @synthesize progress;
+@synthesize image;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -33,6 +35,7 @@
     if ([self.engine isServiceValid]) {
         self.info_field.title = @"已在豆瓣验证";
     }
+    self.image = nil;
     [[self progress] stopAnimation:self];
 }
 
@@ -49,7 +52,25 @@
         self.info_field.title = @"失败!";
         NSLog(@"Failed %@", e);
     };
-    [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:nil withRecTitle:@"该作者的博客" withRecUrl:@"http://www.guojing.me" withRecDesc:@"欢迎访问" successBlock:successBlock failedBlock:failBlock];
+    [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:self.image withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)openImageButtonClicked:(id)sender{
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    [openDlg setCanChooseFiles:YES];
+    [openDlg setCanChooseDirectories:NO];
+    NSArray *fileTypesArray;
+    fileTypesArray = [NSArray arrayWithObjects:@"jpg", @"gif", @"png", nil];
+    [openDlg setPrompt:NSLocalizedString(@"选择图片", nil)];
+    [openDlg setAllowedFileTypes:fileTypesArray];
+        
+    if ([openDlg runModal] == NSOKButton) {
+        NSURL* path = [[openDlg URLs] objectAtIndex:0];
+        NSString *path_str = [path absoluteString];
+        NSLog(@"%@", path_str);
+        NSImage * picture =  [[NSImage alloc] initWithContentsOfURL:path];
+        self.image = picture;
+    }
 }
 
 @end

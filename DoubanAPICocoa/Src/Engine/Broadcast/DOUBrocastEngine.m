@@ -28,17 +28,17 @@
     }
     
     NSData *image_data = nil;
-    NSString *image_byte = @"";
     if (image) {
         image_data = [image TIFFRepresentation];
-        image_byte = [[NSString alloc] initWithData:image_data encoding:NSUTF8StringEncoding];
+        NSBitmapImageRep *bitmap = [[image representations] objectAtIndex:0];
+        image_data = [bitmap representationUsingType:NSJPEGFileType properties: nil];
     }
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUWriteBroadcastAPIUrl;
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&image=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, image_byte, title, url, desc];
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&image=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, image_data, title, url, desc];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
