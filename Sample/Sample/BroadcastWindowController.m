@@ -55,6 +55,7 @@
     };
     if (self.image_data) {
         [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:self.image_data withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failBlock];
+        self.image_data = nil;
     } else {
         [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:nil withRecTitle:@"我的博客" withRecUrl:@"http://www.guojing.me" withRecDesc:@"测试一下哦。" successBlock:successBlock failedBlock:failBlock];
     }
