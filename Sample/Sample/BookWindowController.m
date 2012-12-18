@@ -19,6 +19,7 @@
 @synthesize engine;
 @synthesize pic_cell;
 @synthesize info_field;
+@synthesize info_field2;
 @synthesize progress;
 @synthesize title_field;
 @synthesize rate_field;
@@ -33,6 +34,18 @@
 @synthesize annotation_button;
 @synthesize review_text;
 @synthesize review_button;
+
+@synthesize annotation_id_field;
+@synthesize annotation_text_field;
+@synthesize get_annotation_button;
+@synthesize edit_annotation_button;
+@synthesize delete_annotation_button;
+
+@synthesize review_id_field;
+@synthesize review_text_field;
+@synthesize get_review_button;
+@synthesize edit_review_button;
+@synthesize delete_review_button;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -187,6 +200,48 @@
     };
     DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
     [book_engine writeReview:self.bid_field.title title:@"测试评论" content:self.review_text.title rating:FOUR successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onGetAnnotationButtonClicked:(id)sender{
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    void(^successBlock)(DOUAnnotation *) = ^(DOUAnnotation *a) {
+        self.info_field2.title = @"成功";
+        self.annotation_text_field.title = [a abstract];
+        [self.edit_annotation_button setEnabled:YES];
+        [self.delete_annotation_button setEnabled:YES];
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        self.info_field2.title = @"失败";
+        [self.edit_annotation_button setEnabled:NO];
+        [self.delete_annotation_button setEnabled:NO];
+        NSLog(@"%@", e);
+    };
+    [book_engine getAnnotationWithRemoteID:self.annotation_id_field.title successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onEditAnnotationButtonClicked:(id)sender{
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    void(^successBlock)(NSString *) = ^(NSString *a) {
+        self.info_field2.title = @"成功";
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        self.info_field2.title = @"失败";
+        NSLog(@"%@", e);
+    };
+    [book_engine editAnnotation:self.annotation_id_field.title withContet:self.annotation_text_field.title withPage:@"20" withChapter:@"20" withPrivacy:@"" successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onDeleteAnnotationButtonClicked:(id)sender{
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine deleteAnnotation:self.annotation_id_field.title successBlock:nil failedBlock:nil];
+}
+
+- (IBAction)onEditReviwButtonClicked:(id)sender{
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+}
+
+- (IBAction)onDeleteReviewButtonClicked:(id)sender{
+    DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
 }
 
 @end

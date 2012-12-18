@@ -16,7 +16,13 @@ enum _EngineTypes {
     kDOUComment,
     kDOUOnline,
     kDOUUser,
-    kDOUBook
+    kDOUBook,
+    kDOUMovie,
+    kDOUMusic,
+    kDOUBoardcast,
+    kDOUMail,
+    kDOUNote,
+    kDOUDiscussion
 } typedef EngineTypes;
 
 enum _RateRanks {

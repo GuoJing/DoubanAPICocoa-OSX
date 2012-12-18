@@ -326,7 +326,7 @@
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUBookAPIUrl, annotation_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookAnnotationAPIUrl, annotation_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
@@ -433,11 +433,14 @@
         }
         return;
     }
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@&privacy=%@", content, page, chapter, privacy];
+    NSMutableString *postBody = nil;
+    postBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@", content, page, chapter];
+    if ([privacy isEqualToString:kDOUPrivacyPrivate]) {
+        postBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@&privacy=%@", content, page, chapter, privacy];
+    }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookWriteAnnotationAPIUrl, book_id];
-    NSLog(@"api url %@", apiUrl);
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
@@ -451,7 +454,6 @@
             }
         }
     };
-    NSLog(@"%@", postBody);
     [service post:query postBody:postBody callback:completionBlock];
 }
 
@@ -468,7 +470,11 @@
         }
         return;
     }
-    NSMutableString *putBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@&privacy=%@", content, page, chapter, privacy];
+    NSMutableString *putBody = nil;
+    putBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@", content, page, chapter];
+    if ([privacy isEqualToString:kDOUPrivacyPrivate]) {
+        putBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@&privacy=%@", content, page, chapter, privacy];
+    }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditAnnotationAPIUrl, annotation_id];
