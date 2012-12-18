@@ -64,7 +64,9 @@
     };
     
     void(^failedBlock)(NSString *) = ^(NSString *e) {
+        self.info_field.title = @"失败!";
         NSLog(@"%@", e);
+        [self.progress stopAnimation:self];
     };
     
     [event_engine getEventWithRemoteID:self.eid_field.title successBlock:successBlock failedBlock:failedBlock];

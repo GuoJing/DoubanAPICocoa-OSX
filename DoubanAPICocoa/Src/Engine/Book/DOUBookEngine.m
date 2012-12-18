@@ -554,7 +554,7 @@
     [service post:query postBody:postBody callback:completionBlock];
 }
 
-- (void)eidtReview:(NSString *)review_id
+- (void)editReview:(NSString *)review_id
              title:(NSString *)title
            content:(NSString *)content
             rating:(int)rating

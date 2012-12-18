@@ -112,7 +112,7 @@
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)eidtReview:(NSString *)review_id
+- (void)editReview:(NSString *)review_id
               title:(NSString *)title
             content:(NSString *)content
              rating:(int)rating

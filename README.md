@@ -1,6 +1,6 @@
 ## 简介 ##
 
-这是一个Cocoa的DoubanAPI库，为了Mac开发使用。
+**这是一个Cocoa的DoubanAPI库，为了Mac开发使用，会在完成之后的下个版本支持iOS。**
 
 **[豆瓣API](http://developers.douban.com/)**
 

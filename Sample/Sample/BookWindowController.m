@@ -238,10 +238,12 @@
 
 - (IBAction)onEditReviwButtonClicked:(id)sender{
     DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine editReview:self.review_id_field.title title:@"测试修改评论" content:self.review_text_field.title rating:FOUR successBlock:nil failedBlock:nil];
 }
 
 - (IBAction)onDeleteReviewButtonClicked:(id)sender{
     DOUBookEngine *book_engine = [self.engine getEngine:kDOUBook];
+    [book_engine deleteReview:self.review_id_field.title successBlock:nil failedBlock:nil];
 }
 
 @end
