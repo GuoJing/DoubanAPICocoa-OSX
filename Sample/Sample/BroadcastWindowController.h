@@ -19,6 +19,7 @@
     IBOutlet NSProgressIndicator *progress;
     
     NSImage *image;
+    NSData *image_data;
 }
 
 @property (nonatomic, retain) DOUEngine *engine;
@@ -29,6 +30,7 @@
 @property (nonatomic, retain) IBOutlet NSTextFieldCell *info_field;
 @property (nonatomic, retain) IBOutlet NSProgressIndicator *progress;
 @property (nonatomic, retain) NSImage *image;
+@property (nonatomic, retain) NSData *image_data;
 
 - (IBAction)onShuoButtonClicked:(id)sender;
 - (IBAction)openImageButtonClicked:(id)sender;

@@ -14,7 +14,7 @@
 
 - (void)SayWithSource:(NSString *)source
              withText:(NSString *)text
-            withImage:(NSImage *)image
+            withImage:(NSData *)image_data
          withRecTitle:(NSString *)title
            withRecUrl:(NSString *)url
           withRecDesc:(NSString *)desc

@@ -47,6 +47,7 @@
 - (DOUHttpRequest *)post2:(DOUQuery *)query
                 photoData:(NSData *)photoData
               description:(NSString *)description
+              descriptionName:(NSString *)descriptionName
                  callback:(DOUReqBlock)block
    uploadProgressDelegate:(id<ASIProgressDelegate>)progressDelegate;
 

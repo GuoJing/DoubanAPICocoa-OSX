@@ -279,6 +279,7 @@ static DOUService *myInstance = nil;
 - (DOUHttpRequest *)post2:(DOUQuery *)query 
                 photoData:(NSData *)photoData
               description:(NSString *)description
+              descriptionName:(NSString *)descriptionName
                  callback:(DOUReqBlock)block 
    uploadProgressDelegate:(id<ASIProgressDelegate>)progressDelegate {
   
@@ -307,8 +308,8 @@ static DOUService *myInstance = nil;
 	
 	[req appendPostString:[NSString stringWithFormat:@"--%@\r\n",stringBoundary]];
 	
-	// Adds post data
-  [req appendPostString:[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", @"desc"]];
+	// Adds post data @desc
+  [req appendPostString:[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", descriptionName]];
   [req appendPostString:description];
   [req appendPostString:endItemBoundary];
 

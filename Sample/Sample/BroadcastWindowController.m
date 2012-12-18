@@ -20,6 +20,7 @@
 @synthesize info_field;
 @synthesize progress;
 @synthesize image;
+@synthesize image_data;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -52,7 +53,11 @@
         self.info_field.title = @"失败!";
         NSLog(@"Failed %@", e);
     };
-    [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:self.image withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failBlock];
+    if (self.image_data) {
+        [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:self.image_data withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failBlock];
+    } else {
+        [s SayWithSource:kAPIKey withText:self.shuo_field.title withImage:nil withRecTitle:@"我的博客" withRecUrl:@"http://www.guojing.me" withRecDesc:@"测试一下哦。" successBlock:successBlock failedBlock:failBlock];
+    }
 }
 
 - (IBAction)openImageButtonClicked:(id)sender{
@@ -68,8 +73,8 @@
         NSURL* path = [[openDlg URLs] objectAtIndex:0];
         NSString *path_str = [path absoluteString];
         NSLog(@"%@", path_str);
-        NSImage * picture =  [[NSImage alloc] initWithContentsOfURL:path];
-        self.image = picture;
+        NSData *data = [[NSData alloc] initWithContentsOfURL:path];
+        self.image_data = data;
     }
 }
 

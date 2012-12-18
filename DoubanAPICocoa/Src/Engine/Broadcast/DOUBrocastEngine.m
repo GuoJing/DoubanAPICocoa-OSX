@@ -14,7 +14,7 @@
 
 - (void)SayWithSource:(NSString *)source
              withText:(NSString *)text
-            withImage:(NSImage *)image
+            withImage:(NSData *)image_data
          withRecTitle:(NSString *)title
            withRecUrl:(NSString *)url
           withRecDesc:(NSString *)desc
@@ -27,18 +27,16 @@
         return;
     }
     
-    NSData *image_data = nil;
-    if (image) {
-        image_data = [image TIFFRepresentation];
-        NSBitmapImageRep *bitmap = [[image representations] objectAtIndex:0];
-        image_data = [bitmap representationUsingType:NSJPEGFileType properties: nil];
-    }
-    
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUWriteBroadcastAPIUrl;
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&image=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, image_data, title, url, desc];
+    NSMutableString *postBody = nil;
+    postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, title, url, desc];
+    //if (image_data) {
+    //    postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&image=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, image_data, title, url, desc];
+    //}
+    NSLog(@"%@", postBody);
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -51,7 +49,11 @@
             }
         }
     };
-    [service post:query postBody:postBody callback:completionBlock];
+    if (image_data) {
+        [service post2:query photoData:image_data description:text descriptionName:@"text" callback:completionBlock uploadProgressDelegate:nil];
+    } else {
+        [service post:query postBody:postBody callback:completionBlock];
+    }
 }
 
 @end
