@@ -194,8 +194,10 @@
 		23BB02CF166C548400930FFD /* DOUPhotoArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02B1166C548400930FFD /* DOUPhotoArray.m */; };
 		23E84081165230DF0042F413 /* DOUAPIConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E8407F165230DF0042F413 /* DOUAPIConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E84082165230DF0042F413 /* DOUAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E84080165230DF0042F413 /* DOUAPIConfig.m */; };
-		EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7EC41680156A000153AE /* DOUMovieEngine.h */; };
+		EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7EC41680156A000153AE /* DOUMovieEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7EC51680156A000153AE /* DOUMovieEngine.m */; };
+		EEAC7ECE16804304000153AE /* DOUMusicEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7ECC16804304000153AE /* DOUMusicEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEAC7ECF16804304000153AE /* DOUMusicEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ECD16804304000153AE /* DOUMusicEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -395,6 +397,8 @@
 		23E84080165230DF0042F413 /* DOUAPIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAPIConfig.m; sourceTree = "<group>"; };
 		EEAC7EC41680156A000153AE /* DOUMovieEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMovieEngine.h; sourceTree = "<group>"; };
 		EEAC7EC51680156A000153AE /* DOUMovieEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMovieEngine.m; sourceTree = "<group>"; };
+		EEAC7ECC16804304000153AE /* DOUMusicEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMusicEngine.h; sourceTree = "<group>"; };
+		EEAC7ECD16804304000153AE /* DOUMusicEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMusicEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +443,8 @@
 		23198E6A167DB51F00E9692D /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				EEAC7ECC16804304000153AE /* DOUMusicEngine.h */,
+				EEAC7ECD16804304000153AE /* DOUMusicEngine.m */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -1112,6 +1118,7 @@
 				23198EC9167DCBAC00E9692D /* DOUAnnotation.h in Headers */,
 				23198ECD167DCBBD00E9692D /* DOUAnnotationArray.h in Headers */,
 				EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */,
+				EEAC7ECE16804304000153AE /* DOUMusicEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1266,6 +1273,7 @@
 				23198ECE167DCBBD00E9692D /* DOUAnnotationArray.m in Sources */,
 				234A3824167E11F10078AC9D /* DOUConsts.m in Sources */,
 				EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */,
+				EEAC7ECF16804304000153AE /* DOUMusicEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

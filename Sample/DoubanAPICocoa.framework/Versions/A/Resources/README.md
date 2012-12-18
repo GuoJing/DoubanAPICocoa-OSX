@@ -118,23 +118,11 @@
 
 具体还是请看Sample代码，简单易懂。
 
-## Sample ##
+## 示例 ##
 
 Sample是一个简单的客户端，用来演示各种功能。
 
-![samplewindow](http://guojing.me/images/2012/samplestart.png)
-
-可以在**菜单栏**里打开相应的Sample，**Sample并不是同步更新完善**。
-
-### Event Sample ###
-
-![samplewindow](http://guojing.me/images/2012/samplewindow.png)
-
-获取活动信息
-
-1. 首先点击`验证`，连接到豆瓣。
-2. 链接成功后，会跳转到我的页面，点击`Load`再度激活程序。
-3. 在输入框中输入活动的id，并且点击`获取`，获取活动海报等信息。
+可以在菜单栏里打开相应的Sample，Sample并不是同步更新完善。但基本上重要的接口都会有示例。
 
 ## 历史 ##
 

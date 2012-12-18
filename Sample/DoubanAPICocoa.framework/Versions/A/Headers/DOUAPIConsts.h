@@ -43,3 +43,9 @@ extern NSString * const kDOUMovieSearchAPIUrl;
 extern NSString * const kDOUMovieTagsAPIUrl;
 extern NSString * const kDOUMovieWriteReviewAPIUrl;
 extern NSString * const kDOUMovieEditReviewAPIUrl;
+
+extern NSString * const kDOUMusicAPIUrl;
+extern NSString * const kDOUMusicSearchAPIUrl;
+extern NSString * const kDOUMusicTagsAPIUrl;
+extern NSString * const kDOUMusicWriteReviewAPIUrl;
+extern NSString * const kDOUMusicEditReviewAPIUrl;

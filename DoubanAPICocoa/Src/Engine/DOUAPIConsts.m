@@ -55,3 +55,11 @@ NSString * const kDOUMovieSearchAPIUrl = @"/v2/movie/search?q=%@&start=%d&count=
 NSString * const kDOUMovieTagsAPIUrl = @"/v2/movie/%@/tags";
 NSString * const kDOUMovieWriteReviewAPIUrl = @"/v2/movie/reviews";
 NSString * const kDOUMovieEditReviewAPIUrl = @"/v2/movie/review/%@";
+
+//Music
+
+NSString * const kDOUMusicAPIUrl = @"/v2/music/%@";
+NSString * const kDOUMusicSearchAPIUrl = @"/v2/music/search?q=%@&start=%d&count=%d";
+NSString * const kDOUMusicTagsAPIUrl = @"/v2/music/%@/tags";
+NSString * const kDOUMusicWriteReviewAPIUrl = @"/v2/music/reviews";
+NSString * const kDOUMusicEditReviewAPIUrl = @"/v2/music/review/%@";

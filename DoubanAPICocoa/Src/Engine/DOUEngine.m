@@ -19,6 +19,8 @@
 #import "DOUOnlineEngine.h"
 #import "DOUUserEngine.h"
 #import "DOUBookEngine.h"
+#import "DOUMovieEngine.h"
+#import "DOUMusicEngine.h"
 
 #import "DOUConsts.h"
 
@@ -111,6 +113,10 @@
             break;
         case kDOUBook:
             return [[[DOUBookEngine alloc] initWithEngine:self] autorelease];
+        case kDOUMovie:
+            return [[[DOUMovieEngine alloc] initWithEngine:self] autorelease];
+        case kDOUMusic:
+            return [[[DOUMusicEngine alloc] initWithEngine:self] autorelease];
         default:
             return self;
     }

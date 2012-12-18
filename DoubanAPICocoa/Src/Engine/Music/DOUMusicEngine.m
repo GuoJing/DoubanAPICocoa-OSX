@@ -1,21 +1,21 @@
 //
-//  DOUMovieEngine.m
+//  DOUMusicEngine.m
 //  DoubanAPICocoa
 //
 //  Created by bettylwx's on 12-12-18.
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
-#import "DOUMovieEngine.h"
+#import "DOUMusicEngine.h"
 #import "DOUErrorConsts.h"
 #import "DOUAPIConsts.h"
 
-@implementation DOUMovieEngine
+@implementation DOUMusicEngine
 
-- (void)getMovieWithRemoteID:(NSString *)movie_id
-                successBlock:(void(^)(DOUMovie *))successBlock
+- (void)getMusicWithRemoteID:(NSString *)music_id
+                successBlock:(void(^)(DOUMusic *))successBlock
                  failedBlock:(void(^)(NSString *))failedBlock{
-    __block DOUMovie *newMovie = nil;
+    __block DOUMusic *newMusic = nil;
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -25,17 +25,17 @@
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieAPIUrl, movie_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMusicAPIUrl, music_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMovieArray *array = [[DOUMovieArray alloc] initWithString:[req responseString]];
+            DOUMusicArray *array = [[DOUMusicArray alloc] initWithString:[req responseString]];
             if (array) {
-                newMovie = [[DOUMovie alloc] initWithString:[req responseString]];
+                newMusic = [[DOUMusic alloc] initWithString:[req responseString]];
                 if (successBlock) {
-                    successBlock(newMovie);
+                    successBlock(newMusic);
                 }
             }
         } else {
@@ -47,46 +47,10 @@
     [service get:query callback:completionBlock];
 }
 
-
-- (void)getMovieWithRemoteIMDB:(NSString *)isbn
-                  successBlock:(void(^)(DOUMovie *))successBlock
-                   failedBlock:(void(^)(NSString *))failedBlock{
-    __block DOUMovie *newMovie = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
-    
-    DOUService *service = [self getService];
-    service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieWithIMDBAPIUrl, isbn];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
-    
-    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
-        NSError *error = [req doubanError];
-        if (!error) {
-            DOUMovieArray *array = [[DOUMovieArray alloc] initWithString:[req responseString]];
-            if (array) {
-                newMovie = [[DOUMovie alloc] initWithString:[req responseString]];
-                if (successBlock) {
-                    successBlock(newMovie);
-                }
-            }
-        } else {
-            if (failedBlock) {
-                failedBlock([req responseString]);
-            }
-        }
-    };
-    [service get:query callback:completionBlock];
-}
-
-- (void)searchMovies:(NSString *)search_text
+- (void)searchMusics:(NSString *)search_text
                start:(int)start
                count:(int)count
-        successBlock:(void(^)(DOUMovieArray *))successBlock
+        successBlock:(void(^)(DOUMusicArray *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
@@ -97,13 +61,13 @@
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieSearchAPIUrl, search_text, start, count];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMusicSearchAPIUrl, search_text, start, count];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMovieArray *array = [[DOUMovieArray alloc] initWithString:[req responseString]];
+            DOUMusicArray *array = [[DOUMusicArray alloc] initWithString:[req responseString]];
             if (successBlock) {
                 successBlock(array);
             }
@@ -116,7 +80,7 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)getTagsWithRemoteMovieID:(NSString *)movie_id
+- (void)getTagsWithRemoteMusicID:(NSString *)music_id
                     successBlock:(void(^)(DOUTagArray *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -127,7 +91,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieTagsAPIUrl, movie_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMusicTagsAPIUrl, music_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
@@ -146,7 +110,7 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)writeReview:(NSString *)movie_id
+- (void)writeReview:(NSString *)music_id
               title:(NSString *)title
             content:(NSString *)content
              rating:(int)rating
@@ -158,10 +122,10 @@
         }
         return;
     }
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"movie=%@&title=%@&content=%@&rating=%d", movie_id , title, content, rating];
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"music=%@&title=%@&content=%@&rating=%d", music_id , title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieWriteReviewAPIUrl, movie_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMusicWriteReviewAPIUrl, music_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
@@ -183,7 +147,7 @@
            content:(NSString *)content
             rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
-       failedBlock:(void(^)(NSString *))failedBlock{    
+       failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -193,7 +157,7 @@
     NSMutableString *putBody = [NSMutableString stringWithFormat:@"&title=%@&content=%@&rating=%d", title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieEditReviewAPIUrl, review_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMusicEditReviewAPIUrl, review_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
@@ -221,7 +185,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUMovieEditReviewAPIUrl, review_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMusicEditReviewAPIUrl, review_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
