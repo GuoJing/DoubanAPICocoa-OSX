@@ -19,6 +19,9 @@
 @property (nonatomic, copy) NSString *publishTimeStr;
 @property (nonatomic, retain) NSDate *publishTime;
 
+@property (nonatomic, copy) NSString *image;
+@property (nonatomic, copy) NSString *numRaters;
+@property (nonatomic, copy) NSString *average;
 @property (nonatomic, copy) NSString *largeImage;
 @property (nonatomic, copy) NSString *smallImage;
 @property (nonatomic, copy) NSString *mediumImage;

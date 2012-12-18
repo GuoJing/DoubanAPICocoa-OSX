@@ -23,6 +23,12 @@
 @dynamic publishDate;
 
 @dynamic image;
+@dynamic largeImage;
+@dynamic smallImage;
+@dynamic mediumImage;
+
+@dynamic numRaters;
+@dynamic average;
 
 - (NSString *)identifier {
   return [self.dictionary objectForKey:@"id"];
@@ -55,5 +61,34 @@
   return [self.dictionary objectForKey:@"image"];
 }
 
+- (NSString *)numRaters {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"rating"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"numRaters"];
+    }
+}
+
+- (NSString *)average {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"rating"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"average"];
+    }
+}
+
+- (NSString *)largeImage {
+    return [self.image stringByReplacingOccurrencesOfString:@"spic" withString:@"lpic"];
+}
+
+- (NSString *)smallImage {
+    return self.image;
+}
+
+- (NSString *)mediumImage {
+    return [self.image stringByReplacingOccurrencesOfString:@"spic" withString:@"mpic"];
+}
 
 @end

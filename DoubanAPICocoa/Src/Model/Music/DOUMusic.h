@@ -21,5 +21,11 @@
 @property (nonatomic, retain) NSDate *publishDate;
 
 @property (nonatomic, copy) NSString *image;
+@property (nonatomic, copy) NSString *largeImage;
+@property (nonatomic, copy) NSString *smallImage;
+@property (nonatomic, copy) NSString *mediumImage;
+
+@property (nonatomic, copy) NSString *numRaters;
+@property (nonatomic, copy) NSString *average;
 
 @end

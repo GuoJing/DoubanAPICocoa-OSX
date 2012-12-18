@@ -21,13 +21,15 @@
 @dynamic publishTimeStr;
 @dynamic publishTime;
 
+@dynamic numRaters;
+@dynamic average;
+@dynamic image;
 @dynamic largeImage;
 @dynamic smallImage;
 @dynamic mediumImage;
 
 @dynamic wishCount;
 @dynamic collectionCount;
-
 
 - (NSString *)identifier {
   return [self.dictionary objectForKey:@"id"];
@@ -56,20 +58,6 @@
   return [self.dictionary objectForKey:@"pubdate"];
 }
 
-- (NSString *)largeImage {
-  return [[self.dictionary objectForKey:@"images"] objectForKey:@"large"];
-}
-
-- (NSString *)smallImage {
-  return [[self.dictionary objectForKey:@"images"] objectForKey:@"small"];
-}
-
-- (NSString *)mediumImage {
-  return [[self.dictionary objectForKey:@"images"] objectForKey:@"medium"];
-}
-
-
-
 - (NSInteger)wishCount {
   return [[self.dictionary objectForKey:@"wish"] integerValue];
 }
@@ -78,5 +66,38 @@
   return [[self.dictionary objectForKey:@"collection"] integerValue];
 }
 
+- (NSString *)image {
+    return [self.dictionary objectForKey:@"image"];
+}
+
+- (NSString *)numRaters {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"rating"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"numRaters"];
+    }
+}
+
+- (NSString *)average {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"rating"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"average"];
+    }
+}
+
+- (NSString *)largeImage {
+    return [self.image stringByReplacingOccurrencesOfString:@"spic" withString:@"lpic"];
+}
+
+- (NSString *)smallImage {
+    return self.image;
+}
+
+- (NSString *)mediumImage {
+    return [self.image stringByReplacingOccurrencesOfString:@"spic" withString:@"mpic"];
+}
 
 @end
