@@ -8,6 +8,9 @@
 
 #import "DOUAPIConsts.h"
 
+//#TODO 书影音的获取用户所有的tag没有实现
+//v2/xxx/user_tags/id
+
 //Event
 
 NSString * const kDOUEventAPIUrl = @"/v2/event/%@";
@@ -43,3 +46,12 @@ NSString * const kDOUBookWriteAnnotationAPIUrl = @"/v2/book/%@/annotations";
 NSString * const kDOUBookEditAnnotationAPIUrl = @"/v2/book/annotation/%@";
 NSString * const kDOUBookWriteReviewAPIUrl = @"/v2/book/reviews";
 NSString * const kDOUBookEditReviewAPIUrl = @"/v2/book/review/%@";
+
+//Movie
+
+NSString * const kDOUMovieAPIUrl = @"/v2/movie/%@";
+NSString * const kDOUMovieWithIMDBAPIUrl = @"/v2/movie/imdb/%@";
+NSString * const kDOUMovieSearchAPIUrl = @"/v2/movie/search?q=%@&start=%d&count=%d";
+NSString * const kDOUMovieTagsAPIUrl = @"/v2/movie/%@/tags";
+NSString * const kDOUMovieWriteReviewAPIUrl = @"/v2/movie/reviews";
+NSString * const kDOUMovieEditReviewAPIUrl = @"/v2/movie/review/%@";

@@ -548,7 +548,7 @@
     [service post:query postBody:postBody callback:completionBlock];
 }
 
-- (void)eidtReview:(NSString *)book_id
+- (void)eidtReview:(NSString *)review_id
              title:(NSString *)title
            content:(NSString *)content
             rating:(int)rating
@@ -560,10 +560,10 @@
         }
         return;
     }
-    NSMutableString *putBody = [NSMutableString stringWithFormat:@"book=%@&title=%@&content=%@&rating=%d", book_id , title, content, rating];
+    NSMutableString *putBody = [NSMutableString stringWithFormat:@"&title=%@&content=%@&rating=%d", title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, book_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, review_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
@@ -580,7 +580,7 @@
     [service put:query putBody:putBody callback:completionBlock];
 }
 
-- (void)deleteReview:(NSString *)book_id
+- (void)deleteReview:(NSString *)review_id
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -591,7 +591,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, book_id];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, review_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];

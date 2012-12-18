@@ -36,3 +36,10 @@ extern NSString * const kDOUBookWriteAnnotationAPIUrl;
 extern NSString * const kDOUBookEditAnnotationAPIUrl;
 extern NSString * const kDOUBookWriteReviewAPIUrl;
 extern NSString * const kDOUBookEditReviewAPIUrl;
+
+extern NSString * const kDOUMovieAPIUrl;
+extern NSString * const kDOUMovieWithIMDBAPIUrl;
+extern NSString * const kDOUMovieSearchAPIUrl;
+extern NSString * const kDOUMovieTagsAPIUrl;
+extern NSString * const kDOUMovieWriteReviewAPIUrl;
+extern NSString * const kDOUMovieEditReviewAPIUrl;

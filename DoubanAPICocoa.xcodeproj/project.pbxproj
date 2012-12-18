@@ -194,6 +194,8 @@
 		23BB02CF166C548400930FFD /* DOUPhotoArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02B1166C548400930FFD /* DOUPhotoArray.m */; };
 		23E84081165230DF0042F413 /* DOUAPIConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E8407F165230DF0042F413 /* DOUAPIConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E84082165230DF0042F413 /* DOUAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E84080165230DF0042F413 /* DOUAPIConfig.m */; };
+		EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7EC41680156A000153AE /* DOUMovieEngine.h */; };
+		EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7EC51680156A000153AE /* DOUMovieEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -391,6 +393,8 @@
 		23BB02B1166C548400930FFD /* DOUPhotoArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUPhotoArray.m; sourceTree = "<group>"; };
 		23E8407F165230DF0042F413 /* DOUAPIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAPIConfig.h; sourceTree = "<group>"; };
 		23E84080165230DF0042F413 /* DOUAPIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAPIConfig.m; sourceTree = "<group>"; };
+		EEAC7EC41680156A000153AE /* DOUMovieEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMovieEngine.h; sourceTree = "<group>"; };
+		EEAC7EC51680156A000153AE /* DOUMovieEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMovieEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,6 +455,8 @@
 		23198E6C167DB52000E9692D /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				EEAC7EC41680156A000153AE /* DOUMovieEngine.h */,
+				EEAC7EC51680156A000153AE /* DOUMovieEngine.m */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -1105,6 +1111,7 @@
 				23198EC5167DC9A900E9692D /* DOUUserTagArray.h in Headers */,
 				23198EC9167DCBAC00E9692D /* DOUAnnotation.h in Headers */,
 				23198ECD167DCBBD00E9692D /* DOUAnnotationArray.h in Headers */,
+				EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1258,6 +1265,7 @@
 				23198ECA167DCBAC00E9692D /* DOUAnnotation.m in Sources */,
 				23198ECE167DCBBD00E9692D /* DOUAnnotationArray.m in Sources */,
 				234A3824167E11F10078AC9D /* DOUConsts.m in Sources */,
+				EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
