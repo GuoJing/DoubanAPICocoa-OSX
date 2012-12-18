@@ -198,6 +198,8 @@
 		EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7EC51680156A000153AE /* DOUMovieEngine.m */; };
 		EEAC7ECE16804304000153AE /* DOUMusicEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7ECC16804304000153AE /* DOUMusicEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEAC7ECF16804304000153AE /* DOUMusicEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ECD16804304000153AE /* DOUMusicEngine.m */; };
+		EEAC7ED9168057FB000153AE /* DOUBrocastEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7ED7168057FB000153AE /* DOUBrocastEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEAC7EDA168057FB000153AE /* DOUBrocastEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED8168057FB000153AE /* DOUBrocastEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -399,6 +401,8 @@
 		EEAC7EC51680156A000153AE /* DOUMovieEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMovieEngine.m; sourceTree = "<group>"; };
 		EEAC7ECC16804304000153AE /* DOUMusicEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMusicEngine.h; sourceTree = "<group>"; };
 		EEAC7ECD16804304000153AE /* DOUMusicEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMusicEngine.m; sourceTree = "<group>"; };
+		EEAC7ED7168057FB000153AE /* DOUBrocastEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBrocastEngine.h; sourceTree = "<group>"; };
+		EEAC7ED8168057FB000153AE /* DOUBrocastEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBrocastEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -602,6 +606,8 @@
 		23198ECF167DDAC100E9692D /* Broadcast */ = {
 			isa = PBXGroup;
 			children = (
+				EEAC7ED7168057FB000153AE /* DOUBrocastEngine.h */,
+				EEAC7ED8168057FB000153AE /* DOUBrocastEngine.m */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -1119,6 +1125,7 @@
 				23198ECD167DCBBD00E9692D /* DOUAnnotationArray.h in Headers */,
 				EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */,
 				EEAC7ECE16804304000153AE /* DOUMusicEngine.h in Headers */,
+				EEAC7ED9168057FB000153AE /* DOUBrocastEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,6 +1281,7 @@
 				234A3824167E11F10078AC9D /* DOUConsts.m in Sources */,
 				EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */,
 				EEAC7ECF16804304000153AE /* DOUMusicEngine.m in Sources */,
+				EEAC7EDA168057FB000153AE /* DOUBrocastEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

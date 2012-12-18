@@ -63,3 +63,22 @@ NSString * const kDOUMusicSearchAPIUrl = @"/v2/music/search?q=%@&start=%d&count=
 NSString * const kDOUMusicTagsAPIUrl = @"/v2/music/%@/tags";
 NSString * const kDOUMusicWriteReviewAPIUrl = @"/v2/music/reviews";
 NSString * const kDOUMusicEditReviewAPIUrl = @"/v2/music/review/%@";
+
+//Broadcast
+NSString * const kDOUWriteBroadcastAPIUrl = @"/shuo/v2/statuses/";
+NSString * const kDOUBroadcastByFriendsAPIUrl = @"/shuo/v2/statuses/home_timeline";
+NSString * const kDOUBroadcastByUserAPIUrl = @"/shuo/v2/statuses/user_timeline/%@";
+NSString * const kDOUBroadcastShuoAPIUrl = @"/shuo/v2/statuses/%@";
+NSString * const kDOUBroadcastCommentListAPIUrl = @"/shuo/v2/statuses/%@/comments";
+NSString * const kDOUBroadcastCommentAPIUrl = @"/shuo/v2/statuses/comment/%@";
+NSString * const kDOUBroadcastRepostAPIUrl = @"/shuo/v2/statuses/%@/reshare";
+NSString * const kDOUBroadcastLikeAPIUrl = @"/shuo/v2/statuses/%@/like";
+NSString * const kDOUBroadcastUserFollowingAPIUrl = @"/shuo/v2/users/%@/following";
+NSString * const kDOUBroadcastUserFollowersAPIUrl = @"/shuo/v2/users/%@/followers";
+NSString * const kDOUBroadcastUserFollowInCommonAPIUrl = @"/shuo/v2/users/%@/follow_in_common";
+NSString * const kDOUBroadcastUserFollowingFollowersAPIUrl = @"/shuo/v2/users/%@/following_followers_of";
+NSString * const kDOUBroadcastUserSearchAPIUrl = @"/shuo/v2/users/search";
+NSString * const kDOUBroadcastUserBlockAPIUrl = @"/shuo/v2/users/%@/block";
+NSString * const kDOUBroadcastUserFollowAPIUrl = @"/shuo/v2/friendships/create";
+NSString * const kDOUBroadcastUserUnFollowAPIUrl = @"/shuo/v2/friendships/destroy";
+NSString * const kDOUBroadcastUserFriendShopAPIurl = @"/shuo/v2/friendships/show";

@@ -27,6 +27,7 @@
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 		EEAC7ED2168046D6000153AE /* MusicWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED1168046D6000153AE /* MusicWindowController.m */; };
 		EEAC7ED6168046EB000153AE /* MovieWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED5168046EB000153AE /* MovieWindowController.m */; };
+		EEAC7EE016805F9E000153AE /* BroadcastWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7EDF16805F9E000153AE /* BroadcastWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		EEAC7ED1168046D6000153AE /* MusicWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWindowController.m; sourceTree = "<group>"; };
 		EEAC7ED4168046EB000153AE /* MovieWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieWindowController.h; sourceTree = "<group>"; };
 		EEAC7ED5168046EB000153AE /* MovieWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieWindowController.m; sourceTree = "<group>"; };
+		EEAC7EDE16805F9E000153AE /* BroadcastWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastWindowController.h; sourceTree = "<group>"; };
+		EEAC7EDF16805F9E000153AE /* BroadcastWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadcastWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				EEAC7ED1168046D6000153AE /* MusicWindowController.m */,
 				EEAC7ED4168046EB000153AE /* MovieWindowController.h */,
 				EEAC7ED5168046EB000153AE /* MovieWindowController.m */,
+				EEAC7EDE16805F9E000153AE /* BroadcastWindowController.h */,
+				EEAC7EDF16805F9E000153AE /* BroadcastWindowController.m */,
 				23152154167077EF00AF553E /* Supporting Files */,
 			);
 			path = Sample;
@@ -325,6 +330,7 @@
 				234A3822167DE5B60078AC9D /* BookWindowController.m in Sources */,
 				EEAC7ED2168046D6000153AE /* MusicWindowController.m in Sources */,
 				EEAC7ED6168046EB000153AE /* MovieWindowController.m in Sources */,
+				EEAC7EE016805F9E000153AE /* BroadcastWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
