@@ -71,8 +71,6 @@
         
     if ([openDlg runModal] == NSOKButton) {
         NSURL* path = [[openDlg URLs] objectAtIndex:0];
-        NSString *path_str = [path absoluteString];
-        NSLog(@"%@", path_str);
         NSData *data = [[NSData alloc] initWithContentsOfURL:path];
         self.image_data = data;
     }
