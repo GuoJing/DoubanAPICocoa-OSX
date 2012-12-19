@@ -1,20 +1,20 @@
 //
-//  DOUUserEngine.m
+//  DOUMailEngine.m
 //  DoubanAPICocoa
 //
-//  Created by GuoJing on 12-12-14.
+//  Created by GuoJing on 12-12-19.
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
-#import "DOUUserEngine.h"
+#import "DOUMailEngine.h"
 #import "DOUErrorConsts.h"
 #import "DOUAPIConsts.h"
 
-@implementation DOUUserEngine
+@implementation DOUMailEngine
 
-- (void)getUserWithRemoteID:(NSString *)user_id
-               successBlock:(void(^)(DOUUser *))successBlock
-                failedBlock:(void(^)(NSString *))failedBlock{
+- (void)getDoumailWithRemoteID:(NSString *)mail_id
+                  successBlock:(void(^)(DOUMail *))successBlock
+                   failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -23,15 +23,15 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUUserAPIUrl, user_id];
+    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUMailAPIUrl, mail_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUUser *user = [[[DOUUser alloc] initWithString:[req responseString]] autorelease];
-            if (user) {
+            DOUMail *mail = [[[DOUMail alloc] initWithString:[req responseString]] autorelease];
+            if (mail) {
                 if (successBlock) {
-                    successBlock(user);
+                    successBlock(mail);
                 }
             }
         } else {
@@ -43,9 +43,8 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)getUserFollowingWithUserID:(NSString *)user_id
-                      successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
-                       failedBlock:(void(^)(NSString *))failedBlock{
+- (void)getInbox:(void(^)(DOUMailArray *))successBlock
+     failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -54,12 +53,12 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastUserFollowingAPIUrl, user_id];
+    NSString *apiUrl = kDOUMailInboxAPIUrl;
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
+            DOUMailArray *array = [[[DOUMailArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(array);
@@ -74,9 +73,8 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)getUserFollowersWithUserID:(NSString *)user_id
-                      successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
-                       failedBlock:(void(^)(NSString *))failedBlock{
+- (void)getOutbox:(void(^)(DOUMailArray *))successBlock
+      failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -85,12 +83,12 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastUserFollowersAPIUrl, user_id];
+    NSString *apiUrl = kDOUMailOutboxAPIUrl;
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
+            DOUMailArray *array = [[[DOUMailArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(array);
@@ -105,9 +103,8 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)getUserFollowInCommonWithUserID:(NSString *)user_id
-                           successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
-                            failedBlock:(void(^)(NSString *))failedBlock{
+- (void)getInboxUnread:(void(^)(DOUMailArray *))successBlock
+           failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -116,12 +113,12 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastUserFollowInCommonAPIUrl, user_id];
+    NSString *apiUrl = kDOUMailUnreadAPIUrl;
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
+            DOUMailArray *array = [[[DOUMailArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(array);
@@ -136,9 +133,9 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)searchUser:(NSString *)text
-      successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
-       failedBlock:(void(^)(NSString *))failedBlock{
+- (void)markAsReadWithID:(NSString *)mail_id
+            successBlock:(void(^)(NSString *))successBlock
+             failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
             failedBlock(kDOUErrorServiceError);
@@ -147,16 +144,13 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastUserSearchAPIUrl, text];
+    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUMailMarkMailAPIUrl, mail_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
-            if (array) {
-                if (successBlock) {
-                    successBlock(array);
-                }
+            if (successBlock) {
+                successBlock(@"success");
             }
         } else {
             if (failedBlock) {
@@ -164,10 +158,39 @@
             }
         }
     };
-    [service get:query callback:completionBlock];
+    [service put:query putBody:@"" callback:completionBlock];
 }
 
-- (void)followSomeOneWithUserID:(NSString *)user_id
+- (void)markMultipleAsReadWithIDS:(NSString *)doumail_ids
+                    successBlock:(void(^)(NSString *))successBlock
+                     failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = kDOUMailMarkMultiMailAPIUrl;
+    NSMutableString *putBody = [NSMutableString stringWithFormat:@"ids=%@", doumail_ids];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service put:query putBody:putBody callback:completionBlock];
+}
+
+- (void)deleteDoumailWithID:(NSString *)mail_id
                successBlock:(void(^)(NSString *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -178,8 +201,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = kDOUBroadcastUserFollowAPIUrl;
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"user_id=%@&source=%@", user_id, self.apiKey];
+    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUMailDeleteMailAPIUrl, mail_id];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
@@ -193,69 +215,10 @@
             }
         }
     };
-    [service post:query postBody:postBody callback:completionBlock];
+    [service delete:query callback:completionBlock];
 }
 
-- (void)unfollowSomeOneWithUserID:(NSString *)user_id
-                 successBlock:(void(^)(NSString *))successBlock
-                  failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
-    DOUService *service = [self getService];
-    service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = kDOUBroadcastUserUnFollowAPIUrl;
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"user_id=%@&source=%@", user_id, self.apiKey];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
-    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
-        NSError *error = [req doubanError];
-        if (!error) {
-            if (successBlock) {
-                successBlock(@"success");
-            }
-        } else {
-            if (failedBlock) {
-                failedBlock([req responseString]);
-            }
-        }
-    };
-    [service post:query postBody:postBody callback:completionBlock];
-}
-
-- (void)blockSomeOneWithUserID:(NSString *)user_id
-              successBlock:(void(^)(NSString *))successBlock
-               failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
-    DOUService *service = [self getService];
-    service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastUserBlockAPIUrl, user_id];
-    NSMutableString *postBody = [NSMutableString stringWithFormat:@"user_id=%@", user_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
-    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
-        NSError *error = [req doubanError];
-        if (!error) {
-            if (successBlock) {
-                successBlock(@"success");
-            }
-        } else {
-            if (failedBlock) {
-                failedBlock([req responseString]);
-            }
-        }
-    };
-    [service post:query postBody:postBody callback:completionBlock];
-}
-
-- (void)getRelationShopWithSourceID:(NSString *)source_id
-                           targetID:(NSString *)target_id
+- (void)deleteMultipleDoumailWithIDS:(NSString *)doumail_ids
                        successBlock:(void(^)(NSString *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -266,13 +229,14 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastUserFriendShopAPIurl, self.apiKey, source_id, target_id];
+    NSString *apiUrl = kDOUMailDeleteMultiMailAPIUrl;
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"ids=%@", doumail_ids];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock([req responseString]);
+                successBlock(@"success");
             }
         } else {
             if (failedBlock) {
@@ -280,7 +244,41 @@
             }
         }
     };
-    [service get:query callback:completionBlock];
+    [service post:query postBody:postBody callback:completionBlock];
+}
+
+- (void)sendDoumailWithTitle:(NSString *)title
+                 withContent:(NSString *)content
+              withReceiverID:(NSString *)receiver_id
+            withCaptchaToken:(NSString *)captcha_token
+           withCaptchaString:(NSString *)captcha_string
+                successBlock:(void(^)(NSString *))successBlock
+                 failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = kDOUMailWriteMailAPIUrl;
+    NSMutableString *postBody = [NSMutableString stringWithFormat:@"title=%@&content=%@&receiver_id=%@&captcha_token=%@&captcha_string=%@", title, content, receiver_id, captcha_token,
+                                 captcha_string];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service post:query postBody:postBody callback:completionBlock];
 }
 
 @end

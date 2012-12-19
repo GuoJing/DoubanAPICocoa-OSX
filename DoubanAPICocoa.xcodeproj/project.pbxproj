@@ -192,6 +192,12 @@
 		239188BB1681A10D00B39F5D /* DOUBroadcastUserArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188B91681A10D00B39F5D /* DOUBroadcastUserArray.m */; };
 		239188C41681BBDB00B39F5D /* DOUUserArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188C21681BBDA00B39F5D /* DOUUserArray.m */; };
 		239188C51681BBDB00B39F5D /* DOUUserArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188C31681BBDB00B39F5D /* DOUUserArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188C81681BF1200B39F5D /* DOUMail.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188C61681BF1200B39F5D /* DOUMail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188C91681BF1200B39F5D /* DOUMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188C71681BF1200B39F5D /* DOUMail.m */; };
+		239188CC1681BF2100B39F5D /* DOUMailArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188CA1681BF2100B39F5D /* DOUMailArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188CD1681BF2100B39F5D /* DOUMailArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188CB1681BF2100B39F5D /* DOUMailArray.m */; };
+		239188D01681C0B800B39F5D /* DOUMailEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188CE1681C0B800B39F5D /* DOUMailEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188D11681C0B800B39F5D /* DOUMailEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188CF1681C0B800B39F5D /* DOUMailEngine.m */; };
 		23BB02BC166C548400930FFD /* DOUObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029C166C548400930FFD /* DOUObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02BD166C548400930FFD /* DOUObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029D166C548400930FFD /* DOUObject.m */; };
 		23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029E166C548400930FFD /* DOUObject+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -415,6 +421,12 @@
 		239188B91681A10D00B39F5D /* DOUBroadcastUserArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastUserArray.m; sourceTree = "<group>"; };
 		239188C21681BBDA00B39F5D /* DOUUserArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUUserArray.m; sourceTree = "<group>"; };
 		239188C31681BBDB00B39F5D /* DOUUserArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUUserArray.h; sourceTree = "<group>"; };
+		239188C61681BF1200B39F5D /* DOUMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMail.h; sourceTree = "<group>"; };
+		239188C71681BF1200B39F5D /* DOUMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMail.m; sourceTree = "<group>"; };
+		239188CA1681BF2100B39F5D /* DOUMailArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMailArray.h; sourceTree = "<group>"; };
+		239188CB1681BF2100B39F5D /* DOUMailArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMailArray.m; sourceTree = "<group>"; };
+		239188CE1681C0B800B39F5D /* DOUMailEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMailEngine.h; sourceTree = "<group>"; };
+		239188CF1681C0B800B39F5D /* DOUMailEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMailEngine.m; sourceTree = "<group>"; };
 		23BB029C166C548400930FFD /* DOUObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUObject.h; sourceTree = "<group>"; };
 		23BB029D166C548400930FFD /* DOUObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUObject.m; sourceTree = "<group>"; };
 		23BB029E166C548400930FFD /* DOUObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOUObject+Utils.h"; sourceTree = "<group>"; };
@@ -558,6 +570,10 @@
 		23198E71167DB5E000E9692D /* Doumail */ = {
 			isa = PBXGroup;
 			children = (
+				239188C61681BF1200B39F5D /* DOUMail.h */,
+				239188C71681BF1200B39F5D /* DOUMail.m */,
+				239188CA1681BF2100B39F5D /* DOUMailArray.h */,
+				239188CB1681BF2100B39F5D /* DOUMailArray.m */,
 			);
 			path = Doumail;
 			sourceTree = "<group>";
@@ -599,6 +615,8 @@
 		23198E77167DB5EE00E9692D /* Doumail */ = {
 			isa = PBXGroup;
 			children = (
+				239188CE1681C0B800B39F5D /* DOUMailEngine.h */,
+				239188CF1681C0B800B39F5D /* DOUMailEngine.m */,
 			);
 			path = Doumail;
 			sourceTree = "<group>";
@@ -1196,6 +1214,9 @@
 				239188B61681A10000B39F5D /* DOUBroadcastUser.h in Headers */,
 				239188BA1681A10D00B39F5D /* DOUBroadcastUserArray.h in Headers */,
 				239188C51681BBDB00B39F5D /* DOUUserArray.h in Headers */,
+				239188C81681BF1200B39F5D /* DOUMail.h in Headers */,
+				239188CC1681BF2100B39F5D /* DOUMailArray.h in Headers */,
+				239188D01681C0B800B39F5D /* DOUMailEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,6 +1383,9 @@
 				239188B71681A10000B39F5D /* DOUBroadcastUser.m in Sources */,
 				239188BB1681A10D00B39F5D /* DOUBroadcastUserArray.m in Sources */,
 				239188C41681BBDB00B39F5D /* DOUUserArray.m in Sources */,
+				239188C91681BF1200B39F5D /* DOUMail.m in Sources */,
+				239188CD1681BF2100B39F5D /* DOUMailArray.m in Sources */,
+				239188D11681C0B800B39F5D /* DOUMailEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

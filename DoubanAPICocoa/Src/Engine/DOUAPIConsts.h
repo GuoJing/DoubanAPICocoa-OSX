@@ -69,3 +69,14 @@ extern NSString * const kDOUBroadcastUserUnFollowAPIUrl;
 extern NSString * const kDOUBroadcastUserFriendShopAPIurl;
 
 extern NSString * const kDOUUserAPIUrl;
+
+extern NSString * const kDOUMailAPIUrl;
+extern NSString * const kDOUMailInboxAPIUrl;
+extern NSString * const kDOUMailOutboxAPIUrl;
+extern NSString * const kDOUMailUnreadAPIUrl;
+
+extern NSString * const kDOUMailWriteMailAPIUrl;
+extern NSString * const kDOUMailMarkMailAPIUrl;
+extern NSString * const kDOUMailMarkMultiMailAPIUrl;
+extern NSString * const kDOUMailDeleteMailAPIUrl;
+extern NSString * const kDOUMailDeleteMultiMailAPIUrl;

@@ -74,6 +74,7 @@ NSString * const kDOUBroadcastCommentAPIUrl = @"/shuo/v2/statuses/comment/%@";
 NSString * const kDOUBroadcastReshareAPIUrl = @"/shuo/v2/statuses/%@/reshare";
 NSString * const kDOUBroadcastLikeAPIUrl = @"/shuo/v2/statuses/%@/like";
 
+//Broadcast User
 NSString * const kDOUBroadcastUserFollowingAPIUrl = @"/shuo/v2/users/%@/following";
 NSString * const kDOUBroadcastUserFollowersAPIUrl = @"/shuo/v2/users/%@/followers";
 NSString * const kDOUBroadcastUserFollowInCommonAPIUrl = @"/shuo/v2/users/%@/follow_in_common";
@@ -83,4 +84,18 @@ NSString * const kDOUBroadcastUserBlockAPIUrl = @"/shuo/v2/users/%@/block";
 NSString * const kDOUBroadcastUserFollowAPIUrl = @"/shuo/v2/friendships/create";
 NSString * const kDOUBroadcastUserUnFollowAPIUrl = @"/shuo/v2/friendships/destroy";
 NSString * const kDOUBroadcastUserFriendShopAPIurl = @"/shuo/v2/friendships/show?source=%@&source_id=%@&target_id=%@";
+
+//User
 NSString * const kDOUUserAPIUrl = @"/v2/user/%@";
+
+//Doumail
+NSString * const kDOUMailAPIUrl = @"/v2/doumail/%@";
+NSString * const kDOUMailInboxAPIUrl = @"/v2/doumail/inbox";
+NSString * const kDOUMailOutboxAPIUrl = @"/v2/doumail/outbox";
+NSString * const kDOUMailUnreadAPIUrl = @"/v2/doumail/inbox/unread";
+
+NSString * const kDOUMailWriteMailAPIUrl = @"/v2/doumails";
+NSString * const kDOUMailMarkMailAPIUrl = @"/v2/doumail/%@";
+NSString * const kDOUMailMarkMultiMailAPIUrl = @"/v2/doumail/read";
+NSString * const kDOUMailDeleteMailAPIUrl = @"/v2/doumail/%@";
+NSString * const kDOUMailDeleteMultiMailAPIUrl = @"/v2/doumail/delete";
