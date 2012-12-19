@@ -13,8 +13,6 @@
 		2303EDD11679ACAD0026B5DB /* DOUEventEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303EDCF1679ACAD0026B5DB /* DOUEventEngine.m */; };
 		2303EDD81679B92F0026B5DB /* DOUAPIConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */; };
 		2303EDD91679B92F0026B5DB /* DOUAPIConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23198E7D167DB65B00E9692D /* DOUUserArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23198E79167DB65B00E9692D /* DOUUserArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23198E7E167DB65B00E9692D /* DOUUserArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23198E7A167DB65B00E9692D /* DOUUserArray.m */; };
 		23198E7F167DB65B00E9692D /* DOUUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 23198E7B167DB65B00E9692D /* DOUUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23198E80167DB65B00E9692D /* DOUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23198E7C167DB65B00E9692D /* DOUUser.m */; };
 		23198E85167DB68400E9692D /* DOUOnline.h in Headers */ = {isa = PBXBuildFile; fileRef = 23198E81167DB68400E9692D /* DOUOnline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -188,6 +186,12 @@
 		239188AF16818E6900B39F5D /* DOUBroadcastLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188AD16818E6800B39F5D /* DOUBroadcastLike.m */; };
 		239188B216818E8200B39F5D /* DOUBroadcastLikeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188B016818E8100B39F5D /* DOUBroadcastLikeArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		239188B316818E8200B39F5D /* DOUBroadcastLikeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188B116818E8200B39F5D /* DOUBroadcastLikeArray.m */; };
+		239188B61681A10000B39F5D /* DOUBroadcastUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188B41681A0FF00B39F5D /* DOUBroadcastUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188B71681A10000B39F5D /* DOUBroadcastUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188B51681A0FF00B39F5D /* DOUBroadcastUser.m */; };
+		239188BA1681A10D00B39F5D /* DOUBroadcastUserArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188B81681A10D00B39F5D /* DOUBroadcastUserArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188BB1681A10D00B39F5D /* DOUBroadcastUserArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188B91681A10D00B39F5D /* DOUBroadcastUserArray.m */; };
+		239188C41681BBDB00B39F5D /* DOUUserArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188C21681BBDA00B39F5D /* DOUUserArray.m */; };
+		239188C51681BBDB00B39F5D /* DOUUserArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188C31681BBDB00B39F5D /* DOUUserArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02BC166C548400930FFD /* DOUObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029C166C548400930FFD /* DOUObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02BD166C548400930FFD /* DOUObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029D166C548400930FFD /* DOUObject.m */; };
 		23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029E166C548400930FFD /* DOUObject+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -225,8 +229,6 @@
 		2303EDCF1679ACAD0026B5DB /* DOUEventEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUEventEngine.m; sourceTree = "<group>"; };
 		2303EDD61679B92F0026B5DB /* DOUAPIConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAPIConsts.m; sourceTree = "<group>"; };
 		2303EDD71679B92F0026B5DB /* DOUAPIConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAPIConsts.h; sourceTree = "<group>"; };
-		23198E79167DB65B00E9692D /* DOUUserArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUUserArray.h; sourceTree = "<group>"; };
-		23198E7A167DB65B00E9692D /* DOUUserArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUUserArray.m; sourceTree = "<group>"; };
 		23198E7B167DB65B00E9692D /* DOUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUUser.h; sourceTree = "<group>"; };
 		23198E7C167DB65B00E9692D /* DOUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUUser.m; sourceTree = "<group>"; };
 		23198E81167DB68400E9692D /* DOUOnline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUOnline.h; sourceTree = "<group>"; };
@@ -407,6 +409,12 @@
 		239188AD16818E6800B39F5D /* DOUBroadcastLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastLike.m; sourceTree = "<group>"; };
 		239188B016818E8100B39F5D /* DOUBroadcastLikeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastLikeArray.h; sourceTree = "<group>"; };
 		239188B116818E8200B39F5D /* DOUBroadcastLikeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastLikeArray.m; sourceTree = "<group>"; };
+		239188B41681A0FF00B39F5D /* DOUBroadcastUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastUser.h; sourceTree = "<group>"; };
+		239188B51681A0FF00B39F5D /* DOUBroadcastUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastUser.m; sourceTree = "<group>"; };
+		239188B81681A10D00B39F5D /* DOUBroadcastUserArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastUserArray.h; sourceTree = "<group>"; };
+		239188B91681A10D00B39F5D /* DOUBroadcastUserArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastUserArray.m; sourceTree = "<group>"; };
+		239188C21681BBDA00B39F5D /* DOUUserArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUUserArray.m; sourceTree = "<group>"; };
+		239188C31681BBDB00B39F5D /* DOUUserArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUUserArray.h; sourceTree = "<group>"; };
 		23BB029C166C548400930FFD /* DOUObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUObject.h; sourceTree = "<group>"; };
 		23BB029D166C548400930FFD /* DOUObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUObject.m; sourceTree = "<group>"; };
 		23BB029E166C548400930FFD /* DOUObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOUObject+Utils.h"; sourceTree = "<group>"; };
@@ -517,10 +525,14 @@
 		23198E6E167DB5DF00E9692D /* User */ = {
 			isa = PBXGroup;
 			children = (
-				23198E79167DB65B00E9692D /* DOUUserArray.h */,
-				23198E7A167DB65B00E9692D /* DOUUserArray.m */,
 				23198E7B167DB65B00E9692D /* DOUUser.h */,
 				23198E7C167DB65B00E9692D /* DOUUser.m */,
+				239188C31681BBDB00B39F5D /* DOUUserArray.h */,
+				239188C21681BBDA00B39F5D /* DOUUserArray.m */,
+				239188B41681A0FF00B39F5D /* DOUBroadcastUser.h */,
+				239188B51681A0FF00B39F5D /* DOUBroadcastUser.m */,
+				239188B81681A10D00B39F5D /* DOUBroadcastUserArray.h */,
+				239188B91681A10D00B39F5D /* DOUBroadcastUserArray.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1151,7 +1163,6 @@
 				238DF87C1651E24F004B2823 /* ASIS3ObjectRequest.h in Headers */,
 				238DF87E1651E24F004B2823 /* ASIS3Request.h in Headers */,
 				238DF8801651E24F004B2823 /* ASIS3ServiceRequest.h in Headers */,
-				23198E7D167DB65B00E9692D /* DOUUserArray.h in Headers */,
 				23198E7F167DB65B00E9692D /* DOUUser.h in Headers */,
 				23198E85167DB68400E9692D /* DOUOnline.h in Headers */,
 				23198E87167DB68400E9692D /* DOUOnlineArray.h in Headers */,
@@ -1182,6 +1193,9 @@
 				239188AA16818E4C00B39F5D /* DOUBroadcastReshareArray.h in Headers */,
 				239188AE16818E6900B39F5D /* DOUBroadcastLike.h in Headers */,
 				239188B216818E8200B39F5D /* DOUBroadcastLikeArray.h in Headers */,
+				239188B61681A10000B39F5D /* DOUBroadcastUser.h in Headers */,
+				239188BA1681A10D00B39F5D /* DOUBroadcastUserArray.h in Headers */,
+				239188C51681BBDB00B39F5D /* DOUUserArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,7 +1328,6 @@
 				2322B671167CB7D8002D1811 /* DOUNotification.m in Sources */,
 				2322B673167CB7D8002D1811 /* DOUNotificationArray.m in Sources */,
 				2322B68C167D748F002D1811 /* DOUErrorConsts.m in Sources */,
-				23198E7E167DB65B00E9692D /* DOUUserArray.m in Sources */,
 				23198E80167DB65B00E9692D /* DOUUser.m in Sources */,
 				23198E86167DB68400E9692D /* DOUOnline.m in Sources */,
 				23198E88167DB68400E9692D /* DOUOnlineArray.m in Sources */,
@@ -1346,6 +1359,9 @@
 				239188AB16818E4C00B39F5D /* DOUBroadcastReshareArray.m in Sources */,
 				239188AF16818E6900B39F5D /* DOUBroadcastLike.m in Sources */,
 				239188B316818E8200B39F5D /* DOUBroadcastLikeArray.m in Sources */,
+				239188B71681A10000B39F5D /* DOUBroadcastUser.m in Sources */,
+				239188BB1681A10D00B39F5D /* DOUBroadcastUserArray.m in Sources */,
+				239188C41681BBDB00B39F5D /* DOUUserArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

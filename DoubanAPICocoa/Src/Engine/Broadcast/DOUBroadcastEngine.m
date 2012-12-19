@@ -96,7 +96,6 @@
         until_id_str = [[NSString alloc] initWithFormat:@"%d", until_id];
     }
     NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUBroadcastByFriendsAPIUrl, since_id_str, until_id_str, start, count];
-    NSLog(@"%@", apiUrl);
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];

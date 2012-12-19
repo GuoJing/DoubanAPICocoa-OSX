@@ -73,12 +73,14 @@ NSString * const kDOUBroadcastCommentListAPIUrl = @"/shuo/v2/statuses/%@/comment
 NSString * const kDOUBroadcastCommentAPIUrl = @"/shuo/v2/statuses/comment/%@";
 NSString * const kDOUBroadcastReshareAPIUrl = @"/shuo/v2/statuses/%@/reshare";
 NSString * const kDOUBroadcastLikeAPIUrl = @"/shuo/v2/statuses/%@/like";
+
 NSString * const kDOUBroadcastUserFollowingAPIUrl = @"/shuo/v2/users/%@/following";
 NSString * const kDOUBroadcastUserFollowersAPIUrl = @"/shuo/v2/users/%@/followers";
 NSString * const kDOUBroadcastUserFollowInCommonAPIUrl = @"/shuo/v2/users/%@/follow_in_common";
 NSString * const kDOUBroadcastUserFollowingFollowersAPIUrl = @"/shuo/v2/users/%@/following_followers_of";
-NSString * const kDOUBroadcastUserSearchAPIUrl = @"/shuo/v2/users/search";
+NSString * const kDOUBroadcastUserSearchAPIUrl = @"/shuo/v2/users/search?q=%@";
 NSString * const kDOUBroadcastUserBlockAPIUrl = @"/shuo/v2/users/%@/block";
 NSString * const kDOUBroadcastUserFollowAPIUrl = @"/shuo/v2/friendships/create";
 NSString * const kDOUBroadcastUserUnFollowAPIUrl = @"/shuo/v2/friendships/destroy";
-NSString * const kDOUBroadcastUserFriendShopAPIurl = @"/shuo/v2/friendships/show";
+NSString * const kDOUBroadcastUserFriendShopAPIurl = @"/shuo/v2/friendships/show?source=%@&source_id=%@&target_id=%@";
+NSString * const kDOUUserAPIUrl = @"/v2/user/%@";
