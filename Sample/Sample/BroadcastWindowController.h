@@ -27,6 +27,14 @@
     IBOutlet NSTextFieldCell *user_shuo_id_field;
     IBOutlet NSTextFieldCell *get_user_shuo_field;
     IBOutlet NSButton *get_user_shuo_button;
+    
+    IBOutlet NSTextFieldCell *user_shuo_id_field2;
+    IBOutlet NSTextFieldCell *get_user_shuo_field2;
+    IBOutlet NSButton *get_user_shuo_button2;
+    
+    IBOutlet NSTextFieldCell *user_shuo_id_field3;
+    IBOutlet NSTextFieldCell *get_user_shuo_field3;
+    IBOutlet NSButton *get_user_shuo_button3;
 }
 
 @property (nonatomic, retain) DOUEngine *engine;
@@ -46,9 +54,22 @@
 @property (nonatomic, retain) IBOutlet NSTextFieldCell *get_user_shuo_field;
 @property (nonatomic, retain) IBOutlet NSButton *get_user_shuo_button;
 
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *user_shuo_id_field2;
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *get_user_shuo_field2;
+@property (nonatomic, retain) IBOutlet NSButton *get_user_shuo_button2;
+
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *user_shuo_id_field3;
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *get_user_shuo_field3;
+@property (nonatomic, retain) IBOutlet NSButton *get_user_shuo_button3;
+
 - (IBAction)onShuoButtonClicked:(id)sender;
 - (IBAction)openImageButtonClicked:(id)sender;
 - (IBAction)onGetShuoButtonClicked:(id)sender;
 - (IBAction)onGetUserShuoButtonClicked:(id)sender;
-
+- (IBAction)onGetOneShuoButtonClicked:(id)sender;
+- (IBAction)onDeleteOneShuoButtonClicked:(id)sender;
+- (IBAction)onReshareButtonClicked:(id)sender;
+- (IBAction)onLikeButtonClicked:(id)sender;
+- (IBAction)onReshareUserButtonClicked:(id)sender;
+- (IBAction)onLikeUserButtonClicked:(id)sender;
 @end

@@ -31,9 +31,9 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMusicArray *array = [[DOUMusicArray alloc] initWithString:[req responseString]];
+            DOUMusicArray *array = [[[DOUMusicArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
-                newMusic = [[DOUMusic alloc] initWithString:[req responseString]];
+                newMusic = [[[DOUMusic alloc] initWithString:[req responseString]] autorelease];
                 if (successBlock) {
                     successBlock(newMusic);
                 }
@@ -67,7 +67,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMusicArray *array = [[DOUMusicArray alloc] initWithString:[req responseString]];
+            DOUMusicArray *array = [[[DOUMusicArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }
@@ -97,7 +97,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUTagArray *array = [[DOUTagArray alloc] initWithString:[req responseString]];
+            DOUTagArray *array = [[[DOUTagArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }

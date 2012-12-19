@@ -38,9 +38,9 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            DOUEventArray *array = [[[DOUEventArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
-                newEvent = [[DOUEvent alloc] initWithString:[req responseString]];
+                newEvent = [[[DOUEvent alloc] initWithString:[req responseString]] autorelease];
                 if (successBlock) {
                     successBlock(newEvent);
                 }
@@ -72,7 +72,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUUserArray *array = [[DOUUserArray alloc] initWithString:[req responseString]];
+            DOUUserArray *array = [[[DOUUserArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }
@@ -103,7 +103,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUUserArray *array = [[DOUUserArray alloc] initWithString:[req responseString]];
+            DOUUserArray *array = [[[DOUUserArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }
@@ -135,7 +135,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            DOUEventArray *array = [[[DOUEventArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }
@@ -167,7 +167,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            DOUEventArray *array = [[[DOUEventArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }
@@ -199,7 +199,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUEventArray *array = [[DOUEventArray alloc] initWithString:[req responseString]];
+            DOUEventArray *array = [[[DOUEventArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }

@@ -37,7 +37,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBookArray *array = [[DOUBookArray alloc] initWithString:[req responseString]];
+            DOUBookArray *array = [[[DOUBookArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 newBook = [[DOUBook alloc] initWithString:[req responseString]];
                 if (successBlock) {

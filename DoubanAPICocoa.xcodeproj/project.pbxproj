@@ -176,6 +176,18 @@
 		23918896168159DD00B39F5D /* DOUBroadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 23918894168159DD00B39F5D /* DOUBroadcast.m */; };
 		2391889A16815A1300B39F5D /* DOUBroadcastArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 2391889816815A1300B39F5D /* DOUBroadcastArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2391889B16815A1300B39F5D /* DOUBroadcastArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2391889916815A1300B39F5D /* DOUBroadcastArray.m */; };
+		2391889E1681879300B39F5D /* DOUBroadcastComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 2391889C1681879200B39F5D /* DOUBroadcastComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2391889F1681879300B39F5D /* DOUBroadcastComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2391889D1681879200B39F5D /* DOUBroadcastComment.m */; };
+		239188A2168187A300B39F5D /* DOUBroadcastCommentArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188A0168187A200B39F5D /* DOUBroadcastCommentArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188A3168187A300B39F5D /* DOUBroadcastCommentArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188A1168187A200B39F5D /* DOUBroadcastCommentArray.m */; };
+		239188A616818E3400B39F5D /* DOUBroadcastReshare.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188A416818E3300B39F5D /* DOUBroadcastReshare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188A716818E3400B39F5D /* DOUBroadcastReshare.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188A516818E3400B39F5D /* DOUBroadcastReshare.m */; };
+		239188AA16818E4C00B39F5D /* DOUBroadcastReshareArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188A816818E4B00B39F5D /* DOUBroadcastReshareArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188AB16818E4C00B39F5D /* DOUBroadcastReshareArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188A916818E4B00B39F5D /* DOUBroadcastReshareArray.m */; };
+		239188AE16818E6900B39F5D /* DOUBroadcastLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188AC16818E6800B39F5D /* DOUBroadcastLike.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188AF16818E6900B39F5D /* DOUBroadcastLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188AD16818E6800B39F5D /* DOUBroadcastLike.m */; };
+		239188B216818E8200B39F5D /* DOUBroadcastLikeArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188B016818E8100B39F5D /* DOUBroadcastLikeArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		239188B316818E8200B39F5D /* DOUBroadcastLikeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188B116818E8200B39F5D /* DOUBroadcastLikeArray.m */; };
 		23BB02BC166C548400930FFD /* DOUObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029C166C548400930FFD /* DOUObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02BD166C548400930FFD /* DOUObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029D166C548400930FFD /* DOUObject.m */; };
 		23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029E166C548400930FFD /* DOUObject+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -383,6 +395,18 @@
 		23918894168159DD00B39F5D /* DOUBroadcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcast.m; sourceTree = "<group>"; };
 		2391889816815A1300B39F5D /* DOUBroadcastArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastArray.h; sourceTree = "<group>"; };
 		2391889916815A1300B39F5D /* DOUBroadcastArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastArray.m; sourceTree = "<group>"; };
+		2391889C1681879200B39F5D /* DOUBroadcastComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastComment.h; sourceTree = "<group>"; };
+		2391889D1681879200B39F5D /* DOUBroadcastComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastComment.m; sourceTree = "<group>"; };
+		239188A0168187A200B39F5D /* DOUBroadcastCommentArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastCommentArray.h; sourceTree = "<group>"; };
+		239188A1168187A200B39F5D /* DOUBroadcastCommentArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastCommentArray.m; sourceTree = "<group>"; };
+		239188A416818E3300B39F5D /* DOUBroadcastReshare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastReshare.h; sourceTree = "<group>"; };
+		239188A516818E3400B39F5D /* DOUBroadcastReshare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastReshare.m; sourceTree = "<group>"; };
+		239188A816818E4B00B39F5D /* DOUBroadcastReshareArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastReshareArray.h; sourceTree = "<group>"; };
+		239188A916818E4B00B39F5D /* DOUBroadcastReshareArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastReshareArray.m; sourceTree = "<group>"; };
+		239188AC16818E6800B39F5D /* DOUBroadcastLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastLike.h; sourceTree = "<group>"; };
+		239188AD16818E6800B39F5D /* DOUBroadcastLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastLike.m; sourceTree = "<group>"; };
+		239188B016818E8100B39F5D /* DOUBroadcastLikeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastLikeArray.h; sourceTree = "<group>"; };
+		239188B116818E8200B39F5D /* DOUBroadcastLikeArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastLikeArray.m; sourceTree = "<group>"; };
 		23BB029C166C548400930FFD /* DOUObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUObject.h; sourceTree = "<group>"; };
 		23BB029D166C548400930FFD /* DOUObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUObject.m; sourceTree = "<group>"; };
 		23BB029E166C548400930FFD /* DOUObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOUObject+Utils.h"; sourceTree = "<group>"; };
@@ -627,6 +651,18 @@
 				23918894168159DD00B39F5D /* DOUBroadcast.m */,
 				2391889816815A1300B39F5D /* DOUBroadcastArray.h */,
 				2391889916815A1300B39F5D /* DOUBroadcastArray.m */,
+				2391889C1681879200B39F5D /* DOUBroadcastComment.h */,
+				2391889D1681879200B39F5D /* DOUBroadcastComment.m */,
+				239188A0168187A200B39F5D /* DOUBroadcastCommentArray.h */,
+				239188A1168187A200B39F5D /* DOUBroadcastCommentArray.m */,
+				239188A416818E3300B39F5D /* DOUBroadcastReshare.h */,
+				239188A516818E3400B39F5D /* DOUBroadcastReshare.m */,
+				239188A816818E4B00B39F5D /* DOUBroadcastReshareArray.h */,
+				239188A916818E4B00B39F5D /* DOUBroadcastReshareArray.m */,
+				239188AC16818E6800B39F5D /* DOUBroadcastLike.h */,
+				239188AD16818E6800B39F5D /* DOUBroadcastLike.m */,
+				239188B016818E8100B39F5D /* DOUBroadcastLikeArray.h */,
+				239188B116818E8200B39F5D /* DOUBroadcastLikeArray.m */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -1140,6 +1176,12 @@
 				EEAC7ED9168057FB000153AE /* DOUBroadcastEngine.h in Headers */,
 				23918895168159DD00B39F5D /* DOUBroadcast.h in Headers */,
 				2391889A16815A1300B39F5D /* DOUBroadcastArray.h in Headers */,
+				2391889E1681879300B39F5D /* DOUBroadcastComment.h in Headers */,
+				239188A2168187A300B39F5D /* DOUBroadcastCommentArray.h in Headers */,
+				239188A616818E3400B39F5D /* DOUBroadcastReshare.h in Headers */,
+				239188AA16818E4C00B39F5D /* DOUBroadcastReshareArray.h in Headers */,
+				239188AE16818E6900B39F5D /* DOUBroadcastLike.h in Headers */,
+				239188B216818E8200B39F5D /* DOUBroadcastLikeArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1298,6 +1340,12 @@
 				EEAC7EDA168057FB000153AE /* DOUBroadcastEngine.m in Sources */,
 				23918896168159DD00B39F5D /* DOUBroadcast.m in Sources */,
 				2391889B16815A1300B39F5D /* DOUBroadcastArray.m in Sources */,
+				2391889F1681879300B39F5D /* DOUBroadcastComment.m in Sources */,
+				239188A3168187A300B39F5D /* DOUBroadcastCommentArray.m in Sources */,
+				239188A716818E3400B39F5D /* DOUBroadcastReshare.m in Sources */,
+				239188AB16818E4C00B39F5D /* DOUBroadcastReshareArray.m in Sources */,
+				239188AF16818E6900B39F5D /* DOUBroadcastLike.m in Sources */,
+				239188B316818E8200B39F5D /* DOUBroadcastLikeArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 @implementation DOUBroadcast
 
 @synthesize category;
+@synthesize reshared_status;
 @synthesize reshared_count;
 @synthesize attachments;
 @synthesize entities;
@@ -49,8 +50,24 @@
 @synthesize user_type;
 @synthesize user_name;
 
+@synthesize reshared_id;
+@synthesize reshared_category;
+@synthesize reshared_reshared_count;
+@synthesize reshared_text;
+@synthesize reshared_created_at;
+@synthesize reshared_title;
+@synthesize reshared_can_reply;
+@synthesize reshared_liked;
+@synthesize reshared_reshare_id;
+@synthesize reshared_like_count;
+@synthesize reshared_comments_count;
+
 - (NSString *)category {
     return [self.dictionary objectForKey:@"category"];
+}
+
+- (NSString *)reshared_status {
+    return [self.dictionary objectForKey:@"reshared_status"];
 }
 
 - (NSString *)reshared_count {
@@ -118,7 +135,7 @@
 }
 
 - (NSString *)identifier {
-    return [self.dictionary objectForKey:@"identifier"];
+    return [self.dictionary objectForKey:@"id"];
 }
 
 - (NSString *)attachments_description {
@@ -300,6 +317,105 @@
         return nil;
     } else {
         return [dic objectForKey:@"screen_name"];
+    }
+}
+
+- (NSString *)reshared_id {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"id"];
+    }
+}
+
+- (NSString *)reshared_category {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"category"];
+    }
+}
+
+- (NSString *)reshared_reshared_count {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"reshared_count"];
+    }
+}
+
+- (NSString *)reshared_text {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"text"];
+    }
+}
+
+- (NSString *)reshared_created_at {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"created_at"];
+    }
+}
+
+- (NSString *)reshared_title {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"title"];
+    }
+}
+
+- (NSString *)reshared_can_reply {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"can_reply"];
+    }
+}
+
+- (NSString *)reshared_liked {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"licked"];
+    }
+}
+
+- (NSString *)reshared_reshare_id {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"reshare_id"];
+    }
+}
+
+- (NSString *)reshared_like_count {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"like_count"];
+    }
+}
+
+- (NSString *)reshared_comments_count {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"reshared_status"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"comments_count"];
     }
 }
 

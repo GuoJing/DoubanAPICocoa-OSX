@@ -31,9 +31,9 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMovieArray *array = [[DOUMovieArray alloc] initWithString:[req responseString]];
+            DOUMovieArray *array = [[[DOUMovieArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
-                newMovie = [[DOUMovie alloc] initWithString:[req responseString]];
+                newMovie = [[[DOUMovie alloc] initWithString:[req responseString]] autorelease];
                 if (successBlock) {
                     successBlock(newMovie);
                 }
@@ -67,9 +67,9 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMovieArray *array = [[DOUMovieArray alloc] initWithString:[req responseString]];
+            DOUMovieArray *array = [[[DOUMovieArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
-                newMovie = [[DOUMovie alloc] initWithString:[req responseString]];
+                newMovie = [[[DOUMovie alloc] initWithString:[req responseString]] autorelease];
                 if (successBlock) {
                     successBlock(newMovie);
                 }
@@ -103,7 +103,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUMovieArray *array = [[DOUMovieArray alloc] initWithString:[req responseString]];
+            DOUMovieArray *array = [[[DOUMovieArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }
@@ -133,7 +133,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUTagArray *array = [[DOUTagArray alloc] initWithString:[req responseString]];
+            DOUTagArray *array = [[[DOUTagArray alloc] initWithString:[req responseString]] autorelease];
             if (successBlock) {
                 successBlock(array);
             }

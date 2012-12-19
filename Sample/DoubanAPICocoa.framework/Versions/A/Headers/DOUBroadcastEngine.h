@@ -11,6 +11,12 @@
 #import "DOUEngine.h"
 #import "DOUBroadcast.h"
 #import "DOUBroadcastArray.h"
+#import "DOUBroadcastComment.h"
+#import "DOUBroadcastCommentArray.h"
+#import "DOUBroadcastReshare.h"
+#import "DOUBroadcastReshareArray.h"
+#import "DOUBroadcastLike.h"
+#import "DOUBroadcastLikeArray.h"
 
 @interface DOUBroadcastEngine : DOUEngine
 
@@ -60,4 +66,47 @@
                      successBlock:(void(^)(DOUBroadcastArray *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock;
 
+- (void)getBroadCastWithRemoteID:(NSString *)broadcast_id
+                    successBlock:(void(^)(DOUBroadcast *))successBlock
+                     failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)deleteBroadCastWithRemoteID:(NSString *)broadcast_id
+                    successBlock:(void(^)(NSString *))successBlock
+                     failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getCommentsWithBroadCastID:(NSString *)broadcast_id
+                             start:(int)start
+                             count:(int)count
+                      successBlock:(void(^)(DOUBroadcastCommentArray *))successBlock
+                       failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)writeCommentWithBroadCastID:(NSString *)broadcast_id
+                       successBlock:(void(^)(DOUBroadcastComment *))successBlock
+                        failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getCommentsWithRemoteID:(NSString *)comment_id
+                             start:(int)start
+                             count:(int)count
+                      successBlock:(void(^)(DOUBroadcastComment *))successBlock
+                       failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)deleteCommentWithRemoteID:(NSString *)comment_id
+                       successBlock:(void(^)(NSString *))successBlock
+                        failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getResharersWithBroadCastID:(NSString *)broadcast_id
+                     successBlock:(void(^)(DOUBroadcastReshareArray *))successBlock
+                      failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)reshareWithBroadCastID:(NSString *)broadcast_id
+                  successBlock:(void(^)(NSString *))successBlock
+                   failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getLikersWithBroadCastID:(NSString *)broadcast_id
+                     successBlock:(void(^)(DOUBroadcastLikeArray *))successBlock
+                      failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)likeWithBroadCastID:(NSString *)broadcast_id
+                  successBlock:(void(^)(NSString *))successBlock
+                   failedBlock:(void(^)(NSString *))failedBlock;
 @end

@@ -38,7 +38,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOULocArray *array = [[DOULocArray alloc] initWithString:[req responseString]];
+            DOULocArray *array = [[[DOULocArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 newLoc = [[DOULoc alloc] initWithString:[req responseString]];
                 if (successBlock) {
@@ -70,7 +70,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOULocArray *array = [[DOULocArray alloc] initWithString:[req responseString]];
+            DOULocArray *array = [[[DOULocArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successListBlock) {
                     successListBlock(array);

@@ -13,6 +13,7 @@
 @interface DOUBroadcast : DOUObject
 
 @property (nonatomic, copy) NSString *category;
+@property (nonatomic, copy) NSString *reshared_status;
 @property (nonatomic, copy) NSString *reshared_count;
 @property (nonatomic, copy) NSString *attachments;
 @property (nonatomic, copy) NSString *entities;
@@ -50,5 +51,17 @@
 @property (nonatomic, copy) NSString *user_large_avatar;
 @property (nonatomic, copy) NSString *user_type;
 @property (nonatomic, copy) NSString *user_name;
+
+@property (nonatomic, copy) NSString *reshared_id;
+@property (nonatomic, copy) NSString *reshared_category;
+@property (nonatomic, copy) NSString *reshared_reshared_count;
+@property (nonatomic, copy) NSString *reshared_text;
+@property (nonatomic, copy) NSString *reshared_created_at;
+@property (nonatomic, copy) NSString *reshared_title;
+@property (nonatomic, copy) NSString *reshared_can_reply;
+@property (nonatomic, copy) NSString *reshared_liked;
+@property (nonatomic, copy) NSString *reshared_reshare_id;
+@property (nonatomic, copy) NSString *reshared_like_count;
+@property (nonatomic, copy) NSString *reshared_comments_count;
 
 @end

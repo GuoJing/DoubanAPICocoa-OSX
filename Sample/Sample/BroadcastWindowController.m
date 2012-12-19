@@ -12,6 +12,10 @@
 #import <DoubanAPICocoa/DOUBroadcastEngine.h>
 #import <DoubanAPICocoa/DOUBroadcast.h>
 #import <DoubanAPICocoa/DOUBroadcastArray.h>
+#import <DoubanAPICocoa/DOUBroadcastLike.h>
+#import <DoubanAPICocoa/DOUBroadcastReshare.h>
+#import <DoubanAPICocoa/DOUBroadcastLikeArray.h>
+#import <DoubanAPICocoa/DOUBroadcastReshareArray.h>
 
 @implementation BroadcastWindowController
 
@@ -29,6 +33,14 @@
 @synthesize user_shuo_id_field;
 @synthesize get_user_shuo_field;
 @synthesize get_user_shuo_button;
+
+@synthesize user_shuo_id_field2;
+@synthesize get_user_shuo_field2;
+@synthesize get_user_shuo_button2;
+
+@synthesize user_shuo_id_field3;
+@synthesize get_user_shuo_field3;
+@synthesize get_user_shuo_button3;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -56,7 +68,6 @@
         [[self progress] stopAnimation:self];
     };
     void(^failBlock)(NSString *) = ^(NSString *e) {
-        self.info_field.title = @"失败!";
         [[self progress] stopAnimation:self];
         self.info_field.title = @"失败!";
         NSLog(@"Failed %@", e);
@@ -92,10 +103,9 @@
         self.info_field.title = @"成功!";
         [[self progress] stopAnimation:self];
         DOUBroadcast *b = [[casts objectArray] objectAtIndex:0];
-        self.get_shuo_field.title = b.user_name;
+        self.get_shuo_field.title = b.title;
     };
     void(^failBlock)(NSString *) = ^(NSString *e) {
-        self.info_field.title = @"失败!";
         [[self progress] stopAnimation:self];
         self.info_field.title = @"失败!";
         NSLog(@"Failed %@", e);
@@ -110,15 +120,89 @@
         self.info_field.title = @"成功!";
         [[self progress] stopAnimation:self];
         DOUBroadcast *b = [[casts objectArray] objectAtIndex:0];
-            self.get_user_shuo_field.title = b.text;
+            self.get_user_shuo_field.title = b.title;
     };
     void(^failBlock)(NSString *) = ^(NSString *e) {
-        self.info_field.title = @"失败!";
         [[self progress] stopAnimation:self];
         self.info_field.title = @"失败!";
         NSLog(@"Failed %@", e);
     };
     [s getUserTimeLineWithUserID:self.user_shuo_id_field.title successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onGetOneShuoButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(DOUBroadcast *) = ^(DOUBroadcast *b) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+        self.get_user_shuo_field2.title = b.text;
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"失败!";
+        NSLog(@"Failed %@", e);
+    };
+    [s getBroadCastWithRemoteID:self.user_shuo_id_field2.title successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onDeleteOneShuoButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(NSString *) = ^(NSString *b) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"失败!";
+        NSLog(@"Failed %@", e);
+    };
+    [s deleteBroadCastWithRemoteID:self.user_shuo_id_field2.title successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onReshareButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(NSString *) = ^(NSString *b) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+    };
+    [s reshareWithBroadCastID:self.user_shuo_id_field3.title successBlock:successBlock failedBlock:nil];
+}
+
+-(IBAction)onLikeButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(NSString *) = ^(NSString *b) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+    };
+    [s likeWithBroadCastID:self.user_shuo_id_field3.title successBlock:successBlock failedBlock:nil];
+}
+
+- (IBAction)onReshareUserButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(DOUBroadcastReshareArray *) = ^(DOUBroadcastReshareArray *b) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+        DouBroadcastReshare *us = [[b objectArray] objectAtIndex:0];
+        NSLog(@"%@", us.screen_name);
+    };
+    [s getResharersWithBroadCastID:self.user_shuo_id_field3.title successBlock:successBlock failedBlock:nil];
+}
+
+- (IBAction)onLikeUserButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(DOUBroadcastLikeArray *) = ^(DOUBroadcastLikeArray *b) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+        DOUBroadcastLike *us = [[b objectArray] objectAtIndex:0];
+        NSLog(@"%@", us.screen_name);
+    };
+    [s getLikersWithBroadCastID:self.user_shuo_id_field3.title successBlock:successBlock failedBlock:nil];
 }
 
 @end

@@ -56,7 +56,7 @@ extern NSString * const kDOUBroadcastByUserAPIUrl;
 extern NSString * const kDOUBroadcastShuoAPIUrl;
 extern NSString * const kDOUBroadcastCommentListAPIUrl;
 extern NSString * const kDOUBroadcastCommentAPIUrl;
-extern NSString * const kDOUBroadcastRepostAPIUrl;
+extern NSString * const kDOUBroadcastReshareAPIUrl;
 extern NSString * const kDOUBroadcastLikeAPIUrl;
 extern NSString * const kDOUBroadcastUserFollowingAPIUrl;
 extern NSString * const kDOUBroadcastUserFollowersAPIUrl;
