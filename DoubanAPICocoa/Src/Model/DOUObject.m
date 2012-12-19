@@ -15,31 +15,30 @@
 @dynamic string;
 @synthesize dictionary = dictionary_;
 
-
 - (id)init {
-  self = [super init];
-  if (self) {
-    self.dictionary = [NSMutableDictionary dictionary];
-  }
-  return  self;
+    self = [super init];
+    if (self) {
+        self.dictionary = [NSMutableDictionary dictionary];
+    }
+    return  self;
 }
 
 
 - (id)initWithString:(NSString *)theJsonStr {
-  self = [super init];
-  if (self) {
-    if (!theJsonStr || [theJsonStr length] <= 0) {
-      return nil;
-    }
+    self = [super init];
+    if (self) {
+        if (!theJsonStr || [theJsonStr length] <= 0) {
+            return nil;
+        }
 
-    NSMutableDictionary *dic = (NSMutableDictionary *)[theJsonStr JSONValue]; 
-    if (!dic) {
-      return nil;
-    }
+        NSMutableDictionary *dic = (NSMutableDictionary *)[theJsonStr JSONValue];
+        if (!dic) {
+            return nil;
+        }
     
-    self.dictionary = dic;
-  }
-  return self;
+        self.dictionary = dic;
+    }
+    return self;
 }
 
 

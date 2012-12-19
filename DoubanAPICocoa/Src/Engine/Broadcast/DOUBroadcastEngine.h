@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "DOUEngine.h"
+#import "DOUBroadcast.h"
+#import "DOUBroadcastArray.h"
 
-@interface DOUBrocastEngine : DOUEngine
+@interface DOUBroadcastEngine : DOUEngine
 
-- (void)SayWithSource:(NSString *)text
+- (void)sayWithSource:(NSString *)text
             withImage:(NSData *)image_data
          withRecTitle:(NSString *)title
            withRecUrl:(NSString *)url
@@ -20,20 +22,23 @@
     successBlock:(void(^)(NSString *))successBlock
     failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)Say:(NSString *)text
+- (void)say:(NSString *)text
     successBlock:(void(^)(NSString *))successBlock
     failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)SayWithImage:(NSString *)text
+- (void)sayWithImage:(NSString *)text
                withImage:(NSData *)image_data
             successBlock:(void(^)(NSString *))successBlock
              failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)SayWithRec:(NSString *)text
+- (void)sayWithRec:(NSString *)text
       withRecTitle:(NSString *)title
         withRecUrl:(NSString *)url
        withRecDesc:(NSString *)desc
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getHomeTimeLine:(void(^)(DOUBroadcastArray *))successBlock
+            failedBlock:(void(^)(NSString *))failedBlock;
 
 @end

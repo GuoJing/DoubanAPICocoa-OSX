@@ -19,7 +19,7 @@ enum _EngineTypes {
     kDOUBook,
     kDOUMovie,
     kDOUMusic,
-    kDOUBoardcast,
+    kDOUBroadcast,
     kDOUMail,
     kDOUNote,
     kDOUDiscussion

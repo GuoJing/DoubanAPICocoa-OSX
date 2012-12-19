@@ -10,6 +10,7 @@
 
 @interface DOUObjectArray : DOUObject
 
+@property (nonatomic, retain) NSArray *array;
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) NSInteger start;
 @property (nonatomic, assign) NSInteger total;

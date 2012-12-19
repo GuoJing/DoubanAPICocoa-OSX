@@ -9,7 +9,9 @@
 #import "BroadcastWindowController.h"
 #import "Consts.h"
 
-#import <DoubanAPICocoa/DOUBrocastEngine.h>
+#import <DoubanAPICocoa/DOUBroadcastEngine.h>
+#import <DoubanAPICocoa/DOUBroadcast.h>
+#import <DoubanAPICocoa/DOUBroadcastArray.h>
 
 @implementation BroadcastWindowController
 
@@ -21,6 +23,8 @@
 @synthesize progress;
 @synthesize image;
 @synthesize image_data;
+@synthesize get_shuo_button;
+@synthesize get_shuo_field;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -41,7 +45,7 @@
 }
 
 - (IBAction)onShuoButtonClicked:(id)sender {
-    DOUBrocastEngine *s = [self.engine getEngine:kDOUBoardcast];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
     [[self progress] startAnimation:self];
     void(^successBlock)(NSString *) = ^(NSString *e) {
         self.info_field.title = @"成功!";
@@ -54,10 +58,10 @@
         NSLog(@"Failed %@", e);
     };
     if (self.image_data) {
-        [s SayWithImage:self.shuo_field.title withImage:self.image_data successBlock:successBlock failedBlock:failBlock];
+        [s sayWithImage:self.shuo_field.title withImage:self.image_data successBlock:successBlock failedBlock:failBlock];
         self.image_data = nil;
     } else {
-        [s Say:self.shuo_field.title successBlock:successBlock failedBlock:failBlock];
+        [s say:self.shuo_field.title successBlock:successBlock failedBlock:failBlock];
     }
 }
 
@@ -75,6 +79,24 @@
         NSData *data = [[NSData alloc] initWithContentsOfURL:path];
         self.image_data = data;
     }
+}
+
+- (IBAction)onGetShuoButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(DOUBroadcastArray *) = ^(DOUBroadcastArray *casts) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+        DOUBroadcast *b = [[casts objectArray] objectAtIndex:0];
+        self.get_shuo_field.title = b.user_name;
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        self.info_field.title = @"失败!";
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"失败!";
+        NSLog(@"Failed %@", e);
+    };
+    [s getHomeTimeLine:successBlock failedBlock:failBlock];
 }
 
 @end

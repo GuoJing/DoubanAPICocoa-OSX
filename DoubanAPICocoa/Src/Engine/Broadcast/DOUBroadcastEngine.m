@@ -6,13 +6,13 @@
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
-#import "DOUBrocastEngine.h"
+#import "DOUBroadcastEngine.h"
 #import "DOUErrorConsts.h"
 #import "DOUAPIConsts.h"
 
-@implementation DOUBrocastEngine
+@implementation DOUBroadcastEngine
 
-- (void)SayWithSource:(NSString *)text
+- (void)sayWithSource:(NSString *)text
             withImage:(NSData *)image_data
          withRecTitle:(NSString *)title
            withRecUrl:(NSString *)url
@@ -51,26 +51,56 @@
     }
 }
 
-- (void)Say:(NSString *)text
+- (void)say:(NSString *)text
 successBlock:(void(^)(NSString *))successBlock
 failedBlock:(void(^)(NSString *))failedBlock{
-    [self SayWithSource:text withImage:nil withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failedBlock];
+    [self sayWithSource:text withImage:nil withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failedBlock];
 }
 
-- (void)SayWithImage:(NSString *)text
+- (void)sayWithImage:(NSString *)text
            withImage:(NSData *)image_data
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
-    [self SayWithSource:text withImage:image_data withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failedBlock];
+    [self sayWithSource:text withImage:image_data withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failedBlock];
 }
 
-- (void)SayWithRec:(NSString *)text
+- (void)sayWithRec:(NSString *)text
       withRecTitle:(NSString *)title
         withRecUrl:(NSString *)url
        withRecDesc:(NSString *)desc
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock{
-    [self SayWithSource:text withImage:nil withRecTitle:title withRecUrl:url withRecDesc:desc successBlock:successBlock failedBlock:failedBlock];
+    [self sayWithSource:text withImage:nil withRecTitle:title withRecUrl:url withRecDesc:desc successBlock:successBlock failedBlock:failedBlock];
 }
 
+- (void)getHomeTimeLine:(void(^)(DOUBroadcastArray *))successBlock
+            failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = kDOUBroadcastByFriendsAPIUrl;
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUBroadcastArray *array = [[DOUBroadcastArray alloc] initWithString:[req responseString]];
+            if (array) {
+                if (successBlock) {
+                    successBlock(array);
+                }
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
+}
 @end

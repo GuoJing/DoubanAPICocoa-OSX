@@ -20,6 +20,9 @@
     
     NSImage *image;
     NSData *image_data;
+    
+    IBOutlet NSTextFieldCell *get_shuo_field;
+    IBOutlet NSButton *get_shuo_button;
 }
 
 @property (nonatomic, retain) DOUEngine *engine;
@@ -32,7 +35,11 @@
 @property (nonatomic, retain) NSImage *image;
 @property (nonatomic, retain) NSData *image_data;
 
+@property (nonatomic, retain) IBOutlet NSTextFieldCell *get_shuo_field;
+@property (nonatomic, retain) IBOutlet NSButton *get_shuo_button;
+
 - (IBAction)onShuoButtonClicked:(id)sender;
 - (IBAction)openImageButtonClicked:(id)sender;
+- (IBAction)onGetShuoButtonClicked:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DOUObjectArray.h"
+#import "SBJson.h"
 
 @implementation DOUObjectArray
 
@@ -17,36 +18,43 @@
 
 
 - (NSInteger)start {
-  return [[self.dictionary objectForKey:@"start"] integerValue];
+    return [[self.dictionary objectForKey:@"start"] integerValue];
 }
 
 
 - (NSInteger)count {
-  return [[self.dictionary objectForKey:@"count"] integerValue];
+    return [[self.dictionary objectForKey:@"count"] integerValue];
 }
 
 
 - (NSInteger)total {
-  return [[self.dictionary objectForKey:@"total"] integerValue];
+    return [[self.dictionary objectForKey:@"total"] integerValue];
 }
 
 
 - (NSArray*)objectArray {
-  NSString *objectName = [[self class] objectName];
-  NSMutableArray *objectArray = [NSMutableArray array];
+    NSString *objectName = [[self class] objectName];
+    NSMutableArray *objectArray = [NSMutableArray array];
 
-  if (objectName) {
-    NSArray *array = (NSArray *)[self.dictionary objectForKey:objectName];
+    NSArray *array = nil;
+    if (objectName) {
+        array = (NSArray *)[self.dictionary objectForKey:objectName];
+    } else {
+        array = (NSMutableArray *)[self.string JSONValue];
+    }
+    
+    if (!array) {
+        return nil;
+    }
     
     for (id dic in array) {
-      if ([dic isKindOfClass:[NSDictionary class]]) {
-      id object = [[[self class] objectClass] objectWithDictionary:dic];
-      [objectArray addObject:object];
-      }
+        if ([dic isKindOfClass:[NSDictionary class]]) {
+            id object = [[[self class] objectClass] objectWithDictionary:dic];
+            [objectArray addObject:object];
+        }
     }
-  }
   
-  return objectArray;    
+    return objectArray;
 }
 
 
@@ -54,7 +62,7 @@
  Overwrited by subclass 
  */
 + (Class)objectClass {
-  return nil;
+    return nil;
 }
 
 
@@ -62,7 +70,7 @@
  Overwrited by subclass 
  */
 + (NSString *)objectName {
-  return nil;
+    return nil;
 }
 
 

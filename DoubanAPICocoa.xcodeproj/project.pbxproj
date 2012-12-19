@@ -172,6 +172,10 @@
 		238DF8811651E24F004B2823 /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF8341651E24F004B2823 /* ASIS3ServiceRequest.m */; };
 		238DF8A11651E2B3004B2823 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238DF8A01651E2B3004B2823 /* SystemConfiguration.framework */; };
 		238DF8A31651E2E3004B2823 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238DF8A21651E2E3004B2823 /* CoreServices.framework */; };
+		23918895168159DD00B39F5D /* DOUBroadcast.h in Headers */ = {isa = PBXBuildFile; fileRef = 23918893168159DD00B39F5D /* DOUBroadcast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23918896168159DD00B39F5D /* DOUBroadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 23918894168159DD00B39F5D /* DOUBroadcast.m */; };
+		2391889A16815A1300B39F5D /* DOUBroadcastArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 2391889816815A1300B39F5D /* DOUBroadcastArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2391889B16815A1300B39F5D /* DOUBroadcastArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2391889916815A1300B39F5D /* DOUBroadcastArray.m */; };
 		23BB02BC166C548400930FFD /* DOUObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029C166C548400930FFD /* DOUObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02BD166C548400930FFD /* DOUObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029D166C548400930FFD /* DOUObject.m */; };
 		23BB02BE166C548400930FFD /* DOUObject+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029E166C548400930FFD /* DOUObject+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -198,8 +202,8 @@
 		EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7EC51680156A000153AE /* DOUMovieEngine.m */; };
 		EEAC7ECE16804304000153AE /* DOUMusicEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7ECC16804304000153AE /* DOUMusicEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEAC7ECF16804304000153AE /* DOUMusicEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ECD16804304000153AE /* DOUMusicEngine.m */; };
-		EEAC7ED9168057FB000153AE /* DOUBrocastEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7ED7168057FB000153AE /* DOUBrocastEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEAC7EDA168057FB000153AE /* DOUBrocastEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED8168057FB000153AE /* DOUBrocastEngine.m */; };
+		EEAC7ED9168057FB000153AE /* DOUBroadcastEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAC7ED7168057FB000153AE /* DOUBroadcastEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEAC7EDA168057FB000153AE /* DOUBroadcastEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED8168057FB000153AE /* DOUBroadcastEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -375,6 +379,10 @@
 		238DF8341651E24F004B2823 /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
 		238DF8A01651E2B3004B2823 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		238DF8A21651E2E3004B2823 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		23918893168159DD00B39F5D /* DOUBroadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcast.h; sourceTree = "<group>"; };
+		23918894168159DD00B39F5D /* DOUBroadcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcast.m; sourceTree = "<group>"; };
+		2391889816815A1300B39F5D /* DOUBroadcastArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastArray.h; sourceTree = "<group>"; };
+		2391889916815A1300B39F5D /* DOUBroadcastArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastArray.m; sourceTree = "<group>"; };
 		23BB029C166C548400930FFD /* DOUObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUObject.h; sourceTree = "<group>"; };
 		23BB029D166C548400930FFD /* DOUObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUObject.m; sourceTree = "<group>"; };
 		23BB029E166C548400930FFD /* DOUObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOUObject+Utils.h"; sourceTree = "<group>"; };
@@ -401,8 +409,8 @@
 		EEAC7EC51680156A000153AE /* DOUMovieEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMovieEngine.m; sourceTree = "<group>"; };
 		EEAC7ECC16804304000153AE /* DOUMusicEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUMusicEngine.h; sourceTree = "<group>"; };
 		EEAC7ECD16804304000153AE /* DOUMusicEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUMusicEngine.m; sourceTree = "<group>"; };
-		EEAC7ED7168057FB000153AE /* DOUBrocastEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBrocastEngine.h; sourceTree = "<group>"; };
-		EEAC7ED8168057FB000153AE /* DOUBrocastEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBrocastEngine.m; sourceTree = "<group>"; };
+		EEAC7ED7168057FB000153AE /* DOUBroadcastEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUBroadcastEngine.h; sourceTree = "<group>"; };
+		EEAC7ED8168057FB000153AE /* DOUBroadcastEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUBroadcastEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,8 +614,8 @@
 		23198ECF167DDAC100E9692D /* Broadcast */ = {
 			isa = PBXGroup;
 			children = (
-				EEAC7ED7168057FB000153AE /* DOUBrocastEngine.h */,
-				EEAC7ED8168057FB000153AE /* DOUBrocastEngine.m */,
+				EEAC7ED7168057FB000153AE /* DOUBroadcastEngine.h */,
+				EEAC7ED8168057FB000153AE /* DOUBroadcastEngine.m */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -615,6 +623,10 @@
 		23198ED0167DDACE00E9692D /* Broadcast */ = {
 			isa = PBXGroup;
 			children = (
+				23918893168159DD00B39F5D /* DOUBroadcast.h */,
+				23918894168159DD00B39F5D /* DOUBroadcast.m */,
+				2391889816815A1300B39F5D /* DOUBroadcastArray.h */,
+				2391889916815A1300B39F5D /* DOUBroadcastArray.m */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -1125,7 +1137,9 @@
 				23198ECD167DCBBD00E9692D /* DOUAnnotationArray.h in Headers */,
 				EEAC7EC61680156A000153AE /* DOUMovieEngine.h in Headers */,
 				EEAC7ECE16804304000153AE /* DOUMusicEngine.h in Headers */,
-				EEAC7ED9168057FB000153AE /* DOUBrocastEngine.h in Headers */,
+				EEAC7ED9168057FB000153AE /* DOUBroadcastEngine.h in Headers */,
+				23918895168159DD00B39F5D /* DOUBroadcast.h in Headers */,
+				2391889A16815A1300B39F5D /* DOUBroadcastArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1281,7 +1295,9 @@
 				234A3824167E11F10078AC9D /* DOUConsts.m in Sources */,
 				EEAC7EC71680156A000153AE /* DOUMovieEngine.m in Sources */,
 				EEAC7ECF16804304000153AE /* DOUMusicEngine.m in Sources */,
-				EEAC7EDA168057FB000153AE /* DOUBrocastEngine.m in Sources */,
+				EEAC7EDA168057FB000153AE /* DOUBroadcastEngine.m in Sources */,
+				23918896168159DD00B39F5D /* DOUBroadcast.m in Sources */,
+				2391889B16815A1300B39F5D /* DOUBroadcastArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
