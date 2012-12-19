@@ -26,6 +26,10 @@
 @synthesize get_shuo_button;
 @synthesize get_shuo_field;
 
+@synthesize user_shuo_id_field;
+@synthesize get_user_shuo_field;
+@synthesize get_user_shuo_button;
+
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -58,7 +62,7 @@
         NSLog(@"Failed %@", e);
     };
     if (self.image_data) {
-        [s sayWithImage:self.shuo_field.title withImage:self.image_data successBlock:successBlock failedBlock:failBlock];
+        [s say:self.shuo_field.title withImage:self.image_data successBlock:successBlock failedBlock:failBlock];
         self.image_data = nil;
     } else {
         [s say:self.shuo_field.title successBlock:successBlock failedBlock:failBlock];
@@ -96,7 +100,25 @@
         self.info_field.title = @"失败!";
         NSLog(@"Failed %@", e);
     };
-    [s getHomeTimeLine:successBlock failedBlock:failBlock];
+    [s getHomeTimeLineStartWith:0 count:20 successBlock:successBlock failedBlock:failBlock];
+}
+
+- (IBAction)onGetUserShuoButtonClicked:(id)sender{
+    [[self progress] startAnimation:self];
+    DOUBroadcastEngine *s = [self.engine getEngine:kDOUBroadcast];
+    void(^successBlock)(DOUBroadcastArray *) = ^(DOUBroadcastArray *casts) {
+        self.info_field.title = @"成功!";
+        [[self progress] stopAnimation:self];
+        DOUBroadcast *b = [[casts objectArray] objectAtIndex:0];
+            self.get_user_shuo_field.title = b.text;
+    };
+    void(^failBlock)(NSString *) = ^(NSString *e) {
+        self.info_field.title = @"失败!";
+        [[self progress] stopAnimation:self];
+        self.info_field.title = @"失败!";
+        NSLog(@"Failed %@", e);
+    };
+    [s getUserTimeLineWithUserID:self.user_shuo_id_field.title successBlock:successBlock failedBlock:failBlock];
 }
 
 @end

@@ -66,8 +66,8 @@ NSString * const kDOUMusicEditReviewAPIUrl = @"/v2/music/review/%@";
 
 //Broadcast
 NSString * const kDOUWriteBroadcastAPIUrl = @"/shuo/v2/statuses/";
-NSString * const kDOUBroadcastByFriendsAPIUrl = @"/shuo/v2/statuses/home_timeline";
-NSString * const kDOUBroadcastByUserAPIUrl = @"/shuo/v2/statuses/user_timeline/%@";
+NSString * const kDOUBroadcastByFriendsAPIUrl = @"/shuo/v2/statuses/home_timeline?since_id=%@&until_id=%@&start=%d&count=%d";
+NSString * const kDOUBroadcastByUserAPIUrl = @"/shuo/v2/statuses/user_timeline/%@?since_id=%@&until_id=%@";
 NSString * const kDOUBroadcastShuoAPIUrl = @"/shuo/v2/statuses/%@";
 NSString * const kDOUBroadcastCommentListAPIUrl = @"/shuo/v2/statuses/%@/comments";
 NSString * const kDOUBroadcastCommentAPIUrl = @"/shuo/v2/statuses/comment/%@";

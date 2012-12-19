@@ -36,6 +36,12 @@
 @synthesize attachments_type;
 @synthesize attachments_properties;
 
+@synthesize attachments_media_src;
+@synthesize attachments_media_secret_pid;
+@synthesize attachments_media_original_src;
+@synthesize attachments_media_href;
+@synthesize attachments_media_type;
+
 @synthesize user_id;
 @synthesize user_description;
 @synthesize user_small_avatar;
@@ -139,6 +145,71 @@
         return nil;
     } else {
         return [dic objectForKey:@"media"];
+    }
+}
+
+- (NSString *)attachments_media_src {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"attachments"];
+    if (!dic) {
+        return nil;
+    } else {
+        NSMutableDictionary *dic2 = [dic objectForKey:@"media"];
+        if (!dic2) {
+            return nil;
+        } else {
+            return [dic2 objectForKey:@"src"];
+        }
+    }
+}
+
+- (NSString *)attachments_media_secret_pid {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"attachments"];
+    if (!dic) {
+        return nil;
+    } else {
+        NSMutableDictionary *dic2 = [dic objectForKey:@"media"];
+        if (!dic2) {
+            return nil;
+        } else {
+            return [dic2 objectForKey:@"secret_pid"];
+        }
+    }
+}
+
+- (NSString *)attachments_media_original_src {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"attachments"];
+    if (!dic) {
+        return nil;
+    } else {
+        NSMutableDictionary *dic2 = [dic objectForKey:@"media"];
+        if (!dic2) {
+            return nil;
+        } else {
+            return [dic2 objectForKey:@"original_src"];
+        }
+    }
+}
+
+- (NSString *)attachments_media_href {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"attachments"];
+    if (!dic) {
+        return nil;
+    } else {
+        return [dic objectForKey:@"media"];
+    }
+}
+
+- (NSString *)attachments_media_type {
+    NSMutableDictionary *dic = [self.dictionary objectForKey:@"attachments"];
+    if (!dic) {
+        return nil;
+    } else {
+        NSMutableDictionary *dic2 = [dic objectForKey:@"media"];
+        if (!dic2) {
+            return nil;
+        } else {
+            return [dic2 objectForKey:@"media_type"];
+        }
     }
 }
 

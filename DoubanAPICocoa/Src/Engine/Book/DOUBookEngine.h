@@ -85,7 +85,7 @@
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)writeAnnotation:(NSString *)book_id
+- (void)writeAnnotationWithBookID:(NSString *)book_id
              withContet:(NSString *)content
                withPage:(NSString *)page
             withChapter:(NSString *)chapter
@@ -105,7 +105,7 @@
                          successBlock:(void(^)(NSString *))successBlock
                           failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)writeReview:(NSString *)book_id
+- (void)writeReviewWithBookID:(NSString *)book_id
               title:(NSString *)title
             content:(NSString *)content
              rating:(int)rating

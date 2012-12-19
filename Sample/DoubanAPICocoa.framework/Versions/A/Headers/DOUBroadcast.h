@@ -38,6 +38,12 @@
 @property (nonatomic, copy) NSString *attachments_type;
 @property (nonatomic, copy) NSString *attachments_properties;
 
+@property (nonatomic, copy) NSString *attachments_media_src;
+@property (nonatomic, copy) NSString *attachments_media_secret_pid;
+@property (nonatomic, copy) NSString *attachments_media_original_src;
+@property (nonatomic, copy) NSString *attachments_media_href;
+@property (nonatomic, copy) NSString *attachments_media_type;
+
 @property (nonatomic, copy) NSString *user_id;
 @property (nonatomic, copy) NSString *user_description;
 @property (nonatomic, copy) NSString *user_small_avatar;

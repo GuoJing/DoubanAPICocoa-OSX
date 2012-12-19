@@ -212,7 +212,7 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)attendEvent:(NSString *)event_id
+- (void)attendEventWithID:(NSString *)event_id
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -240,7 +240,7 @@
     [service post:query postBody:nil callback:completionBlock];
 }
 
-- (void)quitAttendEvent:(NSString *)event_id
+- (void)quitAttendEventWithID:(NSString *)event_id
            successBlock:(void(^)(NSString *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -268,7 +268,7 @@
     [service delete:query callback:completionBlock];
 }
 
-- (void)wishEvent:(NSString *)event_id
+- (void)wishEventWithID:(NSString *)event_id
      successBlock:(void(^)(NSString *))successBlock
       failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
@@ -296,7 +296,7 @@
     [service post:query postBody:nil callback:completionBlock];
 }
 
-- (void)quitWishEvent:(NSString *)event_id
+- (void)quitWishEventWithID:(NSString *)event_id
          successBlock:(void(^)(NSString *))successBlock
           failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {

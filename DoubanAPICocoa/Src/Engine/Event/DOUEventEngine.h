@@ -49,19 +49,19 @@
                                successBlock:(void(^)(DOUEventArray *))successBlock
                                 failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)attendEvent:(NSString *)event_id
+- (void)attendEventWithID:(NSString *)event_id
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)quitAttendEvent:(NSString *)event_id
+- (void)quitAttendEventWithID:(NSString *)event_id
      successBlock:(void(^)(NSString *))successBlock
       failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)wishEvent:(NSString *)event_id
+- (void)wishEventWithID:(NSString *)event_id
      successBlock:(void(^)(NSString *))successBlock
       failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)quitWishEvent:(NSString *)event_id
+- (void)quitWishEventWithID:(NSString *)event_id
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock;
 

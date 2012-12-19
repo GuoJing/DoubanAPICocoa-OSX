@@ -420,7 +420,7 @@
     [service delete:query callback:completionBlock];
 }
 
-- (void)writeAnnotation:(NSString *)book_id
+- (void)writeAnnotationWithBookID:(NSString *)book_id
              withContet:(NSString *)content
                withPage:(NSString *)page
             withChapter:(NSString *)chapter
@@ -522,7 +522,7 @@
     [service delete:query callback:completionBlock];
 }
 
-- (void)writeReview:(NSString *)book_id
+- (void)writeReviewWithBookID:(NSString *)book_id
               title:(NSString *)title
             content:(NSString *)content
              rating:(int)rating
