@@ -44,16 +44,16 @@
 }
 
 - (IBAction)onLoginClicked:(id)sender {
-    if ([self.engine isServiceValid]) {
-        self.login_button.title = @"已连接到豆瓣";
-    } else {
+    //if ([self.engine isServiceValid]) {
+    //    self.login_button.title = @"已连接到豆瓣";
+    //} else {
         NSString *url_str = [self.engine getConnectUrl];
         NSURL *login_url = [NSURL URLWithString:url_str];
         if ([[NSWorkspace sharedWorkspace] openURL:login_url])
             NSLog(@"Opened successfully.");
         else
             NSLog(@"Failed to open URL.");
-    }
+    //}
 }
 
 - (void)awakeFromNib {
