@@ -12,8 +12,7 @@
 
 @implementation DOUBrocastEngine
 
-- (void)SayWithSource:(NSString *)source
-             withText:(NSString *)text
+- (void)SayWithSource:(NSString *)text
             withImage:(NSData *)image_data
          withRecTitle:(NSString *)title
            withRecUrl:(NSString *)url
@@ -32,10 +31,7 @@
     NSString *apiUrl = kDOUWriteBroadcastAPIUrl;
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     NSMutableString *postBody = nil;
-    postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, title, url, desc];
-    //if (image_data) {
-    //    postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&image=%@&rec_title=%@&rec_url=%@&rec_desc=%@", source, text, image_data, title, url, desc];
-    //}
+    postBody = [NSMutableString stringWithFormat:@"source=%@&text=%@&rec_title=%@&rec_url=%@&rec_desc=%@", self.apiKey, text, title, url, desc];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -53,6 +49,28 @@
     } else {
         [service post:query postBody:postBody callback:completionBlock];
     }
+}
+
+- (void)Say:(NSString *)text
+successBlock:(void(^)(NSString *))successBlock
+failedBlock:(void(^)(NSString *))failedBlock{
+    [self SayWithSource:text withImage:nil withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failedBlock];
+}
+
+- (void)SayWithImage:(NSString *)text
+           withImage:(NSData *)image_data
+        successBlock:(void(^)(NSString *))successBlock
+         failedBlock:(void(^)(NSString *))failedBlock{
+    [self SayWithSource:text withImage:image_data withRecTitle:@"" withRecUrl:@"" withRecDesc:@"" successBlock:successBlock failedBlock:failedBlock];
+}
+
+- (void)SayWithRec:(NSString *)text
+      withRecTitle:(NSString *)title
+        withRecUrl:(NSString *)url
+       withRecDesc:(NSString *)desc
+      successBlock:(void(^)(NSString *))successBlock
+       failedBlock:(void(^)(NSString *))failedBlock{
+    [self SayWithSource:text withImage:nil withRecTitle:title withRecUrl:url withRecDesc:desc successBlock:successBlock failedBlock:failedBlock];
 }
 
 @end
