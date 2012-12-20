@@ -11,6 +11,7 @@
 #import "DOUEngine.h"
 #import "DOUDiscussion.h"
 #import "DOUDiscussionArray.h"
+#import "DOUCommentArray.h"
 
 @interface DOUDiscussionEngine : DOUEngine
 
@@ -39,4 +40,9 @@
                            withTargetID:(NSString *)target_id
                      successBlock:(void(^)(DOUDiscussionArray *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getCommentListWithID:(NSString *)discussion_id
+                successBlock:(void(^)(DOUCommentArray *))successBlock
+                 failedBlock:(void(^)(NSString *))failedBlock;
+
 @end

@@ -9,6 +9,7 @@
 #import "DOUDiscussionEngine.h"
 #import "DOUErrorConsts.h"
 #import "DOUAPIConsts.h"
+#import "DOUCommentEngine.h"
 
 @implementation DOUDiscussionEngine
 
@@ -162,6 +163,13 @@
         }
     };
     [service get:query callback:completionBlock];
+}
+
+- (void)getCommentListWithID:(NSString *)discussion_id
+                successBlock:(void(^)(DOUCommentArray *))successBlock
+                 failedBlock:(void(^)(NSString *))failedBlock{
+    DOUCommentEngine *engine = [self getEngine:kDOUComment];
+    [engine getCommentListWithTarget:@"discussion" withTargetID:discussion_id successBlock:successBlock failedBlock:failedBlock];
 }
 
 @end
