@@ -28,6 +28,7 @@
 		239188D41681C83700B39F5D /* MailWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188D31681C83700B39F5D /* MailWindowController.m */; };
 		239188DB1682B65700B39F5D /* NoteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188DA1682B65600B39F5D /* NoteWindowController.m */; };
 		239188ED1682EF6200B39F5D /* DiscussionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188EC1682EF6200B39F5D /* DiscussionWindowController.m */; };
+		239188F4168311F100B39F5D /* AlbumWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188F3168311F100B39F5D /* AlbumWindowController.m */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 		EEAC7ED2168046D6000153AE /* MusicWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED1168046D6000153AE /* MusicWindowController.m */; };
 		EEAC7ED6168046EB000153AE /* MovieWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED5168046EB000153AE /* MovieWindowController.m */; };
@@ -93,6 +94,8 @@
 		239188DA1682B65600B39F5D /* NoteWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteWindowController.m; sourceTree = "<group>"; };
 		239188EB1682EF6200B39F5D /* DiscussionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussionWindowController.h; sourceTree = "<group>"; };
 		239188EC1682EF6200B39F5D /* DiscussionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussionWindowController.m; sourceTree = "<group>"; };
+		239188F2168311F100B39F5D /* AlbumWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumWindowController.h; sourceTree = "<group>"; };
+		239188F3168311F100B39F5D /* AlbumWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumWindowController.m; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		EEAC7ED0168046D6000153AE /* MusicWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWindowController.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				239188DA1682B65600B39F5D /* NoteWindowController.m */,
 				239188EB1682EF6200B39F5D /* DiscussionWindowController.h */,
 				239188EC1682EF6200B39F5D /* DiscussionWindowController.m */,
+				239188F2168311F100B39F5D /* AlbumWindowController.h */,
+				239188F3168311F100B39F5D /* AlbumWindowController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				239188D41681C83700B39F5D /* MailWindowController.m in Sources */,
 				239188DB1682B65700B39F5D /* NoteWindowController.m in Sources */,
 				239188ED1682EF6200B39F5D /* DiscussionWindowController.m in Sources */,
+				239188F4168311F100B39F5D /* AlbumWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

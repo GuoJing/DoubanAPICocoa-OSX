@@ -206,7 +206,7 @@
 		239188E31682DE7400B39F5D /* DOUDiscussionArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188E11682DE7400B39F5D /* DOUDiscussionArray.m */; };
 		239188E61682E33800B39F5D /* DOUDiscussionEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188E41682E33800B39F5D /* DOUDiscussionEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		239188E71682E33800B39F5D /* DOUDiscussionEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188E51682E33800B39F5D /* DOUDiscussionEngine.m */; };
-		239188F0168305CE00B39F5D /* DOUAlbumArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188EE168305CE00B39F5D /* DOUAlbumArray.h */; };
+		239188F0168305CE00B39F5D /* DOUAlbumArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 239188EE168305CE00B39F5D /* DOUAlbumArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		239188F1168305CE00B39F5D /* DOUAlbumArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188EF168305CE00B39F5D /* DOUAlbumArray.m */; };
 		23BB02BC166C548400930FFD /* DOUObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB029C166C548400930FFD /* DOUObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02BD166C548400930FFD /* DOUObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB029D166C548400930FFD /* DOUObject.m */; };
@@ -1250,8 +1250,8 @@
 				239188D71682AB0500B39F5D /* DOUNoteEngine.h in Headers */,
 				239188DE1682DE6700B39F5D /* DOUDiscussion.h in Headers */,
 				239188E21682DE7400B39F5D /* DOUDiscussionArray.h in Headers */,
-				239188E61682E33800B39F5D /* DOUDiscussionEngine.h in Headers */,
 				239188F0168305CE00B39F5D /* DOUAlbumArray.h in Headers */,
+				239188E61682E33800B39F5D /* DOUDiscussionEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
