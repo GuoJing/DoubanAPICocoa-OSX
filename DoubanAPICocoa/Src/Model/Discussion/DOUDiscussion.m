@@ -10,4 +10,43 @@
 
 @implementation DOUDiscussion
 
+@dynamic identifier;
+@dynamic title;
+@dynamic content;
+@dynamic comments_count;
+@dynamic alt;
+@dynamic updated;
+@dynamic author;
+
+- (NSString *)identifier {
+    return [self.dictionary objectForKey:@"id"];
+}
+
+- (NSString *)title {
+    return [self.dictionary objectForKey:@"content"];
+}
+
+- (NSString *)content {
+    return [self.dictionary objectForKey:@"content"];
+}
+
+- (NSString *)comments_count {
+    return [self.dictionary objectForKey:@"comments_count"];
+}
+
+- (NSString *)alt {
+    return [self.dictionary objectForKey:@"alt"];
+}
+
+- (NSDate *)updated {
+    return [self.dictionary objectForKey:@"updated"];
+}
+
+
+- (DOUUser *)author {
+    NSDictionary *dic = [self.dictionary objectForKey:@"author"];
+    DOUUser *user = [DOUUser objectWithDictionary:dic];
+    return user;
+}
+
 @end

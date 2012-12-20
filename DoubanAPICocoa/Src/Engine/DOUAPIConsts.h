@@ -87,3 +87,9 @@ extern NSString * const kDOUNoteCommentsAPIUrl;
 extern NSString * const kDOUNoteLikeAPIUrl;
 extern NSString * const kDOUNoteUserNotesAPIUrl;
 extern NSString * const kDOUNoteUserLikedNotesAPIUrl;
+
+extern NSString * const kDOUDiscussionAPIUrl;
+extern NSString * const kDOUDiscussionsAPIUrl;
+
+extern NSString * const kDOUCommentAPIUrl;
+extern NSString * const kDOUCommentsAPIUrl;

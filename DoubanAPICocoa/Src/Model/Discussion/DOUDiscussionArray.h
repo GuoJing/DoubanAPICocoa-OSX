@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DOUDiscussionArray : NSObject
+#import "DOUObjectArray.h"
+
+@interface DOUDiscussionArray : DOUObjectArray
 
 @end

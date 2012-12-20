@@ -23,6 +23,7 @@
 #import "DOUMusicEngine.h"
 #import "DOUMailEngine.h"
 #import "DOUNoteEngine.h"
+#import "DOUDiscussionEngine.h"
 #import "DOUBroadcastEngine.h"
 
 #import "DOUConsts.h"
@@ -95,25 +96,18 @@
     switch (engine_id) {
         case kDOUEvent:
             return [[[DOUEventEngine alloc] initWithEngine:self] autorelease];
-            break;
         case kDOULoc:
             return[[[DOULocEngine alloc] initWithEngine:self] autorelease];;
-            break;
         case kDOUAlbum:
             return [[[DOUAlbumEngine alloc] initWithEngine:self] autorelease];;
-            break;
         case kDOUPhoto:
             return [[[DOUPhotoEngine alloc] initWithEngine:self] autorelease];
-            break;
         case kDOUComment:
             return [[[DOUCommentEngine alloc] initWithEngine:self] autorelease];
-            break;
         case kDOUOnline:
             return [[[DOUOnlineEngine alloc] initWithEngine:self] autorelease];
-            break;
         case kDOUUser:
             return [[[DOUUserEngine alloc] initWithEngine:self] autorelease];
-            break;
         case kDOUBook:
             return [[[DOUBookEngine alloc] initWithEngine:self] autorelease];
         case kDOUMovie:
@@ -126,6 +120,8 @@
             return [[[DOUMailEngine alloc] initWithEngine:self] autorelease];
         case kDOUNote:
             return [[[DOUNoteEngine alloc] initWithEngine:self] autorelease];
+        case kDOUDiscussion:
+            return [[[DOUDiscussionEngine alloc] initWithEngine:self] autorelease];
         default:
             return self;
     }

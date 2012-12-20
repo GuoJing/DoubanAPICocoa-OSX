@@ -16,6 +16,7 @@
 #import "DOUErrorConsts.h"
 #import "DOUQuery.h"
 #import "DOUUserArray.h"
+#import "DOUDiscussionEngine.h"
 
 @implementation DOUEventEngine
 
@@ -324,8 +325,12 @@
     [service delete:query callback:completionBlock];
 }
 
-- (void)dealloc
-{
-    [super dealloc];
+- (void)getDiscussionListWithID:(NSString *)event_id
+                   successBlock:(void(^)(DOUDiscussionArray *))successBlock
+                    failedBlock:(void(^)(NSString *))failedBlock{
+    DOUDiscussionEngine *engine = [self getEngine:kDOUDiscussion];
+    [engine getDiscussionListWithTarget:@"event" withTargetID:event_id successBlock:successBlock failedBlock:failedBlock];
+    
 }
+
 @end

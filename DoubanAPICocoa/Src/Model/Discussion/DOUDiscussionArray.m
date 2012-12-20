@@ -7,7 +7,16 @@
 //
 
 #import "DOUDiscussionArray.h"
+#import "DOUDiscussion.h"
 
 @implementation DOUDiscussionArray
+
++ (Class)objectClass {
+    return [DOUDiscussion class];
+}
+
++ (NSString *)objectName {
+    return @"discussions";
+}
 
 @end

@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DOUDiscussion : NSObject
+#import "DOUObject.h"
+#import "DOUUser.h"
+
+@interface DOUDiscussion : DOUObject
+
+@property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *content;
+@property (nonatomic, copy) NSString *comments_count;
+@property (nonatomic, copy) NSString *alt;
+@property (nonatomic, retain) NSDate *updated;
+@property (nonatomic, retain) DOUUser *author;
 
 @end

@@ -109,4 +109,10 @@ NSString * const kDOUNoteLikeAPIUrl = @"/v2/note/%@/like";
 NSString * const kDOUNoteUserNotesAPIUrl = @"/v2/note/user_created/%@";
 NSString * const kDOUNoteUserLikedNotesAPIUrl = @"/v2/note/user_liked/%@";
 
+//Discussion
+NSString * const kDOUDiscussionAPIUrl = @"/v2/discussion/%@";
+NSString * const kDOUDiscussionsAPIUrl = @"/v2/%@/%@/discussions";
 
+//Comment
+NSString * const kDOUCommentAPIUrl = @"/v2/%@/%@/comment/%d";
+NSString * const kDOUCommentsAPIUrl = @"/v2/%@/%@/comments";

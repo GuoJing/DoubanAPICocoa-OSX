@@ -8,6 +8,35 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DOUDiscussionEngine : NSObject
+#import "DOUEngine.h"
+#import "DOUDiscussion.h"
+#import "DOUDiscussionArray.h"
 
+@interface DOUDiscussionEngine : DOUEngine
+
+- (void)getDiscussionWithRemoteID:(NSString *)discussion_id
+                     successBlock:(void(^)(DOUDiscussion *))successBlock
+                      failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)editDiscussionWithRemoteID:(NSString *)discussion_id
+                         withTitle:(NSString *)title
+                       withContent:(NSString *)content
+                      successBlock:(void(^)(NSString *))successBlock
+                       failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)deleteDiscussionWithRemoteID:(NSString *)discussion_id
+                     successBlock:(void(^)(NSString *))successBlock
+                      failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)writeDiscussionWithTarget:(NSString *)target
+                         withTargetID:(NSString *)target_id
+                        withTitle:(NSString *)title
+                      withContent:(NSString *)content
+                     successBlock:(void(^)(NSString *))successBlock
+                      failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getDiscussionListWithTarget:(NSString *)target
+                           withTargetID:(NSString *)target_id
+                     successBlock:(void(^)(DOUDiscussionArray *))successBlock
+                      failedBlock:(void(^)(NSString *))failedBlock;
 @end
