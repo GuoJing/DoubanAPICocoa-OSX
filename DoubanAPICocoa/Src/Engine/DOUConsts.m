@@ -18,3 +18,7 @@ NSString * const kDOUPrivacyFriend = @"friend";
 
 NSString * const kDOUTrue = @"true";
 NSString * const kDOUFalse = @"false";
+
+NSString * const kDOUOrderAsc = @"true";
+NSString * const kDOUOrderDesc = @"false";
+

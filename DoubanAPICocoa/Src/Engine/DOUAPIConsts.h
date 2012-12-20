@@ -93,3 +93,14 @@ extern NSString * const kDOUDiscussionsAPIUrl;
 
 extern NSString * const kDOUCommentAPIUrl;
 extern NSString * const kDOUCommentsAPIUrl;
+
+extern NSString * const kDOUAlbumAPIUrl;
+extern NSString * const kDOUAlbumPhotosAPIUrl;
+extern NSString * const kDOUAlbumCreateAlbumAPIUrl;
+extern NSString * const kDOUAlbumUpdateAlbumAPIUrl;
+extern NSString * const kDOUAlbumLikeAPIUrl;
+extern NSString * const kDOUAlbumUserAlbumsAPIUrl;
+extern NSString * const kDOUAlbumUserLikedAlbumsAPIUrl;
+
+extern NSString * const kDOUPhotoAPIUrl;
+extern NSString * const kDOUPhotoLikeAPIUrl;

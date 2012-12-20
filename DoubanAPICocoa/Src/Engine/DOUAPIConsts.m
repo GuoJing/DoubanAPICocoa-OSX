@@ -116,3 +116,16 @@ NSString * const kDOUDiscussionsAPIUrl = @"/v2/%@/%@/discussions";
 //Comment
 NSString * const kDOUCommentAPIUrl = @"/v2/%@/%@/comment/%@";
 NSString * const kDOUCommentsAPIUrl = @"/v2/%@/%@/comments";
+
+//Album
+NSString * const kDOUAlbumAPIUrl = @"/v2/album/%@";
+NSString * const kDOUAlbumPhotosAPIUrl = @"/v2/album/%@/photos";
+NSString * const kDOUAlbumCreateAlbumAPIUrl = @"/v2/albums";
+NSString * const kDOUAlbumUpdateAlbumAPIUrl = @"/v2/album/%@";
+NSString * const kDOUAlbumLikeAPIUrl = @"/v2/album/%@/like";
+NSString * const kDOUAlbumUserAlbumsAPIUrl = @"/v2/album/user_created/%@";
+NSString * const kDOUAlbumUserLikedAlbumsAPIUrl = @"/v2/album/user_liked/&@";
+
+//Photo
+NSString * const kDOUPhotoAPIUrl = @"/v2/photo/%@";
+NSString * const kDOUPhotoLikeAPIUrl = @"/v2/photo/%@/like";

@@ -42,3 +42,6 @@ extern NSString * const kDOUPrivacyPublic;
 
 extern NSString * const kDOUTrue;
 extern NSString * const kDOUFalse;
+
+extern NSString * const kDOUOrderAsc;
+extern NSString * const kDOUOrderDesc;
