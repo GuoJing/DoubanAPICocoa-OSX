@@ -26,7 +26,7 @@
                successBlock:(void(^)(DOUNote *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)updateNoteWithRemoteID:(NSString *)note_id
+- (void)editNoteWithRemoteID:(NSString *)note_id
                      withTitle:(NSString *)title
                    withPrivacy:(NSString *)privacy
                   withCanReply:(NSString *)can_reply

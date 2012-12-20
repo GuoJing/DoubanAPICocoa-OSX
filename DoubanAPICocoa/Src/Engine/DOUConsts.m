@@ -15,3 +15,6 @@ NSString * const kDOUBookactionRead = @"read";
 NSString * const kDOUPrivacyPrivate = @"private";
 NSString * const kDOUPrivacyPublic = @"public";
 NSString * const kDOUPrivacyFriend = @"friend";
+
+NSString * const kDOUTrue = @"true";
+NSString * const kDOUFalse = @"false";

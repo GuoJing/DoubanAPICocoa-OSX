@@ -75,7 +75,7 @@
     [service get:query callback:completionBlock];
 }
 
-- (void)updateNoteWithRemoteID:(NSString *)note_id
+- (void)editNoteWithRemoteID:(NSString *)note_id
                      withTitle:(NSString *)title
                    withPrivacy:(NSString *)privacy
                   withCanReply:(NSString *)can_reply
@@ -90,7 +90,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = kDOUNoteWriteNoteAPIUrl;
+    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUNoteAPIUrl, note_id];
     NSMutableString *putBody = [NSMutableString stringWithFormat:@"title=%@&privacy=%@&can_reply=%@&content=%@", title, privacy, can_reply, content];
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
@@ -218,6 +218,7 @@
     DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
+        NSLog(@"%@", [req url]);
         if (!error) {
             if (successBlock) {
                 successBlock(@"success");
