@@ -27,6 +27,7 @@
 		239188C11681A9D300B39F5D /* UserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188C01681A9D300B39F5D /* UserWindowController.m */; };
 		239188D41681C83700B39F5D /* MailWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188D31681C83700B39F5D /* MailWindowController.m */; };
 		239188DB1682B65700B39F5D /* NoteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188DA1682B65600B39F5D /* NoteWindowController.m */; };
+		239188ED1682EF6200B39F5D /* DiscussionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188EC1682EF6200B39F5D /* DiscussionWindowController.m */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 		EEAC7ED2168046D6000153AE /* MusicWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED1168046D6000153AE /* MusicWindowController.m */; };
 		EEAC7ED6168046EB000153AE /* MovieWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED5168046EB000153AE /* MovieWindowController.m */; };
@@ -90,6 +91,8 @@
 		239188D31681C83700B39F5D /* MailWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailWindowController.m; sourceTree = "<group>"; };
 		239188D91682B65500B39F5D /* NoteWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteWindowController.h; sourceTree = "<group>"; };
 		239188DA1682B65600B39F5D /* NoteWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteWindowController.m; sourceTree = "<group>"; };
+		239188EB1682EF6200B39F5D /* DiscussionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussionWindowController.h; sourceTree = "<group>"; };
+		239188EC1682EF6200B39F5D /* DiscussionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussionWindowController.m; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		EEAC7ED0168046D6000153AE /* MusicWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWindowController.h; sourceTree = "<group>"; };
@@ -167,27 +170,9 @@
 		23152153167077EF00AF553E /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				23152165167077F000AF553E /* MainMenu.xib */,
-				234A381C167DE4D30078AC9D /* Consts.h */,
-				234A381D167DE4D30078AC9D /* Consts.m */,
-				23F2A3EC1675BF620034BFD4 /* MainWindowController.h */,
-				23F2A3ED1675BF620034BFD4 /* MainWindowController.m */,
-				2322B67C167CBFAE002D1811 /* EventWindowController.h */,
-				2322B67D167CBFAE002D1811 /* EventWindowController.m */,
-				234A3820167DE5B60078AC9D /* BookWindowController.h */,
-				234A3821167DE5B60078AC9D /* BookWindowController.m */,
-				EEAC7ED0168046D6000153AE /* MusicWindowController.h */,
-				EEAC7ED1168046D6000153AE /* MusicWindowController.m */,
-				EEAC7ED4168046EB000153AE /* MovieWindowController.h */,
-				EEAC7ED5168046EB000153AE /* MovieWindowController.m */,
-				EEAC7EDE16805F9E000153AE /* BroadcastWindowController.h */,
-				EEAC7EDF16805F9E000153AE /* BroadcastWindowController.m */,
-				239188BF1681A9D300B39F5D /* UserWindowController.h */,
-				239188C01681A9D300B39F5D /* UserWindowController.m */,
-				239188D21681C83600B39F5D /* MailWindowController.h */,
-				239188D31681C83700B39F5D /* MailWindowController.m */,
-				239188D91682B65500B39F5D /* NoteWindowController.h */,
-				239188DA1682B65600B39F5D /* NoteWindowController.m */,
+				239188EA1682EE0300B39F5D /* MainMenu */,
+				239188E91682EDF600B39F5D /* Consts */,
+				239188E81682EDD400B39F5D /* Controllers */,
 				23152154167077EF00AF553E /* Supporting Files */,
 			);
 			path = Sample;
@@ -224,6 +209,50 @@
 				23152176167077F000AF553E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		239188E81682EDD400B39F5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23F2A3EC1675BF620034BFD4 /* MainWindowController.h */,
+				23F2A3ED1675BF620034BFD4 /* MainWindowController.m */,
+				2322B67C167CBFAE002D1811 /* EventWindowController.h */,
+				2322B67D167CBFAE002D1811 /* EventWindowController.m */,
+				234A3820167DE5B60078AC9D /* BookWindowController.h */,
+				234A3821167DE5B60078AC9D /* BookWindowController.m */,
+				EEAC7ED0168046D6000153AE /* MusicWindowController.h */,
+				EEAC7ED1168046D6000153AE /* MusicWindowController.m */,
+				EEAC7ED4168046EB000153AE /* MovieWindowController.h */,
+				EEAC7ED5168046EB000153AE /* MovieWindowController.m */,
+				EEAC7EDE16805F9E000153AE /* BroadcastWindowController.h */,
+				EEAC7EDF16805F9E000153AE /* BroadcastWindowController.m */,
+				239188BF1681A9D300B39F5D /* UserWindowController.h */,
+				239188C01681A9D300B39F5D /* UserWindowController.m */,
+				239188D21681C83600B39F5D /* MailWindowController.h */,
+				239188D31681C83700B39F5D /* MailWindowController.m */,
+				239188D91682B65500B39F5D /* NoteWindowController.h */,
+				239188DA1682B65600B39F5D /* NoteWindowController.m */,
+				239188EB1682EF6200B39F5D /* DiscussionWindowController.h */,
+				239188EC1682EF6200B39F5D /* DiscussionWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		239188E91682EDF600B39F5D /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				234A381C167DE4D30078AC9D /* Consts.h */,
+				234A381D167DE4D30078AC9D /* Consts.m */,
+			);
+			name = Consts;
+			sourceTree = "<group>";
+		};
+		239188EA1682EE0300B39F5D /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				23152165167077F000AF553E /* MainMenu.xib */,
+			);
+			name = MainMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +378,7 @@
 				239188C11681A9D300B39F5D /* UserWindowController.m in Sources */,
 				239188D41681C83700B39F5D /* MailWindowController.m in Sources */,
 				239188DB1682B65700B39F5D /* NoteWindowController.m in Sources */,
+				239188ED1682EF6200B39F5D /* DiscussionWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "DOUEvent.h"
 #import "DOUEventArray.h"
 #import "DOUUserArray.h"
+#import "DOUDiscussionArray.h"
 
 @interface DOUEventEngine : DOUEngine
 
@@ -64,5 +65,9 @@
 - (void)quitWishEventWithID:(NSString *)event_id
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock;
+
+- (void)getDiscussionListWithID:(NSString *)event_id
+                   successBlock:(void(^)(DOUDiscussionArray *))successBlock
+                    failedBlock:(void(^)(NSString *))failedBlock;
 
 @end

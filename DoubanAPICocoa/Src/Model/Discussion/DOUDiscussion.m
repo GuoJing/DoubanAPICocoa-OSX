@@ -23,7 +23,7 @@
 }
 
 - (NSString *)title {
-    return [self.dictionary objectForKey:@"content"];
+    return [self.dictionary objectForKey:@"title"];
 }
 
 - (NSString *)content {

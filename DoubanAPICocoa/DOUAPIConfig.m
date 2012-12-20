@@ -11,7 +11,7 @@
 NSString * const kDoubanHttpUrl = @"http://www.douban.com";
 NSString * const kDoubanHttpsUrl = @"https://www.douban.com";
 
-NSString * const kHttpsApiBaseUrl = @"https://www.douban.com/service/api";
+NSString * const kHttpsApiBaseUrl = @"https://api.douban.com";
 NSString * const kHttpApiBaseUrl = @"http://api.douban.com";
 
 NSString * const kAuthUrl = @"https://www.douban.com/service/auth2/auth";

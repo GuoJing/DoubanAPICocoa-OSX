@@ -114,5 +114,5 @@ NSString * const kDOUDiscussionAPIUrl = @"/v2/discussion/%@";
 NSString * const kDOUDiscussionsAPIUrl = @"/v2/%@/%@/discussions";
 
 //Comment
-NSString * const kDOUCommentAPIUrl = @"/v2/%@/%@/comment/%d";
+NSString * const kDOUCommentAPIUrl = @"/v2/%@/%@/comment/%@";
 NSString * const kDOUCommentsAPIUrl = @"/v2/%@/%@/comments";
