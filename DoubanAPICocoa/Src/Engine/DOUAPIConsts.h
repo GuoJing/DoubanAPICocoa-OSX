@@ -80,3 +80,10 @@ extern NSString * const kDOUMailMarkMailAPIUrl;
 extern NSString * const kDOUMailMarkMultiMailAPIUrl;
 extern NSString * const kDOUMailDeleteMailAPIUrl;
 extern NSString * const kDOUMailDeleteMultiMailAPIUrl;
+
+extern NSString * const kDOUNoteWriteNoteAPIUrl;
+extern NSString * const kDOUNoteAPIUrl;
+extern NSString * const kDOUNoteCommentsAPIUrl;
+extern NSString * const kDOUNoteLikeAPIUrl;
+extern NSString * const kDOUNoteUserNotesAPIUrl;
+extern NSString * const kDOUNoteUserLikedNotesAPIUrl;

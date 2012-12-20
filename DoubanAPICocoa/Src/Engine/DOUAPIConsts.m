@@ -99,3 +99,14 @@ NSString * const kDOUMailMarkMailAPIUrl = @"/v2/doumail/%@";
 NSString * const kDOUMailMarkMultiMailAPIUrl = @"/v2/doumail/read";
 NSString * const kDOUMailDeleteMailAPIUrl = @"/v2/doumail/%@";
 NSString * const kDOUMailDeleteMultiMailAPIUrl = @"/v2/doumail/delete";
+
+//Note
+
+NSString * const kDOUNoteWriteNoteAPIUrl = @"/v2/notes";
+NSString * const kDOUNoteAPIUrl = @"/v2/note/%@";
+NSString * const kDOUNoteCommentsAPIUrl = @"/v2/note/%@/comments";
+NSString * const kDOUNoteLikeAPIUrl = @"/v2/note/%@/like";
+NSString * const kDOUNoteUserNotesAPIUrl = @"/v2/note/user_created/%@";
+NSString * const kDOUNoteUserLikedNotesAPIUrl = @"/v2/note/user_liked/%@";
+
+

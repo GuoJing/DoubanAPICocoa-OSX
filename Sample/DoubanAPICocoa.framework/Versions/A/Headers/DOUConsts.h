@@ -37,4 +37,8 @@ extern NSString * const kDOUBookactionWish;
 extern NSString * const kDOUBookactionReading;
 extern NSString * const kDOUBookactionRead;
 extern NSString * const kDOUPrivacyPrivate;
+extern NSString * const kDOUPrivacyFriend;
 extern NSString * const kDOUPrivacyPublic;
+
+extern NSString * const kDOUTrue;
+extern NSString * const kDOUFalse;

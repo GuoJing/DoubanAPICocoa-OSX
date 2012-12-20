@@ -22,6 +22,7 @@
 #import "DOUMovieEngine.h"
 #import "DOUMusicEngine.h"
 #import "DOUMailEngine.h"
+#import "DOUNoteEngine.h"
 #import "DOUBroadcastEngine.h"
 
 #import "DOUConsts.h"
@@ -123,6 +124,8 @@
             return [[[DOUBroadcastEngine alloc] initWithEngine:self] autorelease];
         case kDOUMail:
             return [[[DOUMailEngine alloc] initWithEngine:self] autorelease];
+        case kDOUNote:
+            return [[[DOUNoteEngine alloc] initWithEngine:self] autorelease];
         default:
             return self;
     }
