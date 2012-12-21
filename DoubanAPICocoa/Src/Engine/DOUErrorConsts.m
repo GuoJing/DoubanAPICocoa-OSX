@@ -8,5 +8,6 @@
 
 #import "DOUErrorConsts.h"
 
+NSString * const kDOUErrorOK = @"success";
 NSString * const kDOUErrorServiceError = @"Service not Connected";
 NSString * const kDOUErrorSameUser = @"Same User";

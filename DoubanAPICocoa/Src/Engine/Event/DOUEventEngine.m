@@ -230,7 +230,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -258,7 +258,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -286,7 +286,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -314,7 +314,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -346,13 +346,13 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUEventPhotosAPIUrl, event_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUEventPhotosAPIUrl, event_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {

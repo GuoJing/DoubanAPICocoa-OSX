@@ -25,7 +25,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUCommentAPIUrl, target, target_id, comment_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUCommentAPIUrl, target, target_id, comment_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
@@ -57,7 +57,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUCommentsAPIUrl, target, target_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUCommentsAPIUrl, target, target_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
@@ -84,14 +84,14 @@
                    failedBlock:(void(^)(NSString *))failedBlock{
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUCommentsAPIUrl, target, target_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUCommentsAPIUrl, target, target_id];
     NSMutableString *postBody = [NSMutableString stringWithFormat:@"content=%@", content];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -115,13 +115,13 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUCommentAPIUrl, target, target_id, comment_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUCommentAPIUrl, target, target_id, comment_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {

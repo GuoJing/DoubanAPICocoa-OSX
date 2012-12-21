@@ -23,7 +23,7 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUMailAPIUrl, mail_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMailAPIUrl, mail_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
@@ -144,13 +144,13 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUMailMarkMailAPIUrl, mail_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMailMarkMailAPIUrl, mail_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -179,7 +179,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -201,13 +201,13 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUMailDeleteMailAPIUrl, mail_id] autorelease];
+    NSString *apiUrl = [NSString stringWithFormat:kDOUMailDeleteMailAPIUrl, mail_id];
     DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -236,7 +236,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
@@ -270,7 +270,7 @@
         NSError *error = [req doubanError];
         if (!error) {
             if (successBlock) {
-                successBlock(@"success");
+                successBlock(kDOUErrorOK);
             }
         } else {
             if (failedBlock) {
