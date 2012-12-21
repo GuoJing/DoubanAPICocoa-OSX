@@ -94,12 +94,12 @@
     void(^successBlock)(DOUBroadcastUserArray *) = ^(DOUBroadcastUserArray *us) {
         self.info_field.title = @"成功!";
         DOUBroadcastUser *u = [[us objectArray] objectAtIndex:0];
-        NSLog(@"%@", u.screen_name);
+        NSLog(@"%@", u.screenName);
         [[self progress] stopAnimation:self];
     };
     void(^successUserBlock)(DOUUser *) = ^(DOUUser *u) {
         self.info_field.title = @"成功!";
-        NSLog(@"name is %@", u.screen_name);
+        NSLog(@"name is %@", u.screenName);
         [[self progress] stopAnimation:self];
     };
     void(^failBlock)(NSString *) = ^(NSString *e) {
