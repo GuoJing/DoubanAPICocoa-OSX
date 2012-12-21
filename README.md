@@ -4,6 +4,8 @@ DoubanAPICocoa是一个Cocoa封装的豆瓣API库，非官方版，可以使用�
 
 DoubanAPICocoa的底层支持并兼容老版本的[douban-objc-client](https://github.com/lincode/douban-objc-client)，熟悉[douban-objc-client](https://github.com/lincode/douban-objc-client)开发的同学也可以不用更新代码，直接移植到新的库里并且编译通过。但推荐使用DoubanAPICocoa提供的DOUEngine来实现代码。
 
+注意：示例请自行替换apiKey，并且自行申请相关权限，如豆邮和线上活动以及更多高级的功能。
+
 ### 目的 ###
 
 1. 使开发更加容易，不用关注网络层的细节
