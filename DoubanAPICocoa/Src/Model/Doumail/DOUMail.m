@@ -18,17 +18,17 @@
 @synthesize sender;
 @synthesize receiver;
 
-@synthesize sender_id;
-@synthesize sender_alt;
-@synthesize sender_name;
-@synthesize sender_uid;
-@synthesize sender_avatar;
+@synthesize senderId;
+@synthesize senderAlt;
+@synthesize senderName;
+@synthesize senderUid;
+@synthesize senderAvatar;
 
-@synthesize receiver_id;
-@synthesize receiver_alt;
-@synthesize receiver_name;
-@synthesize receiver_uid;
-@synthesize receiver_avatar;
+@synthesize receiverId;
+@synthesize receiverAlt;
+@synthesize receiverName;
+@synthesize receiverUid;
+@synthesize receiverAvatar;
 
 - (NSString *)identifier {
     return [self.dictionary objectForKey:@"id"];
@@ -50,12 +50,16 @@
     return [self.dictionary objectForKey:@"content"];
 }
 
-- (NSString *)sender {
-    return [self.dictionary objectForKey:@"sender"];
+- (DOUUser *)sender {
+    NSDictionary *dic = [self.dictionary objectForKey:@"sender"];
+    DOUUser *user = [DOUUser objectWithDictionary:dic];
+    return user;
 }
 
-- (NSString *)receiver {
-    return [self.dictionary objectForKey:@"receiver"];
+- (DOUUser *)receiver {
+    NSDictionary *dic = [self.dictionary objectForKey:@"receiver"];
+    DOUUser *user = [DOUUser objectWithDictionary:dic];
+    return user;
 }
 
 - (NSString *)sender_id {

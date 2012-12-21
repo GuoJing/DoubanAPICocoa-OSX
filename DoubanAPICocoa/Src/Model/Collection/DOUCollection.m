@@ -11,19 +11,19 @@
 @implementation DOUCollection
 
 @dynamic status;
-@dynamic book_id;
+@dynamic bookId;
 @dynamic tags;
 @dynamic updated;
 @dynamic comment;
 @dynamic identifier;
-@dynamic user_id;
+@dynamic userId;
 
 - (NSString *)status {
     return [self.dictionary objectForKey:@"status"];
 }
 
 
-- (NSString *)book_id {
+- (NSString *)bookId {
     return [self.dictionary objectForKey:@"book_id"];
 }
 
@@ -43,7 +43,7 @@
     return [self.dictionary objectForKey:@"identifier"];
 }
 
-- (NSString *)user_id {
+- (NSString *)userId {
     return [self.dictionary objectForKey:@"user_id"];
 }
 

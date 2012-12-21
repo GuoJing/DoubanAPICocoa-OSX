@@ -14,7 +14,7 @@
 @dynamic avatar;
 @dynamic alt;
 @dynamic name;
-@dynamic screen_name;
+@dynamic screenName;
 @dynamic uid;
 @dynamic desc;
 @dynamic locId;
@@ -40,7 +40,7 @@
   return [self.dictionary objectForKey:@"name"];
 }
 
-- (NSString *)screen_name {
+- (NSString *)screenName {
     return [self.dictionary objectForKey:@"name"];
 }
 

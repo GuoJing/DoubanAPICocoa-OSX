@@ -13,7 +13,7 @@
 @dynamic identifier;
 @dynamic title;
 @dynamic content;
-@dynamic comments_count;
+@dynamic commentsCount;
 @dynamic alt;
 @dynamic updated;
 @dynamic author;
@@ -30,7 +30,7 @@
     return [self.dictionary objectForKey:@"content"];
 }
 
-- (NSString *)comments_count {
+- (NSString *)commentsCount {
     return [self.dictionary objectForKey:@"comments_count"];
 }
 

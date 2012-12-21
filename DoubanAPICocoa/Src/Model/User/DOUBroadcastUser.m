@@ -12,24 +12,24 @@
 
 @synthesize identifier;
 @synthesize uid;
-@synthesize following_count;
+@synthesize followingCount;
 @synthesize blocked;
 @synthesize city;
 @synthesize verified;
-@synthesize is_first_visit;
-@synthesize followers_count;
+@synthesize isFirstVsit;
+@synthesize followersCount;
 @synthesize location;
-@synthesize logged_in;
+@synthesize loggedIn;
 @synthesize type;
-@synthesize large_avatar;
-@synthesize icon_avatar;
-@synthesize small_avatar;
-@synthesize status_count;
+@synthesize largeAvatar;
+@synthesize iconAvatar;
+@synthesize smallAvatar;
+@synthesize statusCount;
 @synthesize description;
 @synthesize blocking;
-@synthesize screen_name;
+@synthesize screenName;
 @synthesize url;
-@synthesize created_at;
+@synthesize createdAt;
 @synthesize following;
 
 
@@ -41,7 +41,7 @@
     return [self.dictionary objectForKey:@"uid"];
 }
 
-- (NSString *)following_count {
+- (NSString *)followingCount {
     return [self.dictionary objectForKey:@"following_count"];
 }
 
@@ -57,11 +57,11 @@
     return [self.dictionary objectForKey:@"verified"];
 }
 
-- (NSString *)is_first_visit {
+- (NSString *)isFirstVsit {
     return [self.dictionary objectForKey:@"is_first_visit"];
 }
 
-- (NSString *)followers_count {
+- (NSString *)followersCount {
     return [self.dictionary objectForKey:@"followers_count"];
 }
 
@@ -69,7 +69,7 @@
     return [self.dictionary objectForKey:@"location"];
 }
 
-- (NSString *)logged_in {
+- (NSString *)loggedIn {
     return [self.dictionary objectForKey:@"logged_in"];
 }
 
@@ -77,19 +77,19 @@
     return [self.dictionary objectForKey:@"type"];
 }
 
-- (NSString *)large_avatar {
+- (NSString *)largeAvatar {
     return [self.dictionary objectForKey:@"large_avatar"];
 }
 
-- (NSString *)icon_avatar {
+- (NSString *)iconAvatar {
     return [self.dictionary objectForKey:@"icon_avatar"];
 }
 
-- (NSString *)small_avatar {
+- (NSString *)smallAvatar {
     return [self.dictionary objectForKey:@"small_avatar"];
 }
 
-- (NSString *)status_count {
+- (NSString *)statusCount {
     return [self.dictionary objectForKey:@"status_count"];
 }
 
@@ -101,7 +101,7 @@
     return [self.dictionary objectForKey:@"blocking"];
 }
 
-- (NSString *)screen_name {
+- (NSString *)screenName {
     return [self.dictionary objectForKey:@"screen_name"];
 }
 
@@ -109,7 +109,7 @@
     return [self.dictionary objectForKey:@"url"];
 }
 
-- (NSString *)created_at {
+- (NSString *)createdAt {
     return [self.dictionary objectForKey:@"created_at"];
 }
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "DOUObject.h"
+#import "DOUUser.h"
 
 @interface DOUMail : DOUObject
 
@@ -17,19 +18,19 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *published;
 @property (nonatomic, copy) NSString *content;
-@property (nonatomic, copy) NSString *sender;
-@property (nonatomic, copy) NSString *receiver;
+@property (nonatomic, copy) DOUUser *sender;
+@property (nonatomic, copy) DOUUser *receiver;
 
-@property (nonatomic, copy) NSString *sender_id;
-@property (nonatomic, copy) NSString *sender_alt;
-@property (nonatomic, copy) NSString *sender_name;
-@property (nonatomic, copy) NSString *sender_uid;
-@property (nonatomic, copy) NSString *sender_avatar;
+@property (nonatomic, copy) NSString *senderId;
+@property (nonatomic, copy) NSString *senderAlt;
+@property (nonatomic, copy) NSString *senderName;
+@property (nonatomic, copy) NSString *senderUid;
+@property (nonatomic, copy) NSString *senderAvatar;
 
-@property (nonatomic, copy) NSString *receiver_id;
-@property (nonatomic, copy) NSString *receiver_alt;
-@property (nonatomic, copy) NSString *receiver_name;
-@property (nonatomic, copy) NSString *receiver_uid;
-@property (nonatomic, copy) NSString *receiver_avatar;
+@property (nonatomic, copy) NSString *receiverId;
+@property (nonatomic, copy) NSString *receiverAlt;
+@property (nonatomic, copy) NSString *receiverName;
+@property (nonatomic, copy) NSString *receiverUid;
+@property (nonatomic, copy) NSString *receiverAvatar;
 
 @end
