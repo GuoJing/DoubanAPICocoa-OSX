@@ -244,7 +244,7 @@
     [service post:query postBody:@"" callback:completionBlock];
 }
 
-- (void)unlikeOnlineWithID:(NSString *)online_id
+- (void)unLikeOnlineWithID:(NSString *)online_id
               successBlock:(void(^)(NSString *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {

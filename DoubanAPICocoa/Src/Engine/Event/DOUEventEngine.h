@@ -70,4 +70,9 @@
                    successBlock:(void(^)(DOUDiscussionArray *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock;
 
+- (void)uploadPhotoWithOnlineID:(NSString *)event_id
+                  withImageData:(NSData *)image_data
+                       withDesc:(NSString *)desc
+                   successBlock:(void(^)(NSString *))successBlock
+                    failedBlock:(void(^)(NSString *))failedBlock;
 @end

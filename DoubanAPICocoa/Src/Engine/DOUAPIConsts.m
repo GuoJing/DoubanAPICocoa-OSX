@@ -21,7 +21,7 @@ NSString * const kDOUEventUserEventsAPIUrl = @"/v2/event/user_created/%@?start=%
 NSString * const kDOUEventParticipantedEventsAPIUrl = @"/v2/event/user_participated/%@?start=%d&count=%d";
 NSString * const kDOUEventWishedEventsAPIUrl = @"/v2/event/user_wished/%@?start=%d&count=%d";
 NSString * const kDOUEventsListAPIUrl = @"/v2/event/list";
-
+NSString * const kDOUEventPhotosAPIUrl = @"/v2/event/%@/photos";
 NSString * const kDOUEventAttendEventAPIUrl = @"/v2/event/%@/participants";
 NSString * const kDOUEventWishEventAPIUrl = @"/v2/event/%@/wishers";
 

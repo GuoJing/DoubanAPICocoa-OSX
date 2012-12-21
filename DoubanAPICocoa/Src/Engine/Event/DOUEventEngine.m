@@ -333,4 +333,34 @@
     
 }
 
+- (void)uploadPhotoWithOnlineID:(NSString *)event_id
+                  withImageData:(NSData *)image_data
+                       withDesc:(NSString *)desc
+                   successBlock:(void(^)(NSString *))successBlock
+                    failedBlock:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUEventPhotosAPIUrl, event_id];
+    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            if (successBlock) {
+                successBlock(@"success");
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service post2:query photoData:image_data description:desc descriptionName:@"desc" callback:completionBlock uploadProgressDelegate:nil];
+}
+
 @end

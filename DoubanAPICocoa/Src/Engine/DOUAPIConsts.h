@@ -15,6 +15,7 @@ extern NSString * const kDOUEventUserEventsAPIUrl;
 extern NSString * const kDOUEventParticipantedEventsAPIUrl;
 extern NSString * const kDOUEventWishedEventsAPIUrl;
 extern NSString * const kDOUEventsListAPIUrl;
+extern NSString * const kDOUEventPhotosAPIUrl;
 extern NSString * const kDOUEventAttendEventAPIUrl;
 extern NSString * const kDOUEventWishEventAPIUrl;
 
