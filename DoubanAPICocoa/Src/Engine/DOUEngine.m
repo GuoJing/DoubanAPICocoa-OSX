@@ -129,9 +129,6 @@
 }
 
 - (void)dealloc {
-    [[self apiKey] release];
-    [[self secretKey] release];
-    [[self redirUrl] release];
     self.apiKey = nil;
     self.secretKey = nil;
     self.redirUrl = nil;

@@ -34,7 +34,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventAPIUrl, event_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
@@ -69,7 +69,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventParticipantsAPIUrl, event_id, start, count];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -100,7 +100,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishersAPIUrl, event_id, start, count];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -132,7 +132,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventUserEventsAPIUrl, user_id, start, count];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -164,7 +164,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventParticipantedEventsAPIUrl, user_id, start, count];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -196,7 +196,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishedEventsAPIUrl, user_id, start, count];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
@@ -225,7 +225,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventAttendEventAPIUrl, event_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
         if (!error) {
@@ -253,7 +253,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventAttendEventAPIUrl, event_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
         if (!error) {
@@ -281,7 +281,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishEventAPIUrl, event_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
         if (!error) {
@@ -309,7 +309,7 @@
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishEventAPIUrl, event_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest * req) {
         NSError *error = [req doubanError];
         if (!error) {
@@ -346,8 +346,8 @@
     }
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
-    NSString *apiUrl = [[NSString alloc] initWithFormat:kDOUEventPhotosAPIUrl, event_id];
-    DOUQuery *query = [[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil];
+    NSString *apiUrl = [[[NSString alloc] initWithFormat:kDOUEventPhotosAPIUrl, event_id] autorelease];
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
