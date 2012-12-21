@@ -8,5 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kDOUErrorOK;
 extern NSString * const kDOUErrorServiceError;
 extern NSString * const kDOUErrorSameUser;
