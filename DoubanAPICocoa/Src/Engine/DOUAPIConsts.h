@@ -104,3 +104,13 @@ extern NSString * const kDOUAlbumUserLikedAlbumsAPIUrl;
 
 extern NSString * const kDOUPhotoAPIUrl;
 extern NSString * const kDOUPhotoLikeAPIUrl;
+
+extern NSString * const kDOUOnlineAPIUrl;
+extern NSString * const kDOUOnlineParticipantsAPIUrl;
+extern NSString * const kDOUOnlinesAPIUrl;
+extern NSString * const kDOUOnlineUpdateOnlineAPIUrl;
+extern NSString * const kDOUOnlineJoinOnlineAPIUrl;
+extern NSString * const kDOUOnlineLikeOnlineAPIUrl;
+extern NSString * const kDOUOnlinePhotosAPIUrl;
+extern NSString * const kDOUOnlineUserOnlinesAPIUrl;
+extern NSString * const kDOUOnlineUserLikedOnlinesAPIUrl;

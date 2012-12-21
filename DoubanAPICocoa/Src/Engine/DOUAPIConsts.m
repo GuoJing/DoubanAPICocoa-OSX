@@ -8,8 +8,9 @@
 
 #import "DOUAPIConsts.h"
 
-//#TODO 书影音的获取用户所有的tag没有实现
-//v2/xxx/user_tags/id
+//#TODO 书影音的获取用户所有的tag没有实现，好像已经废弃
+//#TODO 豆瓣广播里开放的block用户好像不能用，也不知道为什么
+//#TODO 广播用户应该有一个更好的封装
 
 //Event
 
@@ -129,3 +130,13 @@ NSString * const kDOUAlbumUserLikedAlbumsAPIUrl = @"/v2/album/user_liked/&@";
 //Photo
 NSString * const kDOUPhotoAPIUrl = @"/v2/photo/%@";
 NSString * const kDOUPhotoLikeAPIUrl = @"/v2/photo/%@/like";
+
+NSString * const kDOUOnlineAPIUrl = @"//v2/online/%@";
+NSString * const kDOUOnlineParticipantsAPIUrl = @"/v2/online/%@/participants?start=%@&count=%@";
+NSString * const kDOUOnlinesAPIUrl = @"/v2/onlines";
+NSString * const kDOUOnlineUpdateOnlineAPIUrl = @"/v2/online/%@";
+NSString * const kDOUOnlineJoinOnlineAPIUrl = @"/v2/online/%@/participants";
+NSString * const kDOUOnlineLikeOnlineAPIUrl = @"/v2/online/%@/like";
+NSString * const kDOUOnlinePhotosAPIUrl = @"/v2/online/%@/photos";
+NSString * const kDOUOnlineUserOnlinesAPIUrl = @"/v2/online/user_participated/%@";
+NSString * const kDOUOnlineUserLikedOnlinesAPIUrl = @"/v2/online/user_created/%@";
