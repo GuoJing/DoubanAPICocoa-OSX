@@ -228,13 +228,13 @@
 		23BB02CD166C548400930FFD /* DOUPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02AF166C548400930FFD /* DOUPhoto.m */; };
 		23BB02CE166C548400930FFD /* DOUPhotoArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB02B0166C548400930FFD /* DOUPhotoArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23BB02CF166C548400930FFD /* DOUPhotoArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BB02B1166C548400930FFD /* DOUPhotoArray.m */; };
-		23E34B2116853B8C0010C4A4 /* DOUBroadcastAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B1F16853B8C0010C4A4 /* DOUBroadcastAttachment.h */; };
+		23E34B2116853B8C0010C4A4 /* DOUBroadcastAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B1F16853B8C0010C4A4 /* DOUBroadcastAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E34B2216853B8C0010C4A4 /* DOUBroadcastAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E34B2016853B8C0010C4A4 /* DOUBroadcastAttachment.m */; };
-		23E34B2516853B9F0010C4A4 /* DOUBroadcastMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B2316853B9F0010C4A4 /* DOUBroadcastMedia.h */; };
+		23E34B2516853B9F0010C4A4 /* DOUBroadcastMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B2316853B9F0010C4A4 /* DOUBroadcastMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E34B2616853B9F0010C4A4 /* DOUBroadcastMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E34B2416853B9F0010C4A4 /* DOUBroadcastMedia.m */; };
-		23E34B2916853EB70010C4A4 /* DOUBroadcastAttechmentArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B2716853EB70010C4A4 /* DOUBroadcastAttechmentArray.h */; };
+		23E34B2916853EB70010C4A4 /* DOUBroadcastAttechmentArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B2716853EB70010C4A4 /* DOUBroadcastAttechmentArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E34B2A16853EB70010C4A4 /* DOUBroadcastAttechmentArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E34B2816853EB70010C4A4 /* DOUBroadcastAttechmentArray.m */; };
-		23E34B2D16853EC60010C4A4 /* DOUBroadcastMediaArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B2B16853EC60010C4A4 /* DOUBroadcastMediaArray.h */; };
+		23E34B2D16853EC60010C4A4 /* DOUBroadcastMediaArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E34B2B16853EC60010C4A4 /* DOUBroadcastMediaArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E34B2E16853EC60010C4A4 /* DOUBroadcastMediaArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E34B2C16853EC60010C4A4 /* DOUBroadcastMediaArray.m */; };
 		23E84081165230DF0042F413 /* DOUAPIConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E8407F165230DF0042F413 /* DOUAPIConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23E84082165230DF0042F413 /* DOUAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E84080165230DF0042F413 /* DOUAPIConfig.m */; };
