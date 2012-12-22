@@ -30,6 +30,7 @@
 		239188ED1682EF6200B39F5D /* DiscussionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188EC1682EF6200B39F5D /* DiscussionWindowController.m */; };
 		239188F4168311F100B39F5D /* AlbumWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188F3168311F100B39F5D /* AlbumWindowController.m */; };
 		239188F71683FD4F00B39F5D /* OnlineWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188F61683FD4F00B39F5D /* OnlineWindowController.m */; };
+		23E34B3416854C3B0010C4A4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 23E34B3316854C3B0010C4A4 /* README.md */; };
 		23F2A3EE1675BF620034BFD4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A3ED1675BF620034BFD4 /* MainWindowController.m */; };
 		EEAC7ED2168046D6000153AE /* MusicWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED1168046D6000153AE /* MusicWindowController.m */; };
 		EEAC7ED6168046EB000153AE /* MovieWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC7ED5168046EB000153AE /* MovieWindowController.m */; };
@@ -99,6 +100,7 @@
 		239188F3168311F100B39F5D /* AlbumWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumWindowController.m; sourceTree = "<group>"; };
 		239188F51683FD4E00B39F5D /* OnlineWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineWindowController.h; sourceTree = "<group>"; };
 		239188F61683FD4F00B39F5D /* OnlineWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineWindowController.m; sourceTree = "<group>"; };
+		23E34B3316854C3B0010C4A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		23F2A3EC1675BF620034BFD4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		23F2A3ED1675BF620034BFD4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		EEAC7ED0168046D6000153AE /* MusicWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWindowController.h; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		23152154167077EF00AF553E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23E34B3316854C3B0010C4A4 /* README.md */,
 				23198E33167D986F00E9692D /* eposter.jpg */,
 				2322B674167CBD4C002D1811 /* eye_50.png */,
 				23152155167077EF00AF553E /* Sample-Info.plist */,
@@ -343,6 +346,7 @@
 				23152167167077F000AF553E /* MainMenu.xib in Resources */,
 				2322B675167CBD4C002D1811 /* eye_50.png in Resources */,
 				23198E34167D986F00E9692D /* eposter.jpg in Resources */,
+				23E34B3416854C3B0010C4A4 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
