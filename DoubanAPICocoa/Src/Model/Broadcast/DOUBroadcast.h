@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 
 #import "DOUObject.h"
+#import "DOUBroadcastAttachment.h"
+#import "DOUBroadcastUser.h"
 
 @interface DOUBroadcast : DOUObject
 
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *reshared_status;
 @property (nonatomic, copy) NSString *reshared_count;
-@property (nonatomic, copy) NSString *attachments;
+@property (nonatomic, copy) DOUBroadcastAttachment *attachments;
 @property (nonatomic, copy) NSString *entities;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *created_at;
@@ -25,7 +27,7 @@
 @property (nonatomic, copy) NSString *source;
 @property (nonatomic, copy) NSString *like_count;
 @property (nonatomic, copy) NSString *comments_count;
-@property (nonatomic, copy) NSString *user;
+@property (nonatomic, copy) DOUBroadcastUser *user;
 @property (nonatomic, copy) NSString *is_follow;
 @property (nonatomic, copy) NSString *has_photo;
 @property (nonatomic, copy) NSString *type;

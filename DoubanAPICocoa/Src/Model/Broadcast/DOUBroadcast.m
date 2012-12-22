@@ -74,8 +74,10 @@
     return [self.dictionary objectForKey:@"reshared_count"];
 }
 
-- (NSString *)attachments {
-    return [self.dictionary objectForKey:@"attachments"];
+- (DOUBroadcastAttachment *)attachments {
+    NSDictionary *dic = [self.dictionary objectForKey:@"attachments"];
+    DOUBroadcastAttachment *atts = [DOUBroadcastAttachment objectWithDictionary:dic];
+    return atts;
 }
 
 - (NSString *)text {
@@ -114,8 +116,10 @@
     return [self.dictionary objectForKey:@"comments_count"];
 }
 
-- (NSString *)user {
-    return [self.dictionary objectForKey:@"user"];
+- (DOUBroadcastUser *)user {
+    NSDictionary *dic = [self.dictionary objectForKey:@"user"];
+    DOUBroadcastUser *usr = [DOUBroadcastUser objectWithDictionary:dic];
+    return usr;
 }
 
 - (NSString *)status {
