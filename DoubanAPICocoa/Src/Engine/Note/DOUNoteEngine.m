@@ -229,7 +229,7 @@
             }
         }
     };
-    [service post:query postBody:@"" callback:completionBlock];
+    [service post:query postBody:nil callback:completionBlock];
 }
 
 - (void)unLikeNoteWithNoteID:(NSString *)note_id

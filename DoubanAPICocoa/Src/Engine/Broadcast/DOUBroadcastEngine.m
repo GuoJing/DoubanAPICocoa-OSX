@@ -19,12 +19,7 @@
           withRecDesc:(NSString *)desc
          successBlock:(void(^)(NSString *))successBlock
           failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -407,7 +402,7 @@
             }
         }
     };
-    [service post:query postBody:@"" callback:completionBlock];
+    [service post:query postBody:nil callback:completionBlock];
 }
 
 - (void)getLikersWithBroadCastID:(NSString *)broadcast_id
@@ -469,7 +464,7 @@
             }
         }
     };
-    [service post:query postBody:@"" callback:completionBlock];
+    [service post:query postBody:nil callback:completionBlock];
 }
 
 @end

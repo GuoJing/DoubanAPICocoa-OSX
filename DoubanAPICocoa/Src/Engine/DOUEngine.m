@@ -25,7 +25,7 @@
 #import "DOUNoteEngine.h"
 #import "DOUDiscussionEngine.h"
 #import "DOUBroadcastEngine.h"
-
+#import "DOUErrorConsts.h"
 #import "DOUConsts.h"
 
 @implementation DOUEngine
@@ -126,6 +126,15 @@
             return self;
     }
     return self;
+}
+
+- (void)checkServiceFailedWhen:(void(^)(NSString *))failedBlock{
+    if(![self isServiceValid]) {
+        if (failedBlock) {
+            failedBlock(kDOUErrorServiceError);
+        }
+        return;
+    }
 }
 
 - (void)dealloc {

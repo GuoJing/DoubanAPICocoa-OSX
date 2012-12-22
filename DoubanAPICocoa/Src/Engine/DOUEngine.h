@@ -35,5 +35,5 @@
 - (BOOL)isServiceValid;
 - (DOUService *)getService;
 - (id)getEngine:(EngineTypes)engine_id;
-
+- (void)checkServiceFailedWhen:(void(^)(NSString *))failedBlock;
 @end
