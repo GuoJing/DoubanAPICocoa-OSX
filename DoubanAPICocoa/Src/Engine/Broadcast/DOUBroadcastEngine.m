@@ -350,7 +350,7 @@
 }
 
 - (void)getResharersWithBroadCastID:(NSString *)broadcast_id
-                       successBlock:(void(^)(DOUBroadcastReshareArray *))successBlock
+                       successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
@@ -365,7 +365,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastReshareArray *array = [[[DOUBroadcastReshareArray alloc] initWithString:[req responseString]] autorelease];
+            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(array);
@@ -390,7 +390,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastReshareArray *array = [[[DOUBroadcastReshareArray alloc] initWithString:[req responseString]] autorelease];
+            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(kDOUErrorOK);
@@ -406,7 +406,7 @@
 }
 
 - (void)getLikersWithBroadCastID:(NSString *)broadcast_id
-                    successBlock:(void(^)(DOUBroadcastLikeArray *))successBlock
+                    successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
     if(![self isServiceValid]) {
         if (failedBlock) {
@@ -421,7 +421,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastLikeArray *array = [[[DOUBroadcastLikeArray alloc] initWithString:[req responseString]] autorelease];
+            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(array);
@@ -452,7 +452,7 @@
     DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
         NSError *error = [req doubanError];
         if (!error) {
-            DOUBroadcastLikeArray *array = [[[DOUBroadcastLikeArray alloc] initWithString:[req responseString]] autorelease];
+            DOUBroadcastUserArray *array = [[[DOUBroadcastUserArray alloc] initWithString:[req responseString]] autorelease];
             if (array) {
                 if (successBlock) {
                     successBlock(kDOUErrorOK);

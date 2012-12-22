@@ -1,8 +1,8 @@
 //
-//  DOUBroadLikeArray.h
+//  DOUBroadcastMediaArray.h
 //  DoubanAPICocoa
 //
-//  Created by GuoJing on 12-12-19.
+//  Created by GuoJing on 12-12-22.
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 #import "DOUObjectArray.h"
 
-@interface DOUBroadcastLikeArray : DOUObjectArray
+@interface DOUBroadcastMediaArray : DOUObjectArray
 
 @end

@@ -13,10 +13,8 @@
 #import "DOUBroadcastArray.h"
 #import "DOUBroadcastComment.h"
 #import "DOUBroadcastCommentArray.h"
-#import "DOUBroadcastReshare.h"
-#import "DOUBroadcastReshareArray.h"
-#import "DOUBroadcastLike.h"
-#import "DOUBroadcastLikeArray.h"
+#import "DOUBroadcastUser.h"
+#import "DOUBroadcastUserArray.h"
 
 @interface DOUBroadcastEngine : DOUEngine
 
@@ -95,7 +93,7 @@
                         failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)getResharersWithBroadCastID:(NSString *)broadcast_id
-                     successBlock:(void(^)(DOUBroadcastReshareArray *))successBlock
+                     successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)reshareWithBroadCastID:(NSString *)broadcast_id
@@ -103,7 +101,7 @@
                    failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)getLikersWithBroadCastID:(NSString *)broadcast_id
-                     successBlock:(void(^)(DOUBroadcastLikeArray *))successBlock
+                     successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock;
 
 - (void)likeWithBroadCastID:(NSString *)broadcast_id

@@ -10,7 +10,7 @@
 
 #import "DOUObject.h"
 
-@interface DOUBroadcastLike : DOUObject
+@interface DOUBroadcastLikeUser : DOUObject
 
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *following_count;

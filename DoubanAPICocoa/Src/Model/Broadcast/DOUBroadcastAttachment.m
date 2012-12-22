@@ -14,7 +14,7 @@
 @dynamic description;
 @dynamic title;
 @dynamic media;
-@dynamic expand_href;
+@dynamic expandHref;
 @dynamic caption;
 @dynamic href;
 @dynamic type;
@@ -38,7 +38,7 @@
     return media;
 }
 
-- (NSString *)expand_href {
+- (NSString *)expandHref {
     return [self.dictionary objectForKey:@"expand_href"];
 }
 

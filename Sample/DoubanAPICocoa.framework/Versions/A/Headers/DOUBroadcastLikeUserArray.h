@@ -1,5 +1,5 @@
 //
-//  DOUBroadcastReshareArray.h
+//  DOUBroadLikeArray.h
 //  DoubanAPICocoa
 //
 //  Created by GuoJing on 12-12-19.
@@ -10,6 +10,6 @@
 
 #import "DOUObjectArray.h"
 
-@interface DOUBroadcastReshareArray : DOUObjectArray
+@interface DOUBroadcastLikeUserArray : DOUObjectArray
 
 @end
