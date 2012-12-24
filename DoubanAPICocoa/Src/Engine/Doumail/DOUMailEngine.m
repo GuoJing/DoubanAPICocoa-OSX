@@ -15,12 +15,7 @@
 - (void)getDoumailWithRemoteID:(NSString *)mail_id
                   successBlock:(void(^)(DOUMail *))successBlock
                    failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMailAPIUrl, mail_id];
@@ -45,12 +40,7 @@
 
 - (void)getInbox:(void(^)(DOUMailArray *))successBlock
      failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUMailInboxAPIUrl;
@@ -75,12 +65,7 @@
 
 - (void)getOutbox:(void(^)(DOUMailArray *))successBlock
       failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUMailOutboxAPIUrl;
@@ -105,12 +90,7 @@
 
 - (void)getInboxUnread:(void(^)(DOUMailArray *))successBlock
            failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUMailUnreadAPIUrl;
@@ -136,12 +116,7 @@
 - (void)markAsReadWithID:(NSString *)mail_id
             successBlock:(void(^)(NSString *))successBlock
              failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMailMarkMailAPIUrl, mail_id];
@@ -164,12 +139,7 @@
 - (void)markMultipleAsReadWithIDS:(NSString *)doumail_ids
                     successBlock:(void(^)(NSString *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUMailMarkMultiMailAPIUrl;
@@ -193,12 +163,7 @@
 - (void)deleteDoumailWithID:(NSString *)mail_id
                successBlock:(void(^)(NSString *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMailDeleteMailAPIUrl, mail_id];
@@ -221,12 +186,7 @@
 - (void)deleteMultipleDoumailWithIDS:(NSString *)doumail_ids
                        successBlock:(void(^)(NSString *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUMailDeleteMultiMailAPIUrl;
@@ -254,12 +214,7 @@
            withCaptchaString:(NSString *)captcha_string
                 successBlock:(void(^)(NSString *))successBlock
                  failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUMailWriteMailAPIUrl;

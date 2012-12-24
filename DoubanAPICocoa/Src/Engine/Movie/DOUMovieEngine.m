@@ -16,12 +16,7 @@
                 successBlock:(void(^)(DOUMovie *))successBlock
                  failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUMovie *newMovie = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -52,12 +47,7 @@
                   successBlock:(void(^)(DOUMovie *))successBlock
                    failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUMovie *newMovie = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -88,12 +78,7 @@
                count:(int)count
         successBlock:(void(^)(DOUMovieArray *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -119,12 +104,7 @@
 - (void)getTagsWithRemoteMovieID:(NSString *)movie_id
                     successBlock:(void(^)(DOUTagArray *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMovieTagsAPIUrl, movie_id];
@@ -152,12 +132,7 @@
              rating:(int)rating
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *postBody = [NSMutableString stringWithFormat:@"movie=%@&title=%@&content=%@&rating=%d", movie_id , title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -184,12 +159,7 @@
             rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock{    
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *putBody = [NSMutableString stringWithFormat:@"&title=%@&content=%@&rating=%d", title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -213,12 +183,7 @@
 - (void)deleteReview:(NSString *)review_id
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMovieEditReviewAPIUrl, review_id];

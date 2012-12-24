@@ -23,12 +23,7 @@
               successBlock:(void(^)(DOULoc *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock{
     __block DOULoc *newLoc = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;

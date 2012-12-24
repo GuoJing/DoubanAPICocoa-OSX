@@ -18,12 +18,7 @@
                withContent:(NSString *)content
               successBlock:(void(^)(NSString *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUNoteWriteNoteAPIUrl;
@@ -47,12 +42,7 @@
 - (void)getNoteWithRemoteID:(NSString *)note_id
                successBlock:(void(^)(DOUNote *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteAPIUrl, note_id];
@@ -82,12 +72,7 @@
                    withContent:(NSString *)content
                   successBlock:(void(^)(NSString *))successBlock
                    failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteAPIUrl, note_id];
@@ -111,12 +96,7 @@
 - (void)deleteNoteWithRemoteID:(NSString *)note_id
                   successBlock:(void(^)(NSString *))successBlock
                    failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteAPIUrl, note_id];
@@ -146,12 +126,7 @@
                  successBlock:(void(^)(NSString *))successBlock
                   failedBlock:(void(^)(NSString *))failedBlock{
     //TODO可能还有一些问题
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteAPIUrl, note_id];
@@ -175,12 +150,7 @@
 - (void)getNoteCommentsWithNoteID:(NSString *)note_id
                      successBlock:(void(^)(DOUCommentArray *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteCommentsAPIUrl, note_id];
@@ -206,12 +176,7 @@
 - (void)likeNoteWithNoteID:(NSString *)note_id
               successBlock:(void(^)(NSString *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteLikeAPIUrl, note_id];
@@ -235,12 +200,7 @@
 - (void)unLikeNoteWithNoteID:(NSString *)note_id
                 successBlock:(void(^)(NSString *))successBlock
                  failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteLikeAPIUrl, note_id];
@@ -264,12 +224,7 @@
 - (void)getNotesWithUserID:(NSString *)user_id
               successBlock:(void(^)(DOUNoteArray *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteUserNotesAPIUrl, user_id];
@@ -295,12 +250,7 @@
 - (void)getUserLikedNotesWithUserID:(NSString *)user_id
                        successBlock:(void(^)(DOUNoteArray *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUNoteUserLikedNotesAPIUrl, user_id];

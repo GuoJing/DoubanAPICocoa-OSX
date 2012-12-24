@@ -74,12 +74,7 @@
                   count:(int)count
            successBlock:(void(^)(DOUBroadcastArray *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *since_id_str = [[[NSString alloc] initWithString:@""] autorelease];
@@ -122,12 +117,7 @@
                  userID:(NSString *)user_id
            successBlock:(void(^)(DOUBroadcastArray *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *since_id_str = [[[NSString alloc] initWithString:@""] autorelease];
@@ -168,12 +158,7 @@
                     successBlock:(void(^)(DOUBroadcast *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUBroadcast *newBroadcast = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastShuoAPIUrl, broadcast_id];
@@ -200,12 +185,7 @@
 - (void)deleteBroadCastWithRemoteID:(NSString *)broadcast_id
                        successBlock:(void(^)(NSString *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastShuoAPIUrl, broadcast_id];
@@ -230,12 +210,7 @@
                              count:(int)count
                       successBlock:(void(^)(DOUBroadcastCommentArray *))successBlock
                        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastCommentListAPIUrl, broadcast_id, start, count];
@@ -261,12 +236,7 @@
 - (void)writeCommentWithBroadCastID:(NSString *)broadcast_id
                        successBlock:(void(^)(DOUBroadcastComment *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastCommentListAPIUrl, broadcast_id, 0, 0];
@@ -292,12 +262,7 @@
                           count:(int)count
                    successBlock:(void(^)(DOUBroadcastComment *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastCommentAPIUrl, comment_id];
@@ -324,12 +289,7 @@
 - (void)deleteCommentWithRemoteID:(NSString *)comment_id
                      successBlock:(void(^)(NSString *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastCommentAPIUrl, comment_id];
@@ -352,12 +312,7 @@
 - (void)getResharersWithBroadCastID:(NSString *)broadcast_id
                        successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastReshareAPIUrl, broadcast_id];
@@ -408,12 +363,7 @@
 - (void)getLikersWithBroadCastID:(NSString *)broadcast_id
                     successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastLikeAPIUrl, broadcast_id];
@@ -439,12 +389,7 @@
 - (void)likeWithBroadCastID:(NSString *)broadcast_id
                successBlock:(void(^)(NSString *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastLikeAPIUrl, broadcast_id];

@@ -15,12 +15,7 @@
 - (void)getUserWithRemoteID:(NSString *)user_id
                successBlock:(void(^)(DOUUser *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUUserAPIUrl, user_id];
@@ -46,12 +41,7 @@
 - (void)getUserFollowingWithUserID:(NSString *)user_id
                       successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastUserFollowingAPIUrl, user_id];
@@ -77,12 +67,7 @@
 - (void)getUserFollowersWithUserID:(NSString *)user_id
                       successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastUserFollowersAPIUrl, user_id];
@@ -108,12 +93,7 @@
 - (void)getUserFollowInCommonWithUserID:(NSString *)user_id
                            successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
                             failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastUserFollowInCommonAPIUrl, user_id];
@@ -139,12 +119,7 @@
 - (void)searchUser:(NSString *)text
       successBlock:(void(^)(DOUBroadcastUserArray *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastUserSearchAPIUrl, text];
@@ -170,12 +145,7 @@
 - (void)followSomeOneWithUserID:(NSString *)user_id
                successBlock:(void(^)(NSString *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUBroadcastUserFollowAPIUrl;
@@ -199,12 +169,7 @@
 - (void)unfollowSomeOneWithUserID:(NSString *)user_id
                  successBlock:(void(^)(NSString *))successBlock
                   failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = kDOUBroadcastUserUnFollowAPIUrl;
@@ -228,12 +193,7 @@
 - (void)blockSomeOneWithUserID:(NSString *)user_id
               successBlock:(void(^)(NSString *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastUserBlockAPIUrl, user_id];
@@ -258,12 +218,7 @@
                            targetID:(NSString *)target_id
                        successBlock:(void(^)(NSString *))successBlock
                         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBroadcastUserFriendShopAPIurl, self.apiKey, source_id, target_id];

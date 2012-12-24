@@ -16,12 +16,7 @@
                 successBlock:(void(^)(DOUMusic *))successBlock
                  failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUMusic *newMusic = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -52,12 +47,7 @@
                count:(int)count
         successBlock:(void(^)(DOUMusicArray *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -83,12 +73,7 @@
 - (void)getTagsWithRemoteMusicID:(NSString *)music_id
                     successBlock:(void(^)(DOUTagArray *))successBlock
                      failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMusicTagsAPIUrl, music_id];
@@ -116,12 +101,7 @@
              rating:(int)rating
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *postBody = [NSMutableString stringWithFormat:@"music=%@&title=%@&content=%@&rating=%d", music_id , title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -148,12 +128,7 @@
             rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *putBody = [NSMutableString stringWithFormat:@"&title=%@&content=%@&rating=%d", title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -177,12 +152,7 @@
 - (void)deleteReview:(NSString *)review_id
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUMusicEditReviewAPIUrl, review_id];

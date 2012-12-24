@@ -24,12 +24,7 @@
                 successBlock:(void(^)(DOUEvent *))successBlock
                  failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUEvent *newEvent = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
 
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -60,12 +55,7 @@
                                      userCount:(int)count
                                   successBlock:(void(^)(DOUUserArray *))successBlock
                                    failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventParticipantsAPIUrl, event_id, start, count];
@@ -91,12 +81,7 @@
                               userCount:(int)count
                            successBlock:(void(^)(DOUUserArray *))successBlock
                             failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishersAPIUrl, event_id, start, count];
@@ -122,12 +107,7 @@
                             userCount:(int)count
                          successBlock:(void(^)(DOUEventArray *))successBlock
                           failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -154,12 +134,7 @@
                                          userCount:(int)count
                                       successBlock:(void(^)(DOUEventArray *))successBlock
                                        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -186,12 +161,7 @@
                                   userCount:(int)count
                                successBlock:(void(^)(DOUEventArray *))successBlock
                                 failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -216,12 +186,7 @@
 - (void)attendEventWithID:(NSString *)event_id
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventAttendEventAPIUrl, event_id];
@@ -244,12 +209,7 @@
 - (void)quitAttendEventWithID:(NSString *)event_id
            successBlock:(void(^)(NSString *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventAttendEventAPIUrl, event_id];
@@ -272,12 +232,7 @@
 - (void)wishEventWithID:(NSString *)event_id
      successBlock:(void(^)(NSString *))successBlock
       failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishEventAPIUrl, event_id];
@@ -300,12 +255,7 @@
 - (void)quitWishEventWithID:(NSString *)event_id
          successBlock:(void(^)(NSString *))successBlock
           failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventWishEventAPIUrl, event_id];
@@ -338,12 +288,7 @@
                        withDesc:(NSString *)desc
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUEventPhotosAPIUrl, event_id];

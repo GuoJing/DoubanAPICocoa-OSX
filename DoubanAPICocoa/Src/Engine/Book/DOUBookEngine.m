@@ -22,12 +22,7 @@
                successBlock:(void(^)(DOUBook *))successBlock
                 failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUBook *newBook = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -58,12 +53,7 @@
                  successBlock:(void(^)(DOUBook *))successBlock
                   failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUBook *newBook = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -94,12 +84,7 @@
               count:(int)count
        successBlock:(void(^)(DOUBookArray *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookSearchAPIUrl, search_text, start, count];
@@ -124,12 +109,7 @@
 - (void)getTagsWithRemoteBookID:(NSString *)book_id
                    successBlock:(void(^)(DOUTagArray *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookTagsAPIUrl, book_id];
@@ -156,12 +136,7 @@
                           count:(int)count
                    successBlock:(void(^)(DOUUserTagArray *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookUserAllTagsAPIUrl, user_id, start, count];
@@ -188,12 +163,7 @@
                                      count:(int)count
                               successBlock:(void(^)(DOUCollectionArray *))successBlock
                                failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookUserAllCollectionsAPIUrl, user_id, start, count];
@@ -219,12 +189,7 @@
                              successBlock:(void(^)(DOUCollection *))successBlock
                               failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUCollection *newCollection = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookCollectInfoAPIUrl, book_id];
@@ -254,12 +219,7 @@
                                  count:(int)count
                           successBlock:(void(^)(DOUCollectionArray *))successBlock
                            failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookUserAnnotationAPIUrl, user_id, start, count];
@@ -286,12 +246,7 @@
                                  count:(int)count
                           successBlock:(void(^)(DOUCollectionArray *))successBlock
                            failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookAnnotationsAPIUrl, book_id, start, count];
@@ -317,12 +272,7 @@
                      successBlock:(void(^)(DOUAnnotation *))successBlock
                       failedBlock:(void(^)(NSString *))failedBlock{
     __block DOUAnnotation *newAnnotation = nil;
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -356,12 +306,7 @@
                          rating:(int)rating
                    successBlock:(void(^)(NSString *))successBlock
                     failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookCollectBookAPIUrl, book_id];
@@ -395,12 +340,7 @@
 - (void)deleteBookCollectWithRemoteID:(NSString *)book_id
                          successBlock:(void(^)(NSString *))successBlock
                           failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookCollectBookAPIUrl, book_id];
@@ -427,12 +367,7 @@
             withPrivacy:(NSString *)privacy
            successBlock:(void(^)(NSString *))successBlock
             failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *postBody = nil;
     postBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@", content, page, chapter];
     if ([privacy isEqualToString:kDOUPrivacyPrivate]) {
@@ -464,12 +399,7 @@
            withPrivacy:(NSString *)privacy
           successBlock:(void(^)(NSString *))successBlock
            failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *putBody = nil;
     putBody = [NSMutableString stringWithFormat:@"content=%@&page=%@&chapter=%@", content, page, chapter];
     if ([privacy isEqualToString:kDOUPrivacyPrivate]) {
@@ -497,12 +427,7 @@
 - (void)deleteAnnotation:(NSString *)annotation_id
             successBlock:(void(^)(NSString *))successBlock
              failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditAnnotationAPIUrl, annotation_id];
@@ -528,12 +453,7 @@
              rating:(int)rating
        successBlock:(void(^)(NSString *))successBlock
         failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *postBody = [NSMutableString stringWithFormat:@"book=%@&title=%@&content=%@&rating=%d", book_id , title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -560,12 +480,7 @@
             rating:(int)rating
       successBlock:(void(^)(NSString *))successBlock
        failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     NSMutableString *putBody = [NSMutableString stringWithFormat:@"&title=%@&content=%@&rating=%d", title, content, rating];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
@@ -589,12 +504,7 @@
 - (void)deleteReview:(NSString *)review_id
         successBlock:(void(^)(NSString *))successBlock
          failedBlock:(void(^)(NSString *))failedBlock{
-    if(![self isServiceValid]) {
-        if (failedBlock) {
-            failedBlock(kDOUErrorServiceError);
-        }
-        return;
-    }
+    [self checkServiceFailedWhen:failedBlock];
     DOUService *service = [self getService];
     service.apiBaseUrlString = kHttpsApiBaseUrl;
     NSString *apiUrl = [NSString stringWithFormat:kDOUBookEditReviewAPIUrl, review_id];
