@@ -26,6 +26,7 @@
 #import "DOUDiscussionEngine.h"
 #import "DOUBroadcastEngine.h"
 #import "DOUErrorConsts.h"
+#import "DOUAPIConsts.h"
 #import "DOUConsts.h"
 
 @implementation DOUEngine
@@ -135,6 +136,32 @@
         }
         return;
     }
+}
+
+- (void)getWhoAmI:(void(^)(DOUUser *))successBlock
+      failedBlock:(void(^)(NSString *))failedBlock{
+    [self checkServiceFailedWhen:failedBlock];
+    
+    DOUService *service = [self getService];
+    service.apiBaseUrlString = kHttpsApiBaseUrl;
+    NSString *apiUrl = kDOUUserMeAPIUrl;
+    DOUQuery *query = [[[DOUQuery alloc] initWithSubPath:apiUrl parameters:nil] autorelease];
+    DOUReqBlock completionBlock = ^(DOUHttpRequest *req){
+        NSError *error = [req doubanError];
+        if (!error) {
+            DOUUser *user = [[[DOUUser alloc] initWithString:[req responseString]] autorelease];
+            if (user) {
+                if (successBlock) {
+                    successBlock(user);
+                }
+            }
+        } else {
+            if (failedBlock) {
+                failedBlock([req responseString]);
+            }
+        }
+    };
+    [service get:query callback:completionBlock];
 }
 
 - (void)dealloc {

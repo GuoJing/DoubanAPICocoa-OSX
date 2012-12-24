@@ -69,6 +69,7 @@ extern NSString * const kDOUBroadcastUserFollowAPIUrl;
 extern NSString * const kDOUBroadcastUserUnFollowAPIUrl;
 extern NSString * const kDOUBroadcastUserFriendShopAPIurl;
 
+extern NSString * const kDOUUserMeAPIUrl;
 extern NSString * const kDOUUserAPIUrl;
 
 extern NSString * const kDOUMailAPIUrl;

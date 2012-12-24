@@ -15,6 +15,7 @@
 #import "DOUHttpRequest.h"
 #import "DOUOAuthStore.h"
 #import "DOUConsts.h"
+#import "DOUUser.h"
 
 @interface DOUEngine : NSObject {
     NSString *apiKey;
@@ -36,4 +37,6 @@
 - (DOUService *)getService;
 - (id)getEngine:(EngineTypes)engine_id;
 - (void)checkServiceFailedWhen:(void(^)(NSString *))failedBlock;
+- (void)getWhoAmI:(void(^)(DOUUser *))successBlock
+      failedBlock:(void(^)(NSString *))failedBlock;
 @end
