@@ -14,6 +14,7 @@ DoubanAPICocoa的底层支持并兼容老版本的[douban-objc-client](https://g
 
 1. 封装网络层
 2. 简单
+3. 使用闭包让开发者开发更简单
 3. All consts
 3. No Warning, No Error and No Build Analyze Errors
 
@@ -34,6 +35,10 @@ DoubanAPICocoa的底层支持并兼容老版本的[douban-objc-client](https://g
     [self.engine didLoadWithCode:code];
 
 验证通过。
+
+#### 我是谁 ###
+
+    [u getWhoAmI:successUserBlock failedBlock:failBlock];
 
 #### 发广播 ####
     
