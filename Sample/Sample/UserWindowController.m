@@ -109,6 +109,7 @@
     };
     [u getUserFollowersWithUserID:self.uid_field.title successBlock:successBlock failedBlock:failBlock];
     [u getUserWithRemoteID:self.uid_field.title successBlock:successUserBlock failedBlock:failBlock];
+    [u getWhoAmI:successUserBlock failedBlock:failBlock];
 }
 
 @end

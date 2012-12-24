@@ -87,7 +87,7 @@ NSString * const kDOUBroadcastUserUnFollowAPIUrl = @"/shuo/v2/friendships/destro
 NSString * const kDOUBroadcastUserFriendShopAPIurl = @"/shuo/v2/friendships/show?source=%@&source_id=%@&target_id=%@";
 
 //User
-NSString * const kDOUUserMeAPIUrl = @"/v2/user~me";
+NSString * const kDOUUserMeAPIUrl = @"/v2/user/~me";
 NSString * const kDOUUserAPIUrl = @"/v2/user/%@";
 
 //Doumail
