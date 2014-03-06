@@ -223,3 +223,6 @@ v0.1.1
 v0.1.2
 
 1. 完善Engine。
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GuoJing/doubanapicocoa-osx/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
