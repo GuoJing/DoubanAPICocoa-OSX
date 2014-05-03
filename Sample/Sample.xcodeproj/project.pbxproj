@@ -12,18 +12,16 @@
 		2315215A167077EF00AF553E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23152159167077EF00AF553E /* main.m */; };
 		2315215E167077EF00AF553E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2315215C167077EF00AF553E /* Credits.rtf */; };
 		23152167167077F000AF553E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23152165167077F000AF553E /* MainMenu.xib */; };
-		2315216F167077F000AF553E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315216E167077F000AF553E /* SenTestingKit.framework */; };
 		23152170167077F000AF553E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315214D167077EF00AF553E /* Cocoa.framework */; };
 		23152178167077F000AF553E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23152176167077F000AF553E /* InfoPlist.strings */; };
 		2315217B167077F000AF553E /* SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2315217A167077F000AF553E /* SampleTests.m */; };
 		231522801670793500AF553E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2315227F1670793500AF553E /* Security.framework */; };
 		23198E34167D986F00E9692D /* eposter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23198E33167D986F00E9692D /* eposter.jpg */; };
-		2322B647167B35B6002D1811 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
-		2322B648167B35BC002D1811 /* DoubanAPICocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */; };
 		2322B675167CBD4C002D1811 /* eye_50.png in Resources */ = {isa = PBXBuildFile; fileRef = 2322B674167CBD4C002D1811 /* eye_50.png */; };
 		2322B67E167CBFAE002D1811 /* EventWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322B67D167CBFAE002D1811 /* EventWindowController.m */; };
 		234A381E167DE4D30078AC9D /* Consts.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A381D167DE4D30078AC9D /* Consts.m */; };
 		234A3822167DE5B60078AC9D /* BookWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A3821167DE5B60078AC9D /* BookWindowController.m */; };
+		236C61221914D06200FF3F20 /* DoubanAPICocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236C61211914D06200FF3F20 /* DoubanAPICocoa.framework */; };
 		239188C11681A9D300B39F5D /* UserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188C01681A9D300B39F5D /* UserWindowController.m */; };
 		239188D41681C83700B39F5D /* MailWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188D31681C83700B39F5D /* MailWindowController.m */; };
 		239188DB1682B65700B39F5D /* NoteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239188DA1682B65600B39F5D /* NoteWindowController.m */; };
@@ -54,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2322B648167B35BC002D1811 /* DoubanAPICocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,15 +69,13 @@
 		2315215B167077EF00AF553E /* Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
 		2315215D167077EF00AF553E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		23152166167077F000AF553E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2315216D167077F000AF553E /* SampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2315216E167077F000AF553E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2315216D167077F000AF553E /* SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23152175167077F000AF553E /* SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleTests-Info.plist"; sourceTree = "<group>"; };
 		23152177167077F000AF553E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23152179167077F000AF553E /* SampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleTests.h; sourceTree = "<group>"; };
 		2315217A167077F000AF553E /* SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleTests.m; sourceTree = "<group>"; };
 		2315227F1670793500AF553E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		23198E33167D986F00E9692D /* eposter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eposter.jpg; sourceTree = "<group>"; };
-		2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
 		2322B674167CBD4C002D1811 /* eye_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye_50.png; sourceTree = "<group>"; };
 		2322B67C167CBFAE002D1811 /* EventWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventWindowController.h; sourceTree = "<group>"; };
 		2322B67D167CBFAE002D1811 /* EventWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventWindowController.m; sourceTree = "<group>"; };
@@ -88,6 +83,7 @@
 		234A381D167DE4D30078AC9D /* Consts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consts.m; sourceTree = "<group>"; };
 		234A3820167DE5B60078AC9D /* BookWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookWindowController.h; sourceTree = "<group>"; };
 		234A3821167DE5B60078AC9D /* BookWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookWindowController.m; sourceTree = "<group>"; };
+		236C61211914D06200FF3F20 /* DoubanAPICocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubanAPICocoa.framework; sourceTree = "<group>"; };
 		239188BF1681A9D300B39F5D /* UserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserWindowController.h; sourceTree = "<group>"; };
 		239188C01681A9D300B39F5D /* UserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserWindowController.m; sourceTree = "<group>"; };
 		239188D21681C83600B39F5D /* MailWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailWindowController.h; sourceTree = "<group>"; };
@@ -118,7 +114,7 @@
 			files = (
 				231522801670793500AF553E /* Security.framework in Frameworks */,
 				2315214E167077EF00AF553E /* Cocoa.framework in Frameworks */,
-				2322B647167B35B6002D1811 /* DoubanAPICocoa.framework in Frameworks */,
+				236C61221914D06200FF3F20 /* DoubanAPICocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2315216F167077F000AF553E /* SenTestingKit.framework in Frameworks */,
 				23152170167077F000AF553E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				23152149167077EF00AF553E /* Sample.app */,
-				2315216D167077F000AF553E /* SampleTests.octest */,
+				2315216D167077F000AF553E /* SampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +153,6 @@
 			children = (
 				2315227F1670793500AF553E /* Security.framework */,
 				2315214D167077EF00AF553E /* Cocoa.framework */,
-				2315216E167077F000AF553E /* SenTestingKit.framework */,
 				2315214F167077EF00AF553E /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -167,7 +161,7 @@
 		2315214F167077EF00AF553E /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2322B646167B35B6002D1811 /* DoubanAPICocoa.framework */,
+				236C61211914D06200FF3F20 /* DoubanAPICocoa.framework */,
 				23152150167077EF00AF553E /* AppKit.framework */,
 				23152151167077EF00AF553E /* CoreData.framework */,
 				23152152167077EF00AF553E /* Foundation.framework */,
@@ -305,8 +299,8 @@
 			);
 			name = SampleTests;
 			productName = SampleTests;
-			productReference = 2315216D167077F000AF553E /* SampleTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 2315216D167077F000AF553E /* SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -315,7 +309,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = dbcity;
-				LastUpgradeCheck = 0440;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = GuoJing;
 			};
 			buildConfigurationList = 23152143167077EF00AF553E /* Build configuration list for PBXProject "Sample" */;
@@ -456,7 +451,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -474,7 +468,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -484,7 +478,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -496,7 +489,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -507,7 +500,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
@@ -524,7 +518,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
@@ -540,13 +535,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sample.app/Contents/MacOS/Sample";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "SampleTests/SampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -555,13 +552,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sample.app/Contents/MacOS/Sample";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "SampleTests/SampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

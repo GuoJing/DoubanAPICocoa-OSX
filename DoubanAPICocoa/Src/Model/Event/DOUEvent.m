@@ -17,7 +17,7 @@ NSString * const kParticipatedStatus = @"participate";
 NSString * const kWishedStatus = @"wish";
 NSString * const kArrivedStatus = @"arrive";
 
-static NSString * const kEventAllCategory = @"all";
+//static NSString * const kEventAllCategory = @"all";
 static NSString * const kEventDramaCategory = @"drama";
 static NSString * const kEventMusicCategory = @"music";
 static NSString * const kEventExhibitionCategory = @"exhibition";
@@ -27,7 +27,7 @@ static NSString * const kEventCommonwealCategory = @"commonweal";
 static NSString * const kEventTravelCategory = @"travel";
 static NSString * const kEventFilmCategory = @"film";
 static NSString * const kEventSalonCategory = @"salon";
-static NSString * const kEventOthersCategory = @"others";
+//static NSString * const kEventOthersCategory = @"others";
 
 static NSString * const kEventAllCategoryName = @"类型";
 static NSString * const kEventDramaCategoryName = @"戏剧/曲艺";
@@ -39,7 +39,7 @@ static NSString * const kEventCommonwealCategoryName = @"公益";
 static NSString * const kEventTravelCategoryName = @"旅行";
 static NSString * const kEventFilmCategoryName = @"电影";
 static NSString * const kEventSalonCategoryName = @"讲座/沙龙";
-static NSString * const kEventOthersCategoryName = @"其他";
+//static NSString * const kEventOthersCategoryName = @"其他";
 
 
 @dynamic identifier;

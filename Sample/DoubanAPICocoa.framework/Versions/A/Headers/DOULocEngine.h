@@ -18,6 +18,7 @@
               successBlock:(void(^)(DOULoc *))successBlock
                failedBlock:(void(^)(NSString *))failedBlock;
 
-- (void)getLocListWithRemote:successBlock:(void(^)(DOULocArray *))successListBlock
+- (void)getLocListWithRemote:(NSString *)parent_id
+                successBlock:(void(^)(DOULocArray *))successListBlock
                  failedBlock:(void(^)(NSString *))failedListBlock;
 @end

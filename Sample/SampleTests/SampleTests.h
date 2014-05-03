@@ -6,8 +6,8 @@
 //  Copyright (c) 2012年 GuoJing. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface SampleTests : SenTestCase
+@interface SampleTests : XCTestCase
 
 @end
